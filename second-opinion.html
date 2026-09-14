@@ -21,14 +21,14 @@ body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1
 a{color:inherit;text-decoration:none}
 .banner{background:#111;color:#fff;text-align:center;padding:10px 16px;font-size:12px;font-weight:500}
 .banner a{color:#93C5FD;text-decoration:underline;margin-left:8px}
-header{display:flex;align-items:center;justify-content:space-between;padding:16px var(--pad-x);border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);z-index:5}
+header{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);z-index:50;padding:0}
 header img{height:26px}
 .btn{display:inline-flex;padding:11px 18px;border-radius:999px;font-size:14px;font-weight:600}
 .btn-primary{background:var(--ink);color:#fff}
 .btn-accent{background:var(--accent);color:#fff}
 .btn-ghost{border:1px solid rgba(255,255,255,.25);color:#fff}
 .hero{background:var(--ink);color:#fff;padding:72px var(--pad-x) 64px}
-.hero-inner{max-width:720px}
+.hero-inner{max-width:720px;margin:0 auto}
 .kicker{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#93C5FD;font-weight:600;margin-bottom:14px}
 h1{font-family:var(--serif);font-weight:400;font-size:clamp(36px,4.8vw,52px);line-height:1.05;letter-spacing:-.02em;margin-bottom:16px}
 .lede{font-size:17px;color:#A8B3C0;margin-bottom:28px;max-width:40ch}
@@ -39,29 +39,30 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(36px,4.8vw,52px);lin
 .proof{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
 .pill{padding:6px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.14);font-size:12px;color:#C5CDD6}
 .pill b{color:#fff;font-weight:600;margin-right:4px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:48px var(--pad-x);max-width:960px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:48px var(--pad-x);max-width:1160px;margin:0 auto}
 .card{background:var(--bg-mute);border:1px solid var(--line);padding:22px;border-radius:16px}
 .card h3{font-family:var(--serif);font-size:24px;letter-spacing:-.02em;margin-bottom:10px}
 .card li,.card p{font-size:14px;color:var(--ink-soft)}
 .card ul{padding-left:18px}
 .card li{margin:7px 0}
-.steps{padding:8px var(--pad-x) 48px;max-width:960px}
+.steps{padding:8px var(--pad-x) 48px;max-width:1160px;margin:0 auto}
 .steps h2{font-family:var(--serif);font-size:32px;letter-spacing:-.02em;margin-bottom:20px}
 .step-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .step{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px}
 .step b{display:block;font-size:14px;font-weight:600;margin-bottom:6px}
 .step span{font-size:14px;color:var(--ink-soft)}
-.section{padding:8px var(--pad-x) 56px;max-width:720px}
+.section{padding:8px var(--pad-x) 56px;max-width:800px;margin:0 auto}
 .section h2{font-family:var(--serif);font-size:32px;letter-spacing:-.02em;margin:28px 0 12px}
 .faq details{border-top:1px solid var(--line);padding:14px 0}
 .faq summary{cursor:pointer;font-weight:600}
 .faq p{margin:8px 0 0;font-size:14px;color:var(--ink-soft)}
 .cta{background:var(--bg-mute);border-top:1px solid var(--line);padding:48px var(--pad-x)}
+.cta-inner{max-width:1160px;margin:0 auto}
 .cta h2{font-family:var(--serif);font-size:32px;letter-spacing:-.02em;margin-bottom:10px}
 .cta p{color:var(--ink-soft);margin-bottom:18px;max-width:48ch}
 @media (max-width:700px){.grid,.step-row{grid-template-columns:1fr}}
 
-.intake{background:var(--bg-mute);border:1px solid var(--line);border-radius:20px;padding:28px;margin-top:8px}
+.intake{max-width:1160px;margin:0 auto;background:var(--bg-mute);border:1px solid var(--line);border-radius:20px;padding:28px;margin-top:8px}
 .intake h2{font-family:var(--serif);font-size:28px;letter-spacing:-.02em;margin-bottom:8px}
 .intake .intro{color:var(--ink-soft);font-size:14px;margin-bottom:20px;max-width:48ch}
 .intake-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
@@ -105,7 +106,7 @@ input,select,textarea,button{ font-size:16px; } /* prevent iOS input zoom */
   .cta-row .btn{ width:100%; justify-content:center; }
   .trust{ gap:8px; }
   .pill{ font-size:11px; }
-  .intake{ padding:20px !important; }
+  .intake{max-width:1160px;margin:0 auto; padding:20px !important; }
   .intake-grid{ grid-template-columns:1fr !important; }
   footer .inner{ flex-direction:column; gap:20px; padding:0; }
   footer{ padding:32px 16px !important; }
@@ -145,6 +146,20 @@ nav.primary-nav a.active{color:var(--ink)}
   nav.primary-nav{display:none}
   .header-inner{padding:10px 16px}
 }
+
+
+/* Center content to match homepage column */
+.hero,.section,.door-inner,footer .inner,.grid,.steps,.cta-inner,.hero-inner,.quote-inner{
+  margin-left:auto !important;
+  margin-right:auto !important;
+  width:100%;
+  box-sizing:border-box;
+}
+.hero,.section,.door-inner,footer .inner,.grid,.steps{
+  max-width:1160px !important;
+}
+.hero-inner{max-width:720px !important;}
+.section.narrow,.section#faq{max-width:800px !important;}
 
 </style>
 <script type="application/ld+json">
@@ -323,9 +338,11 @@ nav.primary-nav a.active{color:var(--ink)}
 
 
 <section class="cta">
-  <h2>Ready for a clearer answer?</h2>
+  <div class="cta-inner">
+<h2>Ready for a clearer answer?</h2>
   <p>Call the office or start intake. Our team collects imaging before you meet Dr. Pradhan.</p>
   <a class="btn btn-primary" href="tel:+19724571530">Call (972) 457-1530</a>
+  </div>
 </section>
 <footer>
   <div class="inner">
