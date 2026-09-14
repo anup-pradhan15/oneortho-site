@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PROPOSAL v3 — Surgical Second Opinion | One Ortho</title>
+<meta property="og:title" content="Surgical Second Opinion | One Ortho">
+<meta property="og:description" content="Told you need surgery? Get a clearer answer. $750 transparent cash second opinion.">
+<meta property="og:image" content="https://oneortho.com/assets/og-second-opinion.svg">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fff; --bg-mute:#F3F5F7; --ink:#0B0F14; --ink-soft:#4B5563; --ink-mute:#9AA3AE;
+  --line:#E5E9EE; --accent:#155EEF; --accent-hover:#1249C7;
+  --serif:"Instrument Serif",Georgia,serif; --sans:Inter,-apple-system,sans-serif;
+  --pad-x:clamp(20px,5vw,72px); --r:12px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.banner{background:#111;color:#fff;text-align:center;padding:10px 16px;font-size:12px;font-weight:500}
+.banner a{color:#93C5FD;text-decoration:underline;margin-left:8px}
+header{display:flex;align-items:center;justify-content:space-between;padding:16px var(--pad-x);border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);z-index:5}
+header img{height:26px}
+.btn{display:inline-flex;padding:11px 18px;border-radius:999px;font-size:14px;font-weight:600}
+.btn-primary{background:var(--ink);color:#fff}
+.btn-accent{background:var(--accent);color:#fff}
+.btn-ghost{border:1px solid rgba(255,255,255,.25);color:#fff}
+.hero{background:var(--ink);color:#fff;padding:72px var(--pad-x) 64px}
+.hero-inner{max-width:720px}
+.kicker{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#93C5FD;font-weight:600;margin-bottom:14px}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(36px,4.8vw,52px);line-height:1.05;letter-spacing:-.02em;margin-bottom:16px}
+.lede{font-size:17px;color:#A8B3C0;margin-bottom:28px;max-width:40ch}
+.pricebox{display:inline-flex;align-items:baseline;gap:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);padding:14px 18px;border-radius:12px;margin-bottom:24px}
+.pricebox b{font-family:var(--serif);font-size:40px;font-weight:400}
+.pricebox span{color:#A8B3C0;font-size:14px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.proof{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.pill{padding:6px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.14);font-size:12px;color:#C5CDD6}
+.pill b{color:#fff;font-weight:600;margin-right:4px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:48px var(--pad-x);max-width:960px}
+.card{background:var(--bg-mute);border:1px solid var(--line);padding:22px;border-radius:16px}
+.card h3{font-family:var(--serif);font-size:24px;letter-spacing:-.02em;margin-bottom:10px}
+.card li,.card p{font-size:14px;color:var(--ink-soft)}
+.card ul{padding-left:18px}
+.card li{margin:7px 0}
+.steps{padding:8px var(--pad-x) 48px;max-width:960px}
+.steps h2{font-family:var(--serif);font-size:32px;letter-spacing:-.02em;margin-bottom:20px}
+.step-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.step{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px}
+.step b{display:block;font-size:14px;font-weight:600;margin-bottom:6px}
+.step span{font-size:14px;color:var(--ink-soft)}
+.section{padding:8px var(--pad-x) 56px;max-width:720px}
+.section h2{font-family:var(--serif);font-size:32px;letter-spacing:-.02em;margin:28px 0 12px}
+.faq details{border-top:1px solid var(--line);padding:14px 0}
+.faq summary{cursor:pointer;font-weight:600}
+.faq p{margin:8px 0 0;font-size:14px;color:var(--ink-soft)}
+.cta{background:var(--bg-mute);border-top:1px solid var(--line);padding:48px var(--pad-x)}
+.cta h2{font-family:var(--serif);font-size:32px;letter-spacing:-.02em;margin-bottom:10px}
+.cta p{color:var(--ink-soft);margin-bottom:18px;max-width:48ch}
+@media (max-width:700px){.grid,.step-row{grid-template-columns:1fr}}
+
+.intake{background:var(--bg-mute);border:1px solid var(--line);border-radius:20px;padding:28px;margin-top:8px}
+.intake h2{font-family:var(--serif);font-size:28px;letter-spacing:-.02em;margin-bottom:8px}
+.intake .intro{color:var(--ink-soft);font-size:14px;margin-bottom:20px;max-width:48ch}
+.intake-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.intake label{display:block;font-size:12px;font-weight:600;margin-bottom:6px;color:var(--ink)}
+.intake input,.intake select,.intake textarea{width:100%;padding:12px 14px;border-radius:10px;border:1px solid var(--line);font:inherit;background:#fff;color:var(--ink)}
+.intake textarea{min-height:96px;resize:vertical;grid-column:1/-1}
+.intake .full{grid-column:1/-1}
+.intake .actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:14px}
+.intake .note{font-size:12px;color:var(--ink-mute);margin-top:10px}
+.diagram{margin:8px 0 0;border-radius:20px;overflow:hidden;border:1px solid var(--line)}
+.diagram img{display:block;width:100%;height:auto}
+@media(max-width:700px){.intake-grid{grid-template-columns:1fr}}
+
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "@id": "https://oneortho.com/#physician",
+      "name": "Anup Pradhan, MD",
+      "url": "https://oneortho.com/",
+      "image": "https://oneortho.com/assets/dr-pradhan-portrait.jpg",
+      "telephone": "+1-972-457-1530",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "12222 N Central Expy, Suite 130",
+        "addressLocality": "Dallas",
+        "addressRegion": "TX",
+        "postalCode": "75243",
+        "addressCountry": "US"
+      },
+      "medicalSpecialty": [
+        "Orthopedic",
+        "SportsMedicine"
+      ],
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Vanderbilt University School of Medicine"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Duke University"
+        }
+      ],
+      "award": "D Magazine Best Doctor (6\u00d7)",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "300",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Surgical Second Opinion",
+      "provider": {
+        "@id": "https://oneortho.com/#physician"
+      },
+      "areaServed": "Dallas, TX",
+      "offers": {
+        "@type": "Offer",
+        "price": "750",
+        "priceCurrency": "USD"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you take insurance for this?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Transparent cash product at $750. Surgery quoted separately. Medicare accepted where eligible for follow-on care \u2014 ask the office."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can this be remote?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes when imaging can be shared ahead. We\u2019ll say if in-person is better."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How soon?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most within a week once records arrive."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header>
+  <a href="index.html"><img src="logo-wordmark.png" alt="One Ortho"></a>
+  <a class="btn btn-accent" href="tel:+19724571530">Book second opinion</a>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <p class="kicker">Surgical second opinion</p>
+    <h1>Told you need surgery?<br>Get a clearer answer.</h1>
+    <p class="lede">A fellowship-trained orthopedic surgeon reviews your imaging and options — then tells you yes, no, or not yet. In plain language. In writing.</p>
+    <div class="pricebox"><b>$750</b><span>flat cash · HSA/FSA</span></div>
+    <div class="cta-row">
+      <a class="btn btn-accent" href="tel:+19724571530">Start intake — (972) 457-1530</a>
+      <a class="btn btn-ghost" href="#included">What’s included</a>
+    </div>
+    <div class="proof">
+      <span class="pill"><b>4.8★</b> 300+ reviews</span>
+      <span class="pill"><b>6×</b> Best Doctor</span>
+      <span class="pill"><b>Dallas</b> since 2012</span>
+    </div>
+  </div>
+</section>
+
+<div class="grid" id="included">
+  <article class="card"><h3>What’s included</h3><ul>
+    <li>Full review of imaging &amp; records</li>
+    <li>25-minute visit — in person or video</li>
+    <li>Plain-language recommendation</li>
+    <li>One-page written plan</li>
+  </ul></article>
+  <article class="card"><h3>Who it’s for</h3><ul>
+    <li>Told you need knee, hip, or shoulder surgery</li>
+    <li>Want a serious second look before you commit</li>
+    <li>Cash / high-deductible patients</li>
+    <li>Physician-referred complex decisions</li>
+  </ul></article>
+  <article class="card"><h3>Who it’s not for</h3><ul>
+    <li>ER / urgent fracture care</li>
+    <li>Mild aches for primary intake</li>
+    <li>Workers’ comp paperwork mills</li>
+  </ul></article>
+  <article class="card"><h3>If surgery is right</h3>
+    <p>Stay with Dr. Pradhan for the operation, or take the written plan back to your original surgeon. The product is the decision.</p>
+  </article>
+</div>
+
+<section class="steps">
+  <h2>How it works</h2>
+  <div class="step-row">
+    <div class="step"><b>1. Send records</b><span>Imaging and notes ahead of time.</span></div>
+    <div class="step"><b>2. Meet Dr. Pradhan</b><span>25 minutes on the decision in front of you.</span></div>
+    <div class="step"><b>3. Leave with a plan</b><span>Written recommendation. Clear next step.</span></div>
+  </div>
+</section>
+
+<section class="section faq">
+  <h2>FAQ</h2>
+  <details open><summary>Do you take insurance for this?</summary><p>Transparent cash product at $750. Surgery quoted separately. Medicare accepted where eligible for follow-on care — ask the office.</p></details>
+  <details><summary>Can this be remote?</summary><p>Yes when imaging can be shared ahead. We’ll say if in-person is better.</p></details>
+  <details><summary>How soon?</summary><p>Most within a week once records arrive.</p></details>
+</section>
+
+
+
+<section class="cta">
+  <h2>Ready for a clearer answer?</h2>
+  <p>Call the office or start intake. Our team collects imaging before you meet Dr. Pradhan.</p>
+  <a class="btn btn-primary" href="tel:+19724571530">Call (972) 457-1530</a>
+</section>
+</body>
+</html>
+
+<section class="section" id="intake">
+  <div class="intake">
+    <h2>Start intake</h2>
+    <p class="intro">Takes about a minute. We’ll follow up within one business day. Prefer to talk now? <a class="btn-text" href="tel:+19724571530">(972) 457-1530</a></p>
+    <form class="intake-grid" name="appointment-request" method="POST" action="/thank-you" data-netlify="true" data-netlify-honeypot="bot-field" netlify>
+      <input type="hidden" name="form-name" value="appointment-request">
+      <p class="full" style="display:none" aria-hidden="true"><label>Don’t fill: <input name="bot-field"></label></p>
+      <div><label for="name">Full name</label><input id="name" name="name" required autocomplete="name"></div>
+      <div><label for="phone">Phone</label><input id="phone" name="phone" type="tel" required autocomplete="tel"></div>
+      <div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email"></div>
+      <div><label for="interest">I’m interested in</label>
+        <select id="interest" name="interest"><option value="">Select…</option><option value="knee">Knee</option><option value="hip">Hip</option><option value="shoulder">Shoulder</option><option value="second-opinion" selected>Surgical second opinion</option><option value="other">Not sure / other</option></select>
+      </div>
+      <div class="full"><label for="msg">What’s going on? (optional)</label><textarea id="msg" name="message" placeholder="Pain, injury, prior recommendation for surgery, imaging already done…"></textarea></div>
+      <div class="actions full">
+        <button class="btn btn-accent" type="submit">Send request</button>
+        <a class="btn btn-primary" href="tel:+19724571530">Call now</a>
+        <a class="btn-text" href="/intake">Full patient intake →</a>
+      </div>
+    </form>
+    <p class="note">Submits through Netlify Forms (same appointment-request channel as the live site). Full chart intake stays at /intake.</p>
+  </div>
+</section>

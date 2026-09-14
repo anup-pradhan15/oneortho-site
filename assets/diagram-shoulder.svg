@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" fill="none" role="img" aria-labelledby="shTitle shDesc">
+  <title id="shTitle">Shoulder joint diagram</title>
+  <desc id="shDesc">Simplified shoulder showing ball-and-socket and rotator cuff arc</desc>
+  <rect width="400" height="320" rx="24" fill="#F3F5F7"/>
+  <path d="M120 90c30-40 90-50 140-20 20 12 34 34 34 58 0 20-10 38-28 48" stroke="#0B0F14" stroke-width="3" fill="#fff"/>
+  <circle cx="200" cy="150" r="36" stroke="#0B0F14" stroke-width="3" fill="#fff"/>
+  <circle cx="200" cy="150" r="22" stroke="#155EEF" stroke-width="3" fill="rgba(21,94,239,.12)"/>
+  <path d="M168 130c-30 8-48 28-52 58" stroke="#155EEF" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <path d="M232 130c30 8 48 28 52 58" stroke="#155EEF" stroke-width="3" stroke-linecap="round" fill="none" opacity=".55"/>
+  <path d="M200 186v78" stroke="#0B0F14" stroke-width="3" stroke-linecap="round"/>
+  <text x="28" y="292" font-family="Inter,Arial,sans-serif" font-size="13" fill="#4B5563">Ball · socket · cuff arc</text>
+  <text x="28" y="36" font-family="Inter,Arial,sans-serif" font-size="12" font-weight="600" fill="#155EEF">SHOULDER</text>
+</svg>

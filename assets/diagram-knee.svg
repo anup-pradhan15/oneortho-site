@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" fill="none" role="img" aria-labelledby="kneeTitle kneeDesc">
+  <title id="kneeTitle">Knee joint diagram</title>
+  <desc id="kneeDesc">Simplified knee showing femur, tibia, and meniscus regions</desc>
+  <rect width="400" height="320" rx="24" fill="#F3F5F7"/>
+  <path d="M170 40c-18 40-22 70-18 110h96c6-42 2-78-16-110-12-8-40-8-62 0z" stroke="#0B0F14" stroke-width="3" fill="#fff"/>
+  <path d="M160 170c-8 46-6 78 8 110 20 10 52 10 72 0 12-30 14-66 6-110H160z" stroke="#0B0F14" stroke-width="3" fill="#fff"/>
+  <path d="M175 168c20-14 40-14 58 0" stroke="#155EEF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M178 178c18-8 34-8 50 0" stroke="#155EEF" stroke-width="3" stroke-linecap="round" opacity=".55"/>
+  <circle cx="204" cy="155" r="10" fill="#155EEF" opacity=".2" stroke="#155EEF" stroke-width="2"/>
+  <text x="28" y="292" font-family="Inter,Arial,sans-serif" font-size="13" fill="#4B5563">Femur · meniscus · tibia</text>
+  <text x="28" y="36" font-family="Inter,Arial,sans-serif" font-size="12" font-weight="600" fill="#155EEF">KNEE</text>
+</svg>
