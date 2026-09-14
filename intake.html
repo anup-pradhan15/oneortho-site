@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="shared/intake.css?v=8">
+<link rel="stylesheet" href="shared/intake.css?v=10">
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to content</a>
@@ -54,20 +54,20 @@
 <section class="page-hero">
   <p class="kicker">Before your visit</p>
   <h1>Patient intake</h1>
-  <p class="lede">Already have an appointment? Fill this out before your visit so we can spend our time together on your care — not paperwork. Takes about 8 minutes.</p>
+  <p class="lede">A few minutes before your visit so we can focus on your care — not paperwork.</p>
   <div class="intake-meta">
-    <span><strong>Time:</strong> ~8 minutes</span>
-    <span><strong>Saves:</strong> Auto-saved on this device as you type</span>
-    <span><strong>Need help?</strong> Call <a href="tel:+19724571530">(972) 457-1530</a></span>
+    <span>~5 minutes</span>
+    <span>Auto-saves as you type</span>
+    <span>Help: <a href="tel:+19724571530">(972) 457-1530</a></span>
   </div>
 </section>
 
 <!-- Success state (hidden until form submits) -->
 <section class="intake-success-full">
   <p class="kicker" style="justify-content:center;display:flex;margin-bottom:16px">Submitted</p>
-  <h2>Thanks — we've <em>got it</em>.</h2>
-  <p>Your intake is on its way to our team. We'll review it before your appointment and reach out if we need anything else.</p>
-  <p>If anything changes — or if this is urgent — call us at <a href="tel:+19724571530">(972) 457-1530</a>.</p>
+  <h2>Thanks — we've got it.</h2>
+  <p>We'll review your intake before your visit and reach out if we need anything else.</p>
+  <p>Questions or changes? Call <a href="tel:+19724571530">(972) 457-1530</a>.</p>
   <div class="intake-success-full__actions">
     <a class="btn btn--primary" href="index.html">Back to home</a>
     <button class="btn btn--ghost" type="button" data-intake-clear>Fill out a new intake</button>
@@ -77,11 +77,9 @@
 <section class="intake-page">
 <nav class="intake-progress" aria-label="Intake progress">
     <ol class="intake-progress__list">
-      <li><span class="intake-progress__num">01</span> About you</li>
-      <li><span class="intake-progress__num">02</span> Insurance &amp; referral</li>
-      <li><span class="intake-progress__num">03</span> Why you're coming in</li>
-      <li><span class="intake-progress__num">04</span> A bit about you</li>
-      <li><span class="intake-progress__num">05</span> Review &amp; submit</li>
+      <li><span class="intake-progress__num">1</span> You</li>
+      <li><span class="intake-progress__num">2</span> Your visit</li>
+      <li><span class="intake-progress__num">3</span> Review</li>
     </ol>
   </nav>
 
@@ -89,10 +87,10 @@
     <input type="hidden" name="form-name" value="patient-intake">
     <p hidden><label>Leave blank: <input name="bot-field"></label></p>
 
-    <!-- ============== STEP 1: ABOUT YOU ============== -->
+    <!-- ============== STEP 1: YOU ============== -->
     <fieldset class="intake-step" data-step="0">
-      <legend class="intake-step__title">About <em>you</em>.</legend>
-      <p class="intake-step__intro">The basics — so we can identify your chart and call you back at the right number.</p>
+      <legend class="intake-step__title">You</legend>
+      <p class="intake-step__intro">Basics so we can match your chart and reach you.</p>
 
       <div class="intake-row intake-row--2">
         <div class="intake-field">
@@ -107,20 +105,48 @@
         </div>
       </div>
 
+      <div class="intake-row intake-row--2">
+        <div class="intake-field">
+          <label for="i-sex">Sex</label>
+          <select id="i-sex" name="sex" required>
+            <option value="">— select —</option>
+            <option value="Female">Female</option>
+            <option value="Male">Male</option>
+            <option value="Prefer not to say">Prefer not to say</option>
+          </select>
+          <span class="intake-field__error">Please select an option.</span>
+        </div>
+        <div class="intake-field">
+          <label for="i-phone">Phone</label>
+          <input id="i-phone" name="phone" type="tel" required autocomplete="tel" placeholder="(214) 555-0143">
+          <span class="intake-field__error">Please enter a phone number.</span>
+        </div>
+      </div>
+
+      <div class="intake-row intake-row--2">
+        <div class="intake-field">
+          <label for="i-email">Email <span class="intake-field__hint">(optional)</span></label>
+          <input id="i-email" name="email" type="email" autocomplete="email" placeholder="you@example.com">
+        </div>
+        <div class="intake-field">
+          <span class="intake-field__label">Preferred contact</span>
+          <div class="opt-group opt-group--cols-3" data-required-group="contact_method">
+            <label class="opt"><input type="radio" name="contact_method" value="phone"><span class="opt__indicator"></span><span class="opt__label">Phone</span></label>
+            <label class="opt"><input type="radio" name="contact_method" value="text"><span class="opt__indicator"></span><span class="opt__label">Text</span></label>
+            <label class="opt"><input type="radio" name="contact_method" value="email"><span class="opt__indicator"></span><span class="opt__label">Email</span></label>
+          </div>
+        </div>
+      </div>
+
       <div class="intake-row">
         <div class="intake-field">
-          <span class="intake-field__label">Sex</span>
-          <div class="opt-group opt-group--cols-3" data-required-group="sex">
-            <label class="opt"><input type="radio" name="sex" value="Female"><span class="opt__indicator"></span><span class="opt__label">Female</span></label>
-            <label class="opt"><input type="radio" name="sex" value="Male"><span class="opt__indicator"></span><span class="opt__label">Male</span></label>
-            <label class="opt"><input type="radio" name="sex" value="Prefer not to say"><span class="opt__indicator"></span><span class="opt__label">Prefer not to say</span></label>
-          </div>
+          <label for="i-besttime">Best time <span class="intake-field__hint">(optional)</span></label>
+          <input id="i-besttime" name="best_time" type="text" placeholder="Weekday mornings, after 5pm, etc.">
         </div>
       </div>
 
       <hr class="intake-section-rule">
       <h3 class="intake-subhead">Address</h3>
-      <p class="intake-subhead-sub">Used for your chart and any mailed paperwork.</p>
 
       <div class="intake-row">
         <div class="intake-field">
@@ -144,44 +170,12 @@
       </div>
 
       <hr class="intake-section-rule">
-      <h3 class="intake-subhead">How to reach you</h3>
-
-      <div class="intake-row intake-row--2">
-        <div class="intake-field">
-          <label for="i-phone">Phone</label>
-          <input id="i-phone" name="phone" type="tel" required autocomplete="tel" placeholder="(214) 555-0143">
-          <span class="intake-field__error">Please enter a phone number.</span>
-        </div>
-        <div class="intake-field">
-          <label for="i-email">Email <span class="intake-field__hint">(optional)</span></label>
-          <input id="i-email" name="email" type="email" autocomplete="email" placeholder="you@example.com">
-        </div>
-      </div>
-
-      <div class="intake-row intake-row--2">
-        <div class="intake-field">
-          <span class="intake-field__label">Best way to reach you</span>
-          <div class="opt-group opt-group--cols-3" data-required-group="contact_method">
-            <label class="opt"><input type="radio" name="contact_method" value="phone"><span class="opt__indicator"></span><span class="opt__label">Phone call</span></label>
-            <label class="opt"><input type="radio" name="contact_method" value="text"><span class="opt__indicator"></span><span class="opt__label">Text</span></label>
-            <label class="opt"><input type="radio" name="contact_method" value="email"><span class="opt__indicator"></span><span class="opt__label">Email</span></label>
-          </div>
-        </div>
-        <div class="intake-field">
-          <label for="i-besttime">Best time to reach you <span class="intake-field__hint">(optional)</span></label>
-          <input id="i-besttime" name="best_time" type="text" placeholder="Weekday mornings, after 5pm, etc.">
-        </div>
-      </div>
-    </fieldset>
-
-    <!-- ============== STEP 2: INSURANCE & REFERRAL ============== -->
-    <fieldset class="intake-step" data-step="1">
-      <legend class="intake-step__title">Insurance &amp; <em>referral</em>.</legend>
-      <p class="intake-step__intro">We'll verify benefits before your visit. Final insurance and payment specifics are confirmed at check-in.</p>
+      <h3 class="intake-subhead">Insurance</h3>
+      <p class="intake-subhead-sub">We'll verify benefits before your visit.</p>
 
       <div class="intake-row">
         <div class="intake-field">
-          <span class="intake-field__label">Do you have health insurance you'd like us to bill?</span>
+          <span class="intake-field__label">Health insurance?</span>
           <div class="opt-group opt-group--cols-2" data-required-group="has_insurance">
             <label class="opt"><input type="radio" name="has_insurance" value="yes"><span class="opt__indicator"></span><span class="opt__label">Yes</span></label>
             <label class="opt"><input type="radio" name="has_insurance" value="no"><span class="opt__indicator"></span><span class="opt__label">No / self-pay</span></label>
@@ -190,12 +184,8 @@
       </div>
 
       <div data-reveal-when="has_insurance=yes">
-        <hr class="intake-section-rule">
-        <h3 class="intake-subhead">Insurance details</h3>
-        <p class="intake-subhead-sub">Snap your card to skip the typing — or fill in below. Whatever's easier. We'll verify everything at check-in.</p>
-
         <p class="upload-note">
-          <strong>Heads up:</strong> photo uploads aren't saved if you close this page — fill these in right before you submit. The rest of the form auto-saves.
+          <strong>Note:</strong> card photos aren’t saved if you leave this page — add them just before you submit. Everything else auto-saves.
         </p>
 
         <div class="upload-grid">
@@ -278,7 +268,7 @@
             <input id="i-group" name="group_id" type="text">
           </div>
           <div class="intake-field">
-            <label for="i-subscriber">Subscriber name <span class="intake-field__hint">(if different from you)</span></label>
+            <label for="i-subscriber">Subscriber name <span class="intake-field__hint">(if different)</span></label>
             <input id="i-subscriber" name="subscriber" type="text" placeholder="Spouse / parent name">
           </div>
         </div>
@@ -289,7 +279,7 @@
 
       <div class="intake-row">
         <div class="intake-field">
-          <span class="intake-field__label">Were you referred by another doctor?</span>
+          <span class="intake-field__label">Referred by a doctor?</span>
           <div class="opt-group opt-group--cols-2" data-required-group="was_referred">
             <label class="opt"><input type="radio" name="was_referred" value="yes"><span class="opt__indicator"></span><span class="opt__label">Yes</span></label>
             <label class="opt"><input type="radio" name="was_referred" value="no"><span class="opt__indicator"></span><span class="opt__label">No</span></label>
@@ -312,20 +302,90 @@
 
       <div class="intake-row">
         <div class="intake-field">
-          <label for="i-pcp">Primary care doctor <span class="intake-field__hint">(optional, name + practice)</span></label>
-          <input id="i-pcp" name="pcp" type="text" placeholder="So we can coordinate any records or follow-up">
+          <label for="i-pcp">Primary care doctor <span class="intake-field__hint">(optional)</span></label>
+          <input id="i-pcp" name="pcp" type="text" placeholder="Name + practice">
+        </div>
+      </div>
+
+      <hr class="intake-section-rule">
+      <h3 class="intake-subhead">Emergency contact</h3>
+
+      <div class="intake-row intake-row--3">
+        <div class="intake-field">
+          <label for="i-ecname">Name</label>
+          <input id="i-ecname" name="ec_name" type="text" required>
+          <span class="intake-field__error">Please enter a contact name.</span>
+        </div>
+        <div class="intake-field">
+          <label for="i-ecphone">Phone</label>
+          <input id="i-ecphone" name="ec_phone" type="tel" required>
+          <span class="intake-field__error">Please enter a phone number.</span>
+        </div>
+        <div class="intake-field">
+          <label for="i-ecrel">Relationship</label>
+          <input id="i-ecrel" name="ec_relationship" type="text" placeholder="Spouse, parent, friend">
+        </div>
+      </div>
+
+      <hr class="intake-section-rule">
+      <h3 class="intake-subhead">A bit more</h3>
+
+      <div class="intake-row intake-row--2">
+        <div class="intake-field">
+          <label for="i-occ">Occupation <span class="intake-field__hint">(optional)</span></label>
+          <input id="i-occ" name="occupation" type="text" placeholder="What kind of work do you do?">
+        </div>
+        <div class="intake-field">
+          <label for="i-activity">Activity level</label>
+          <select id="i-activity" name="activity_level">
+            <option value="">— select —</option>
+            <option>Mostly sedentary</option>
+            <option>Lightly active</option>
+            <option>Moderately active (3–4× / week)</option>
+            <option>Very active (5+ × / week)</option>
+            <option>Competitive athlete</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="intake-row">
+        <div class="intake-field">
+          <label for="i-acts">Activities to get back to <span class="intake-field__hint">(optional)</span></label>
+          <input id="i-acts" name="activities" type="text" placeholder="Skiing, tennis, gardening, chasing kids…">
+        </div>
+      </div>
+
+      <div class="intake-row">
+        <div class="intake-field">
+          <label for="i-goals">What would a good outcome look like? <span class="intake-field__hint">(optional)</span></label>
+          <textarea id="i-goals" name="goals" rows="2" placeholder="A sentence is fine."></textarea>
+        </div>
+      </div>
+
+      <div class="intake-row">
+        <div class="intake-field">
+          <span class="intake-field__label">How did you hear about us?</span>
+          <div class="opt-group opt-group--cols-3">
+            <label class="opt"><input type="radio" name="how_heard" value="Google search"><span class="opt__indicator"></span><span class="opt__label">Google</span></label>
+            <label class="opt"><input type="radio" name="how_heard" value="Referred by another doctor"><span class="opt__indicator"></span><span class="opt__label">Doctor referral</span></label>
+            <label class="opt"><input type="radio" name="how_heard" value="Friend or family"><span class="opt__indicator"></span><span class="opt__label">Friend / family</span></label>
+            <label class="opt"><input type="radio" name="how_heard" value="Social media"><span class="opt__indicator"></span><span class="opt__label">Social media</span></label>
+            <label class="opt"><input type="radio" name="how_heard" value="D Magazine / press"><span class="opt__indicator"></span><span class="opt__label">D Magazine / press</span></label>
+            <label class="opt"><input type="radio" name="how_heard" value="Previous patient"><span class="opt__indicator"></span><span class="opt__label">Previous patient</span></label>
+            <label class="opt"><input type="radio" name="how_heard" value="Other"><span class="opt__indicator"></span><span class="opt__label">Other</span></label>
+          </div>
         </div>
       </div>
     </fieldset>
 
-    <!-- ============== STEP 3: WHY YOU'RE COMING IN ============== -->
-    <fieldset class="intake-step" data-step="2">
-      <legend class="intake-step__title">Why you're <em>coming in</em>.</legend>
-      <p class="intake-step__intro">The clinical specifics — medications, allergies, full surgical history — we'll review at your visit. This is the practical picture so we know what to expect.</p>
+    <!-- ============== STEP 2: YOUR VISIT ============== -->
+    <fieldset class="intake-step" data-step="1">
+      <legend class="intake-step__title">Your visit</legend>
+      <p class="intake-step__intro">What’s going on — enough for us to prepare. Full history in person.</p>
 
       <div class="intake-row">
         <div class="intake-field">
-          <span class="intake-field__label">Body part(s) bothering you — check all that apply</span>
+          <span class="intake-field__label">What’s bothering you?</span>
           <div class="opt-group opt-group--cols-4" data-required-group="body_part">
             <label class="opt"><input type="checkbox" name="body_part" value="Knee"><span class="opt__indicator"></span><span class="opt__label">Knee</span></label>
             <label class="opt"><input type="checkbox" name="body_part" value="Hip"><span class="opt__indicator"></span><span class="opt__label">Hip</span></label>
@@ -349,8 +409,8 @@
           </div>
         </div>
         <div class="intake-field">
-          <span class="intake-field__label">How long has this been going on?</span>
-          <select name="duration">
+          <label for="i-duration">How long?</label>
+          <select id="i-duration" name="duration">
             <option value="">— select —</option>
             <option>Less than 1 week</option>
             <option>1–4 weeks</option>
@@ -378,7 +438,7 @@
       </div>
 
       <hr class="intake-section-rule">
-      <h3 class="intake-subhead">Pain right now (0 = none, 10 = worst imaginable)</h3>
+      <h3 class="intake-subhead">Pain now <span class="intake-field__hint">(0–10)</span></h3>
       <div class="intake-row">
         <div class="intake-field">
           <div class="pain-scale" data-required-group="pain_now">
@@ -398,7 +458,7 @@
         </div>
       </div>
 
-      <h3 class="intake-subhead" style="margin-top:32px">Pain at its worst</h3>
+      <h3 class="intake-subhead intake-subhead--tight">Pain at its worst</h3>
       <div class="intake-row">
         <div class="intake-field">
           <div class="pain-scale">
@@ -422,7 +482,7 @@
 
       <div class="intake-row">
         <div class="intake-field">
-          <span class="intake-field__label">What makes it worse? <span class="intake-field__hint">(check all)</span></span>
+          <span class="intake-field__label">What makes it worse? <span class="intake-field__hint">(all that apply)</span></span>
           <div class="opt-group opt-group--cols-4">
             <label class="opt"><input type="checkbox" name="worse" value="Walking"><span class="opt__indicator"></span><span class="opt__label">Walking</span></label>
             <label class="opt"><input type="checkbox" name="worse" value="Standing"><span class="opt__indicator"></span><span class="opt__label">Standing</span></label>
@@ -438,7 +498,7 @@
 
       <div class="intake-row">
         <div class="intake-field">
-          <span class="intake-field__label">What have you tried so far? <span class="intake-field__hint">(check all)</span></span>
+          <span class="intake-field__label">Tried so far? <span class="intake-field__hint">(all that apply)</span></span>
           <div class="opt-group opt-group--cols-3">
             <label class="opt"><input type="checkbox" name="tried" value="Rest / activity modification"><span class="opt__indicator"></span><span class="opt__label">Rest / activity modification</span></label>
             <label class="opt"><input type="checkbox" name="tried" value="Ice or heat"><span class="opt__indicator"></span><span class="opt__label">Ice or heat</span></label>
@@ -455,7 +515,7 @@
 
       <div class="intake-row intake-row--2">
         <div class="intake-field">
-          <span class="intake-field__label">Imaging done for this issue? <span class="intake-field__hint">(check all)</span></span>
+          <span class="intake-field__label">Imaging done? <span class="intake-field__hint">(all that apply)</span></span>
           <div class="opt-group opt-group--cols-2">
             <label class="opt"><input type="checkbox" name="imaging" value="X-ray"><span class="opt__indicator"></span><span class="opt__label">X-ray</span></label>
             <label class="opt"><input type="checkbox" name="imaging" value="MRI"><span class="opt__indicator"></span><span class="opt__label">MRI</span></label>
@@ -465,7 +525,7 @@
           </div>
         </div>
         <div class="intake-field">
-          <span class="intake-field__label">Do you have the images / report?</span>
+          <span class="intake-field__label">Have the images / report?</span>
           <div class="opt-group">
             <label class="opt"><input type="radio" name="imaging_have" value="Images and report"><span class="opt__indicator"></span><span class="opt__label">Yes — images <em>and</em> report</span></label>
             <label class="opt"><input type="radio" name="imaging_have" value="Report only"><span class="opt__indicator"></span><span class="opt__label">Just the report</span></label>
@@ -476,102 +536,26 @@
 
       <div class="intake-row">
         <div class="intake-field">
-          <label for="i-desc">In your own words <span class="intake-field__hint">(optional — what feels most important to mention?)</span></label>
-          <textarea id="i-desc" name="description" rows="4" placeholder="A sentence or two. What's been hardest, what you're worried about, anything you want to be sure we know."></textarea>
+          <label for="i-desc">Anything else we should know? <span class="intake-field__hint">(optional)</span></label>
+          <textarea id="i-desc" name="description" rows="3" placeholder="What’s been hardest, what you’re worried about…"></textarea>
         </div>
       </div>
     </fieldset>
 
-    <!-- ============== STEP 4: A BIT ABOUT YOU ============== -->
-    <fieldset class="intake-step" data-step="3">
-      <legend class="intake-step__title">A bit <em>about you</em>.</legend>
-      <p class="intake-step__intro">Helps us tailor recovery planning around your life, not a brochure.</p>
-
-      <div class="intake-row intake-row--2">
-        <div class="intake-field">
-          <label for="i-occ">Occupation <span class="intake-field__hint">(optional)</span></label>
-          <input id="i-occ" name="occupation" type="text" placeholder="What kind of work do you do?">
-        </div>
-        <div class="intake-field">
-          <span class="intake-field__label">Activity level</span>
-          <select name="activity_level">
-            <option value="">— select —</option>
-            <option>Mostly sedentary</option>
-            <option>Lightly active</option>
-            <option>Moderately active (3–4× / week)</option>
-            <option>Very active (5+ × / week)</option>
-            <option>Competitive athlete</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="intake-row">
-        <div class="intake-field">
-          <label for="i-acts">Sports or activities you want to get back to <span class="intake-field__hint">(optional)</span></label>
-          <input id="i-acts" name="activities" type="text" placeholder="Skiing, tennis, gardening, chasing kids — whatever it is.">
-        </div>
-      </div>
-
-      <div class="intake-row">
-        <div class="intake-field">
-          <label for="i-goals">What does a good outcome look like for you? <span class="intake-field__hint">(optional)</span></label>
-          <textarea id="i-goals" name="goals" rows="3" placeholder="A sentence is fine."></textarea>
-        </div>
-      </div>
-
-      <hr class="intake-section-rule">
-      <h3 class="intake-subhead">Emergency contact</h3>
-      <p class="intake-subhead-sub">Someone we can call in case we need to and can't reach you. Required for any surgical patient.</p>
-
-      <div class="intake-row intake-row--3">
-        <div class="intake-field">
-          <label for="i-ecname">Name</label>
-          <input id="i-ecname" name="ec_name" type="text" required>
-          <span class="intake-field__error">Please enter a contact name.</span>
-        </div>
-        <div class="intake-field">
-          <label for="i-ecphone">Phone</label>
-          <input id="i-ecphone" name="ec_phone" type="tel" required>
-          <span class="intake-field__error">Please enter a phone number.</span>
-        </div>
-        <div class="intake-field">
-          <label for="i-ecrel">Relationship</label>
-          <input id="i-ecrel" name="ec_relationship" type="text" placeholder="Spouse, parent, friend">
-        </div>
-      </div>
-
-      <hr class="intake-section-rule">
-
-      <div class="intake-row">
-        <div class="intake-field">
-          <span class="intake-field__label">How did you hear about us?</span>
-          <div class="opt-group opt-group--cols-3">
-            <label class="opt"><input type="radio" name="how_heard" value="Google search"><span class="opt__indicator"></span><span class="opt__label">Google search</span></label>
-            <label class="opt"><input type="radio" name="how_heard" value="Referred by another doctor"><span class="opt__indicator"></span><span class="opt__label">Referred by another doctor</span></label>
-            <label class="opt"><input type="radio" name="how_heard" value="Friend or family"><span class="opt__indicator"></span><span class="opt__label">Friend / family</span></label>
-            <label class="opt"><input type="radio" name="how_heard" value="Social media"><span class="opt__indicator"></span><span class="opt__label">Social media</span></label>
-            <label class="opt"><input type="radio" name="how_heard" value="D Magazine / press"><span class="opt__indicator"></span><span class="opt__label">D Magazine / press</span></label>
-            <label class="opt"><input type="radio" name="how_heard" value="Previous patient"><span class="opt__indicator"></span><span class="opt__label">Previous patient</span></label>
-            <label class="opt"><input type="radio" name="how_heard" value="Other"><span class="opt__indicator"></span><span class="opt__label">Other</span></label>
-          </div>
-        </div>
-      </div>
-    </fieldset>
-
-    <!-- ============== STEP 5: REVIEW & SUBMIT ============== -->
-    <fieldset class="intake-step" data-step="4">
-      <legend class="intake-step__title">Review &amp; <em>submit</em>.</legend>
-      <p class="intake-step__intro">Look over your answers. Click <strong>Edit</strong> on any section to make changes.</p>
+    <!-- ============== STEP 3: REVIEW ============== -->
+    <fieldset class="intake-step" data-step="2">
+      <legend class="intake-step__title">Review</legend>
+      <p class="intake-step__intro">Check your answers. Tap <strong>Edit</strong> to change a section.</p>
 
       <div class="intake-review"></div>
 
       <div class="intake-attest">
-        <h3 class="intake-attest__title">One last thing.</h3>
-        <p>Detailed medical history — your current medications, allergies, surgical history, and any specific diagnoses — will be reviewed in person at your visit. Bring an up-to-date medication list if you can.</p>
+        <h3 class="intake-attest__title">Before you submit</h3>
+        <p>Medications, allergies, and surgical history will be reviewed at your visit. Bring a current med list if you can.</p>
         <label class="opt">
           <input type="checkbox" name="acknowledge" value="yes" required>
           <span class="opt__indicator"></span>
-          <span class="opt__label">I understand, and the information I've provided above is accurate to the best of my knowledge.</span>
+          <span class="opt__label">I confirm this information is accurate to the best of my knowledge.</span>
         </label>
       </div>
     </fieldset>
@@ -610,7 +594,7 @@
   </div>
 </footer>
 
-<script src="shared/intake.js?v=8"></script>
+<script src="shared/intake.js?v=10"></script>
 <script>
 (function(){
   var btn=document.querySelector('.nav-toggle'), panel=document.getElementById('mobile-nav');

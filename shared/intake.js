@@ -4,7 +4,7 @@
 (function () {
   'use strict';
 
-  var STORAGE_KEY = 'oneortho-patient-intake-v1';
+  var STORAGE_KEY = 'oneortho-patient-intake-v2';
   var MAX_UPLOAD_BYTES = 8 * 1024 * 1024; // 8MB (Netlify file limit headroom)
   var ACCEPT_TYPES = {
     'image/png': true,
@@ -37,27 +37,21 @@
 
   var REVIEW_SECTIONS = [
     {
-      title: 'About you',
+      title: 'You',
       step: 0,
       fields: [
         { name: 'name', label: 'Name' },
         { name: 'dob', label: 'Date of birth' },
         { name: 'sex', label: 'Sex' },
+        { name: 'phone', label: 'Phone' },
+        { name: 'email', label: 'Email' },
+        { name: 'contact_method', label: 'Preferred contact' },
+        { name: 'best_time', label: 'Best time' },
         { name: 'street', label: 'Street' },
         { name: 'city', label: 'City' },
         { name: 'state', label: 'State' },
         { name: 'zip', label: 'ZIP' },
-        { name: 'phone', label: 'Phone' },
-        { name: 'email', label: 'Email' },
-        { name: 'contact_method', label: 'Best contact' },
-        { name: 'best_time', label: 'Best time' }
-      ]
-    },
-    {
-      title: 'Insurance & referral',
-      step: 1,
-      fields: [
-        { name: 'has_insurance', label: 'Has insurance' },
+        { name: 'has_insurance', label: 'Insurance' },
         { name: 'insurance_carrier', label: 'Carrier' },
         { name: 'member_id', label: 'Member ID' },
         { name: 'group_id', label: 'Group #' },
@@ -65,12 +59,20 @@
         { name: 'was_referred', label: 'Referred' },
         { name: 'referring_doctor', label: 'Referring doctor' },
         { name: 'referring_practice', label: 'Referring practice' },
-        { name: 'pcp', label: 'Primary care' }
+        { name: 'pcp', label: 'Primary care' },
+        { name: 'ec_name', label: 'Emergency contact' },
+        { name: 'ec_phone', label: 'EC phone' },
+        { name: 'ec_relationship', label: 'EC relationship' },
+        { name: 'occupation', label: 'Occupation' },
+        { name: 'activity_level', label: 'Activity level' },
+        { name: 'activities', label: 'Activities' },
+        { name: 'goals', label: 'Goals' },
+        { name: 'how_heard', label: 'How you heard' }
       ]
     },
     {
-      title: "Why you're coming in",
-      step: 2,
+      title: 'Your visit',
+      step: 1,
       fields: [
         { name: 'body_part', label: 'Body part(s)' },
         { name: 'side', label: 'Side' },
@@ -83,21 +85,7 @@
         { name: 'tried', label: 'Tried so far' },
         { name: 'imaging', label: 'Imaging' },
         { name: 'imaging_have', label: 'Have images/report' },
-        { name: 'description', label: 'In your words' }
-      ]
-    },
-    {
-      title: 'A bit about you',
-      step: 3,
-      fields: [
-        { name: 'occupation', label: 'Occupation' },
-        { name: 'activity_level', label: 'Activity level' },
-        { name: 'activities', label: 'Activities' },
-        { name: 'goals', label: 'Goals' },
-        { name: 'ec_name', label: 'Emergency contact' },
-        { name: 'ec_phone', label: 'EC phone' },
-        { name: 'ec_relationship', label: 'EC relationship' },
-        { name: 'how_heard', label: 'How you heard' }
+        { name: 'description', label: 'Notes' }
       ]
     }
   ];
@@ -395,7 +383,7 @@
           '</dd></div>';
       });
       // File names if present
-      if (section.step === 1) {
+      if (section.step === 0) {
         var front = form.querySelector('#i-card-front');
         var back = form.querySelector('#i-card-back');
         if (front && front.files && front.files[0]) {
