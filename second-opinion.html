@@ -51,8 +51,8 @@ nav.primary-nav a.active{color:var(--ink);font-weight:600}
 .btn-text{padding:0;border:0;border-radius:0;color:var(--accent);font-weight:600;min-height:auto}
 
 /* Full-bleed dark hero; content column inside */
-.hero{background:var(--ink);color:#fff;padding:72px var(--pad-x) 64px;width:100%}
-.hero-inner{max-width:720px;margin:0 auto}
+.hero{background:var(--ink);color:#fff;padding:72px 0 64px;width:100%}
+.hero-inner{max-width:1160px;margin:0 auto;padding:0 var(--pad-x);box-sizing:border-box}
 .kicker{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#93C5FD;font-weight:600;margin-bottom:14px}
 h1{font-family:var(--serif);font-weight:400;font-size:clamp(36px,4.8vw,52px);line-height:1.05;letter-spacing:-.02em;margin-bottom:16px}
 .lede{font-size:17px;color:#A8B3C0;margin-bottom:28px;max-width:40ch}
@@ -84,14 +84,12 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(36px,4.8vw,52px);lin
 .faq summary{cursor:pointer;font-weight:600}
 .faq p{margin:8px 0 0;font-size:14px;color:var(--ink-soft)}
 
-.cta{background:var(--bg-mute);border-top:1px solid var(--line);padding:48px var(--pad-x);width:100%}
-.cta-inner{max-width:1160px;margin:0 auto}
-.cta h2{font-family:var(--serif);font-size:32px;letter-spacing:-.02em;margin-bottom:10px}
-.cta p{color:var(--ink-soft);margin-bottom:18px;max-width:48ch}
-.cta .cta-row{margin-top:4px}
-
-.intake-wrap{padding:0 var(--pad-x) 56px;max-width:1160px;margin:0 auto;width:100%}
-.intake{background:var(--bg-mute);border:1px solid var(--line);border-radius:20px;padding:28px}
+.bottom-band{background:var(--bg-mute);border-top:1px solid var(--line);padding:56px 0;width:100%}
+.bottom-inner{max-width:1160px;margin:0 auto;padding:0 var(--pad-x);box-sizing:border-box}
+.bottom-inner > h2{font-family:var(--serif);font-size:32px;letter-spacing:-.02em;margin-bottom:10px}
+.bottom-inner > .lead{color:var(--ink-soft);margin-bottom:20px;max-width:48ch}
+.bottom-inner > .cta-row{margin-bottom:28px}
+.intake{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px}
 .intake h2{font-family:var(--serif);font-size:28px;letter-spacing:-.02em;margin-bottom:8px}
 .intake .intro{color:var(--ink-soft);font-size:14px;margin-bottom:20px;max-width:48ch}
 .intake-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
@@ -107,7 +105,7 @@ footer strong{color:#fff;display:block;margin-bottom:8px;font-weight:600}
 footer a{color:#93C5FD;text-decoration:none}
 
 @supports(padding:max(0px)){
-  .header-inner,.hero,.grid,.steps,.section,.cta,.intake-wrap,footer .inner,.mobile-panel nav{
+  .header-inner,.hero-inner,.grid,.steps,.section,.bottom-inner,footer .inner,.mobile-panel nav{
     padding-left:max(var(--pad-x), env(safe-area-inset-left));
     padding-right:max(var(--pad-x), env(safe-area-inset-right));
   }
@@ -116,8 +114,8 @@ footer a{color:#93C5FD;text-decoration:none}
   .nav-toggle{display:inline-flex}
   nav.primary-nav{display:none}
   .header-inner{padding:10px 16px}
-  .hero{padding:48px 16px 40px}
-  .grid,.steps,.section,.cta,.intake-wrap{padding-left:16px;padding-right:16px}
+  .hero{padding:48px 0 40px}
+  .grid,.steps,.section,.hero-inner,.bottom-inner{padding-left:16px;padding-right:16px}
   .grid,.step-row{grid-template-columns:1fr}
   .cta-row{flex-direction:column;align-items:stretch}
   .cta-row .btn{width:100%;justify-content:center}
@@ -252,19 +250,15 @@ footer a{color:#93C5FD;text-decoration:none}
   <details><summary>How soon?</summary><p>Most within a week once records arrive.</p></details>
 </section>
 
-<section class="cta">
-  <div class="cta-inner">
+<section class="bottom-band" id="intake">
+  <div class="bottom-inner">
     <h2>Ready for a clearer answer?</h2>
-    <p>Call the office or start intake. Our team collects imaging before you meet Dr. Pradhan.</p>
+    <p class="lead">Call the office or start intake. Our team collects imaging before you meet Dr. Pradhan.</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="#intake">Request an online consult</a>
+      <a class="btn btn-primary" href="#intake-form">Request an online consult</a>
       <a class="btn btn-ghost-dark" href="tel:+19724571530">Call (972) 457-1530</a>
     </div>
-  </div>
-</section>
-
-<section class="intake-wrap" id="intake">
-  <div class="intake">
+    <div class="intake" id="intake-form">
     <h2>Start intake</h2>
     <p class="intro">Takes about a minute. We’ll follow up within one business day. Prefer to talk now? <a class="btn-text" href="tel:+19724571530">(972) 457-1530</a></p>
     <form class="intake-grid" name="appointment-request" method="POST" action="/thank-you" data-netlify="true" data-netlify-honeypot="bot-field" netlify>
@@ -282,6 +276,7 @@ footer a{color:#93C5FD;text-decoration:none}
         <a class="btn-text" href="/intake">Prefer full patient intake?</a>
       </div>
     </form>
+  </div>
   </div>
 </section>
 
