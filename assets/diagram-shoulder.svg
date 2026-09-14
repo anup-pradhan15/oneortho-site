@@ -1,13 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" fill="none" role="img" aria-labelledby="shTitle shDesc">
-  <title id="shTitle">Shoulder joint diagram</title>
-  <desc id="shDesc">Simplified shoulder showing ball-and-socket and rotator cuff arc</desc>
-  <rect width="400" height="320" rx="24" fill="#F3F5F7"/>
-  <path d="M120 90c30-40 90-50 140-20 20 12 34 34 34 58 0 20-10 38-28 48" stroke="#0B0F14" stroke-width="3" fill="#fff"/>
-  <circle cx="200" cy="150" r="36" stroke="#0B0F14" stroke-width="3" fill="#fff"/>
-  <circle cx="200" cy="150" r="22" stroke="#155EEF" stroke-width="3" fill="rgba(21,94,239,.12)"/>
-  <path d="M168 130c-30 8-48 28-52 58" stroke="#155EEF" stroke-width="3" stroke-linecap="round" fill="none"/>
-  <path d="M232 130c30 8 48 28 52 58" stroke="#155EEF" stroke-width="3" stroke-linecap="round" fill="none" opacity=".55"/>
-  <path d="M200 186v78" stroke="#0B0F14" stroke-width="3" stroke-linecap="round"/>
-  <text x="28" y="292" font-family="Inter,Arial,sans-serif" font-size="13" fill="#4B5563">Ball · socket · cuff arc</text>
-  <text x="28" y="36" font-family="Inter,Arial,sans-serif" font-size="12" font-weight="600" fill="#155EEF">SHOULDER</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="t d">
+  <title id="t">Labeled shoulder anatomy</title>
+  <desc id="d">Shoulder ball and socket with rotator cuff and labrum labeled</desc>
+  <rect width="640" height="420" rx="24" fill="#F3F5F7"/>
+  <text x="28" y="42" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="700" fill="#155EEF" letter-spacing="0.08em">SHOULDER — BALL AND SOCKET</text>
+
+  <!-- Scapula / socket -->
+  <path d="M90 120 c40-60 130-70 180-20 20 20 28 50 20 78 -50 10-100 4-140-20 -28-16-48-28-60-38 z" fill="#fff" stroke="#0B0F14" stroke-width="3"/>
+  <text x="110" y="145" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="600" fill="#0B0F14">Shoulder blade</text>
+  <text x="110" y="162" font-family="Inter,Arial,sans-serif" font-size="12" fill="#4B5563">(socket side)</text>
+
+  <!-- Labrum -->
+  <circle cx="250" cy="175" r="48" fill="none" stroke="#155EEF" stroke-width="7" opacity=".4"/>
+
+  <!-- Humeral head -->
+  <circle cx="250" cy="175" r="36" fill="#DBEAFE" stroke="#0B0F14" stroke-width="3"/>
+
+  <!-- Cuff arcs -->
+  <path d="M210 140 c-36 10-58 40-62 78" fill="none" stroke="#155EEF" stroke-width="6" stroke-linecap="round"/>
+  <path d="M290 140 c36 10 58 40 62 78" fill="none" stroke="#155EEF" stroke-width="6" stroke-linecap="round" opacity=".7"/>
+
+  <!-- Humerus shaft -->
+  <path d="M250 210 v150" stroke="#0B0F14" stroke-width="16" stroke-linecap="round"/>
+  <path d="M250 210 v150" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+  <text x="268" y="300" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="600" fill="#0B0F14">Humerus</text>
+  <text x="268" y="318" font-family="Inter,Arial,sans-serif" font-size="12" fill="#4B5563">(upper arm bone)</text>
+
+  <!-- Callouts -->
+  <path d="M250 145 L470 95" stroke="#155EEF" stroke-width="1.5"/>
+  <circle cx="250" cy="145" r="4" fill="#155EEF"/>
+  <rect x="470" y="70" width="150" height="52" rx="8" fill="#fff" stroke="#E5E9EE"/>
+  <text x="482" y="92" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700" fill="#155EEF">Rotator cuff</text>
+  <text x="482" y="110" font-family="Inter,Arial,sans-serif" font-size="12" fill="#4B5563">Muscles that lift/rotate</text>
+
+  <path d="M250 175 L470 175" stroke="#0B0F14" stroke-width="1.5"/>
+  <circle cx="250" cy="175" r="4" fill="#0B0F14"/>
+  <rect x="470" y="154" width="150" height="52" rx="8" fill="#fff" stroke="#E5E9EE"/>
+  <text x="482" y="176" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700" fill="#0B0F14">Humeral head</text>
+  <text x="482" y="194" font-family="Inter,Arial,sans-serif" font-size="12" fill="#4B5563">“Ball” of the shoulder</text>
+
+  <path d="M285 200 L470 250" stroke="#4B5563" stroke-width="1.5"/>
+  <rect x="470" y="228" width="150" height="52" rx="8" fill="#fff" stroke="#E5E9EE"/>
+  <text x="482" y="250" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700" fill="#0B0F14">Labrum</text>
+  <text x="482" y="268" font-family="Inter,Arial,sans-serif" font-size="12" fill="#4B5563">Rim that deepens socket</text>
+
+  <text x="28" y="392" font-family="Inter,Arial,sans-serif" font-size="12" fill="#6B7280">We repair cuff and labrum when tissue allows — or replace the joint (anatomic / reverse) when arthritis wins.</text>
 </svg>

@@ -1,12 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" fill="none" role="img" aria-labelledby="kneeTitle kneeDesc">
-  <title id="kneeTitle">Knee joint diagram</title>
-  <desc id="kneeDesc">Simplified knee showing femur, tibia, and meniscus regions</desc>
-  <rect width="400" height="320" rx="24" fill="#F3F5F7"/>
-  <path d="M170 40c-18 40-22 70-18 110h96c6-42 2-78-16-110-12-8-40-8-62 0z" stroke="#0B0F14" stroke-width="3" fill="#fff"/>
-  <path d="M160 170c-8 46-6 78 8 110 20 10 52 10 72 0 12-30 14-66 6-110H160z" stroke="#0B0F14" stroke-width="3" fill="#fff"/>
-  <path d="M175 168c20-14 40-14 58 0" stroke="#155EEF" stroke-width="4" stroke-linecap="round"/>
-  <path d="M178 178c18-8 34-8 50 0" stroke="#155EEF" stroke-width="3" stroke-linecap="round" opacity=".55"/>
-  <circle cx="204" cy="155" r="10" fill="#155EEF" opacity=".2" stroke="#155EEF" stroke-width="2"/>
-  <text x="28" y="292" font-family="Inter,Arial,sans-serif" font-size="13" fill="#4B5563">Femur · meniscus · tibia</text>
-  <text x="28" y="36" font-family="Inter,Arial,sans-serif" font-size="12" font-weight="600" fill="#155EEF">KNEE</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="t d">
+  <title id="t">Labeled knee anatomy</title>
+  <desc id="d">Front view of the knee with femur, meniscus, ACL, and tibia labeled</desc>
+  <rect width="640" height="420" rx="24" fill="#F3F5F7"/>
+  <text x="28" y="42" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="700" fill="#155EEF" letter-spacing="0.08em">KNEE — SIMPLIFIED FRONT VIEW</text>
+
+  <!-- Femur -->
+  <path d="M270 50 h100 v110 c0 18-18 34-50 34 s-50-16-50-34 z" fill="#fff" stroke="#0B0F14" stroke-width="3"/>
+  <text x="292" y="105" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="600" fill="#0B0F14">Femur</text>
+  <text x="278" y="124" font-family="Inter,Arial,sans-serif" font-size="12" fill="#4B5563">(thigh bone)</text>
+
+  <!-- Meniscus wedges -->
+  <path d="M278 198 c20-16 64-16 84 0 c-8 14-28 22-42 22 s-34-8-42-22 z" fill="#DBEAFE" stroke="#155EEF" stroke-width="3"/>
+  <path d="M278 198 c12 2 28 2 40 0" stroke="#155EEF" stroke-width="2" opacity=".5"/>
+
+  <!-- Tibia -->
+  <path d="M270 220 c32-12 68-12 100 0 v140 h-100 z" fill="#fff" stroke="#0B0F14" stroke-width="3"/>
+  <text x="295" y="300" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="600" fill="#0B0F14">Tibia</text>
+  <text x="278" y="318" font-family="Inter,Arial,sans-serif" font-size="12" fill="#4B5563">(shin bone)</text>
+
+  <!-- ACL line -->
+  <path d="M310 175 L350 230" stroke="#0B0F14" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="330" cy="202" r="3" fill="#0B0F14"/>
+
+  <!-- Callouts -->
+  <path d="M362 205 L470 120" stroke="#155EEF" stroke-width="1.5"/>
+  <circle cx="362" cy="205" r="4" fill="#155EEF"/>
+  <rect x="470" y="96" width="140" height="48" rx="8" fill="#fff" stroke="#E5E9EE"/>
+  <text x="482" y="116" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700" fill="#155EEF">Meniscus</text>
+  <text x="482" y="134" font-family="Inter,Arial,sans-serif" font-size="12" fill="#4B5563">Cushion / shock pad</text>
+
+  <path d="M330 202 L470 210" stroke="#0B0F14" stroke-width="1.5"/>
+  <rect x="470" y="190" width="140" height="48" rx="8" fill="#fff" stroke="#E5E9EE"/>
+  <text x="482" y="210" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700" fill="#0B0F14">ACL</text>
+  <text x="482" y="228" font-family="Inter,Arial,sans-serif" font-size="12" fill="#4B5563">Stability ligament</text>
+
+  <text x="28" y="392" font-family="Inter,Arial,sans-serif" font-size="12" fill="#6B7280">We operate on meniscus tears, ACL injuries, and worn-out joints (replacement).</text>
 </svg>
