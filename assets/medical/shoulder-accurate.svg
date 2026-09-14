@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" role="img" aria-labelledby="title desc">
+  <title id="title">Shoulder joint — labeled anatomy</title>
+  <desc id="desc">Anterior view. Articular surface of humeral head, greater tuberosity, rotator cuff inserting on greater tuberosity, labrum on glenoid.</desc>
+  <defs>
+    <linearGradient id="bone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F5E6D3"/>
+      <stop offset="55%" stop-color="#E8D4BE"/>
+      <stop offset="100%" stop-color="#D9C4A8"/>
+    </linearGradient>
+    <linearGradient id="cartilage" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFAF3"/>
+      <stop offset="100%" stop-color="#F0E0CC"/>
+    </linearGradient>
+    <linearGradient id="soft" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5BA3F5"/>
+      <stop offset="100%" stop-color="#2B6FDB"/>
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity=".12"/>
+    </filter>
+  </defs>
+  <rect width="960" height="720" fill="#FFFFFF"/>
+
+  <!-- Scapula body + glenoid (left) -->
+  <path d="M80 220
+           Q100 140 180 120
+           Q260 105 320 150
+           Q350 175 355 210
+           L340 280
+           Q300 320 240 340
+           Q160 360 100 320
+           Q70 280 80 220 Z"
+        fill="url(#bone)" stroke="#8B7355" stroke-width="1.5"/>
+  <!-- Acromion overhang -->
+  <path d="M280 130 Q360 115 430 140 Q450 150 445 165 Q400 155 340 160 Q300 165 280 145 Z"
+        fill="url(#bone)" stroke="#8B7355" stroke-width="1.3"/>
+  <!-- Coracoid hint -->
+  <path d="M300 175 Q330 155 355 175 Q340 195 310 190 Z" fill="url(#bone)" stroke="#8B7355" stroke-width="1"/>
+
+  <!-- Glenoid cavity (socket face) -->
+  <ellipse cx="355" cy="250" rx="28" ry="48" fill="#C9B08F" stroke="#8B7355" stroke-width="1.2"/>
+
+  <!-- Labrum ring around glenoid -->
+  <ellipse cx="355" cy="250" rx="36" ry="56" fill="none" stroke="url(#soft)" stroke-width="10" opacity=".9" filter="url(#softShadow)"/>
+  <ellipse cx="355" cy="250" rx="36" ry="56" fill="none" stroke="#93C5FD" stroke-width="3" opacity=".5"/>
+
+  <!-- Proximal humerus: shaft -->
+  <path d="M520 380
+           Q535 420 540 480
+           L555 680 L470 680
+           Q475 520 490 430
+           Q500 400 520 380 Z"
+        fill="url(#bone)" stroke="#8B7355" stroke-width="1.5"/>
+
+  <!-- Greater tuberosity — lateral bony prominence, NOT cartilage -->
+  <ellipse cx="555" cy="275" rx="48" ry="42" fill="#D4B896" stroke="#8B7355" stroke-width="1.5"/>
+  <!-- Texture hint on tuberosity (non-articular) -->
+  <circle cx="540" cy="265" r="2" fill="#B8956F" opacity=".5"/>
+  <circle cx="560" cy="280" r="2" fill="#B8956F" opacity=".45"/>
+  <circle cx="575" cy="268" r="1.5" fill="#B8956F" opacity=".4"/>
+  <circle cx="548" cy="290" r="1.8" fill="#B8956F" opacity=".4"/>
+
+  <!-- Humeral head ARTICULAR SURFACE — smooth cartilage, medial/facing glenoid -->
+  <ellipse cx="455" cy="250" rx="72" ry="78" fill="url(#cartilage)" stroke="#8B7355" stroke-width="1.5"/>
+  <!-- Highlight on articular cartilage to read as smooth surface -->
+  <ellipse cx="430" cy="230" rx="28" ry="36" fill="#FFFFFF" opacity=".35"/>
+  <!-- Anatomical neck step-off between articular surface and greater tuberosity -->
+  <path d="M510 210 Q525 250 515 300" fill="none" stroke="#A08968" stroke-width="2" stroke-dasharray="4 3"/>
+
+  <!-- Rotator cuff (supraspinatus) inserting on SUPERIOR facet of greater tuberosity -->
+  <path d="M300 155
+           Q380 125 470 145
+           Q520 155 545 200
+           Q555 220 550 245
+           Q530 230 510 225
+           Q470 210 420 200
+           Q350 185 300 175 Z"
+        fill="url(#soft)" stroke="#1D4ED8" stroke-width="1" opacity=".92" filter="url(#softShadow)"/>
+  <!-- Fiber striations -->
+  <path d="M340 165 Q420 150 500 175" fill="none" stroke="#93C5FD" stroke-width="1.5" opacity=".6"/>
+  <path d="M360 178 Q440 165 520 200" fill="none" stroke="#93C5FD" stroke-width="1.2" opacity=".45"/>
+  <!-- Clear insertion footprint on greater tuberosity -->
+  <ellipse cx="548" cy="235" rx="22" ry="12" fill="#1D4ED8" opacity=".85"/>
+
+  <!-- Labels -->
+  <g font-family="Inter,Arial,sans-serif" font-size="15" fill="#0B0F14">
+    <line x1="160" y1="200" x2="80" y2="100" stroke="#0B0F14" stroke-width="1.2"/>
+    <circle cx="160" cy="200" r="3.5" fill="#0B0F14"/>
+    <text x="48" y="90" font-weight="600">Scapula</text>
+    <text x="48" y="110" font-size="13" fill="#4B5563">shoulder blade</text>
+
+    <line x1="355" y1="300" x2="200" y2="380" stroke="#155EEF" stroke-width="1.3"/>
+    <circle cx="355" cy="300" r="3.5" fill="#155EEF"/>
+    <text x="48" y="385" font-weight="700" fill="#155EEF">Labrum</text>
+    <text x="48" y="405" font-size="13" fill="#4B5563">rim of the socket</text>
+
+    <line x1="420" y1="230" x2="280" y2="480" stroke="#0B0F14" stroke-width="1.2"/>
+    <circle cx="420" cy="230" r="3.5" fill="#0B0F14"/>
+    <text x="48" y="490" font-weight="600">Articular surface</text>
+    <text x="48" y="510" font-size="13" fill="#4B5563">of humeral head</text>
+
+    <line x1="575" y1="275" x2="720" y2="275" stroke="#0B0F14" stroke-width="1.2"/>
+    <circle cx="575" cy="275" r="3.5" fill="#0B0F14"/>
+    <text x="730" y="272" font-weight="600">Greater tuberosity</text>
+    <text x="730" y="292" font-size="13" fill="#4B5563">bony insertion site</text>
+
+    <line x1="500" y1="170" x2="700" y2="120" stroke="#155EEF" stroke-width="1.3"/>
+    <circle cx="500" cy="170" r="3.5" fill="#155EEF"/>
+    <text x="710" y="115" font-weight="700" fill="#155EEF">Rotator cuff</text>
+    <text x="710" y="135" font-size="13" fill="#4B5563">inserts on greater</text>
+    <text x="710" y="153" font-size="13" fill="#4B5563">tuberosity</text>
+
+    <line x1="520" y1="520" x2="700" y2="560" stroke="#0B0F14" stroke-width="1.2"/>
+    <circle cx="520" cy="520" r="3.5" fill="#0B0F14"/>
+    <text x="710" y="565" font-weight="600">Humerus</text>
+    <text x="710" y="585" font-size="13" fill="#4B5563">upper arm bone</text>
+  </g>
+
+  <text x="48" y="48" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700" fill="#155EEF" letter-spacing=".06em">SHOULDER — ANTERIOR VIEW</text>
+</svg>

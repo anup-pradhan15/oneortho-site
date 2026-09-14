@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" role="img" aria-labelledby="title desc">
+  <title id="title">Knee joint — labeled anatomy</title>
+  <desc id="desc">Anterior view with patella removed. ACL attaches on the medial wall of the lateral femoral condyle.</desc>
+  <defs>
+    <linearGradient id="bone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F5E6D3"/>
+      <stop offset="55%" stop-color="#E8D4BE"/>
+      <stop offset="100%" stop-color="#D9C4A8"/>
+    </linearGradient>
+    <linearGradient id="cart" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F8F1E8"/>
+      <stop offset="100%" stop-color="#EAD9C4"/>
+    </linearGradient>
+    <linearGradient id="soft" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5BA3F5"/>
+      <stop offset="100%" stop-color="#2B6FDB"/>
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity=".12"/>
+    </filter>
+  </defs>
+  <rect width="960" height="720" fill="#FFFFFF"/>
+
+  <!-- FEMUR shaft -->
+  <path d="M390 40 L570 40 Q590 40 590 70 L590 180 Q590 200 560 215
+           L520 235 Q505 242 505 255 L505 268
+           L455 268 L455 255 Q455 242 440 235 L400 215 Q370 200 370 180 L370 70 Q370 40 390 40 Z"
+        fill="url(#bone)" stroke="#8B7355" stroke-width="1.5"/>
+
+  <!-- Lateral femoral condyle (patient's lateral = viewer's right for right knee anterior... 
+       Standard textbook anterior RIGHT knee: medial is on viewer's RIGHT, lateral on viewer's LEFT.
+       We'll draw RIGHT knee: medial condyle on right side of image, lateral on left. -->
+  <!-- Lateral condyle (LEFT of image) -->
+  <ellipse cx="420" cy="310" rx="78" ry="95" fill="url(#cart)" stroke="#8B7355" stroke-width="1.5"/>
+  <!-- Medial condyle (RIGHT of image) -->
+  <ellipse cx="540" cy="312" rx="82" ry="98" fill="url(#cart)" stroke="#8B7355" stroke-width="1.5"/>
+
+  <!-- Intercondylar notch: cut between condyles - darker recess -->
+  <path d="M468 250 Q480 290 480 340 Q480 290 492 250 Z" fill="#C4A882" opacity=".85"/>
+  <!-- Medial WALL of lateral condyle (the vertical face of lateral condyle facing the notch) -->
+  <path id="latWall" d="M468 255 L468 355" fill="none"/>
+  <path d="M455 248 Q468 280 468 350 Q460 320 455 280 Z" fill="#B8956F" opacity=".55"/>
+
+  <!-- Menisci on tibia -->
+  <path d="M350 410 Q420 385 470 400 Q420 430 350 418 Z" fill="url(#soft)" stroke="#1D4ED8" stroke-width="1" filter="url(#softShadow)"/>
+  <path d="M490 400 Q540 385 610 410 Q580 430 490 418 Z" fill="url(#soft)" stroke="#1D4ED8" stroke-width="1" filter="url(#softShadow)"/>
+
+  <!-- Tibia -->
+  <path d="M340 420 Q420 400 480 405 Q540 400 620 420
+           L630 700 L330 700 Z" fill="url(#bone)" stroke="#8B7355" stroke-width="1.5"/>
+  <!-- Tibial spines / plateau detail -->
+  <path d="M455 408 L470 430 L490 408" fill="none" stroke="#A08968" stroke-width="2"/>
+
+  <!-- Fibula (lateral, thin bone) - left side for right knee -->
+  <path d="M300 455 Q315 450 322 470 L335 700 L290 700 Q288 520 300 455 Z" fill="url(#bone)" stroke="#8B7355" stroke-width="1.2"/>
+
+  <!-- ACL: from medial wall of LATERAL femoral condyle (left condyle's notch-facing wall)
+       down anteromedially to anterior tibial intercondylar area -->
+  <path d="M470 275
+           C 478 300, 490 330, 498 360
+           C 505 385, 508 400, 500 418"
+        fill="none" stroke="url(#soft)" stroke-width="14" stroke-linecap="round" opacity=".95"/>
+  <path d="M470 275
+           C 478 300, 490 330, 498 360
+           C 505 385, 508 400, 500 418"
+        fill="none" stroke="#93C5FD" stroke-width="5" stroke-linecap="round" opacity=".55"/>
+  <!-- Attachment blob on medial wall of lateral condyle -->
+  <ellipse cx="470" cy="275" rx="10" ry="14" fill="#2563EB"/>
+  <!-- Tibial attachment -->
+  <ellipse cx="500" cy="418" rx="12" ry="7" fill="#2563EB"/>
+
+  <!-- Labels -->
+  <g font-family="Inter,Arial,sans-serif" font-size="15" fill="#0B0F14">
+    <!-- Femur -->
+    <line x1="520" y1="100" x2="700" y2="70" stroke="#0B0F14" stroke-width="1.2"/>
+    <circle cx="520" cy="100" r="3.5" fill="#0B0F14"/>
+    <text x="710" y="68" font-weight="600">Femur</text>
+    <text x="710" y="88" font-size="13" fill="#4B5563">thigh bone</text>
+
+    <!-- Lateral femoral condyle -->
+    <line x1="360" y1="300" x2="200" y2="250" stroke="#0B0F14" stroke-width="1.2"/>
+    <circle cx="360" cy="300" r="3.5" fill="#0B0F14"/>
+    <text x="48" y="245" font-weight="600">Lateral femoral</text>
+    <text x="48" y="265" font-weight="600">condyle</text>
+
+    <!-- Medial femoral condyle -->
+    <line x1="600" y1="300" x2="740" y2="250" stroke="#0B0F14" stroke-width="1.2"/>
+    <circle cx="600" cy="300" r="3.5" fill="#0B0F14"/>
+    <text x="750" y="245" font-weight="600">Medial femoral</text>
+    <text x="750" y="265" font-weight="600">condyle</text>
+
+    <!-- Intercondylar notch -->
+    <line x1="480" y1="255" x2="480" y2="175" stroke="#0B0F14" stroke-width="1.2"/>
+    <circle cx="480" cy="255" r="3.5" fill="#0B0F14"/>
+    <text x="420" y="165" font-weight="600" text-anchor="middle">Intercondylar notch</text>
+
+    <!-- ACL -->
+    <line x1="485" y1="320" x2="700" y2="340" stroke="#155EEF" stroke-width="1.4"/>
+    <circle cx="485" cy="320" r="3.5" fill="#155EEF"/>
+    <text x="710" y="335" font-weight="700" fill="#155EEF">ACL</text>
+    <text x="710" y="355" font-size="12" fill="#4B5563">femoral attachment on</text>
+    <text x="710" y="372" font-size="12" fill="#4B5563">medial wall of lateral</text>
+    <text x="710" y="389" font-size="12" fill="#4B5563">femoral condyle</text>
+
+    <!-- Meniscus -->
+    <line x1="380" y1="410" x2="200" y2="480" stroke="#155EEF" stroke-width="1.2"/>
+    <circle cx="380" cy="410" r="3.5" fill="#155EEF"/>
+    <text x="48" y="485" font-weight="700" fill="#155EEF">Meniscus</text>
+    <text x="48" y="505" font-size="13" fill="#4B5563">cushion on tibia</text>
+
+    <!-- Tibia -->
+    <line x1="520" y1="560" x2="700" y2="560" stroke="#0B0F14" stroke-width="1.2"/>
+    <circle cx="520" cy="560" r="3.5" fill="#0B0F14"/>
+    <text x="710" y="565" font-weight="600">Tibia</text>
+    <text x="710" y="585" font-size="13" fill="#4B5563">shin bone</text>
+
+    <!-- Fibula -->
+    <line x1="310" y1="560" x2="160" y2="600" stroke="#0B0F14" stroke-width="1.2"/>
+    <circle cx="310" cy="560" r="3.5" fill="#0B0F14"/>
+    <text x="48" y="605" font-weight="600">Fibula</text>
+  </g>
+
+  <text x="48" y="48" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700" fill="#155EEF" letter-spacing=".06em">KNEE — ANTERIOR VIEW (PATELLA REMOVED)</text>
+</svg>
