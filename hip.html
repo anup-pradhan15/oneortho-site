@@ -165,15 +165,18 @@ nav.primary-nav a.active{color:var(--ink)}
 
 
 /* Center content to match homepage column */
-.hero,.section,.door-inner,footer .inner,.grid,.steps,.cta-inner,.hero-inner,.quote-inner{
+.section,.door-inner,footer .inner,.grid,.steps,.cta-inner,.hero-inner,.quote-inner{
   margin-left:auto !important;
   margin-right:auto !important;
   width:100%;
   box-sizing:border-box;
 }
-.hero,.section,.door-inner,footer .inner,.grid,.steps{
+.section,.door-inner,footer .inner,.grid,.steps{
   max-width:1160px !important;
 }
+/* Keep .hero centered but do NOT clamp full-bleed .door */
+.hero{margin-left:auto;margin-right:auto;max-width:1160px;width:100%;box-sizing:border-box}
+.door{width:100%}
 .hero-inner{max-width:720px !important;}
 .section.narrow,.section#faq{max-width:800px !important;}
 
