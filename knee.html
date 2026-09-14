@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Knee Surgeon in Dallas | One Ortho · Dr. Anup Pradhan</title>
 <meta property="og:title" content="Knee Surgeon in Dallas | One Ortho">
 <meta property="og:description" content="Elite knee surgery in Dallas — clear answers, honest care. Dr. Anup Pradhan.">
@@ -94,6 +94,48 @@ footer strong{color:#fff;display:block;margin-bottom:6px}
 
 .header-phone{font-weight:700;color:var(--ink)!important;white-space:nowrap}
 @media(max-width:900px){.header-phone{display:none}}
+
+/* iOS / responsive hardening */
+html{ -webkit-text-size-adjust:100%; text-size-adjust:100%; }
+*,*::before,*::after{ box-sizing:border-box; }
+body{ overflow-x:hidden; width:100%; }
+img,svg,video{ max-width:100%; height:auto; }
+.section,.hero,.door,.quote-block,.muted,.topbar-inner,footer .inner{ width:100%; }
+input,select,textarea,button{ font-size:16px; } /* prevent iOS input zoom */
+.btn{ min-height:44px; padding:12px 18px; }
+.header-phone{ min-height:44px; display:inline-flex; align-items:center; }
+@supports(padding:max(0px)){
+  .topbar-inner, header, .section, .hero, footer .inner, .door-inner{ padding-left:max(var(--pad-x), env(safe-area-inset-left)); padding-right:max(var(--pad-x), env(safe-area-inset-right)); }
+}
+@media (max-width:900px){
+  header{ padding:12px 16px; gap:12px; }
+  header img{ height:24px; }
+  nav{ gap:12px; }
+  nav .hide{ display:none !important; }
+  .hero{ grid-template-columns:1fr !important; gap:28px !important; padding:36px 16px 32px !important; }
+  .hero-photo img{ aspect-ratio:4/5; max-height:420px; width:100%; object-fit:cover; }
+  .focus,.two,.values,.grid,.grid3,.steps,.creds,.diagram-row{ grid-template-columns:1fr !important; }
+  .focus{ padding:24px !important; border-radius:16px !important; }
+  .section{ padding:40px 16px !important; }
+  .quote-block{ padding:40px 16px !important; }
+  .door-inner{ padding:20px 16px !important; flex-direction:column; align-items:flex-start !important; }
+  .cta-row{ flex-direction:column; align-items:stretch; }
+  .cta-row .btn{ width:100%; justify-content:center; }
+  .trust{ gap:8px; }
+  .pill{ font-size:11px; }
+  .intake{ padding:20px !important; }
+  .intake-grid{ grid-template-columns:1fr !important; }
+  footer .inner{ flex-direction:column; gap:20px; padding:0; }
+  footer{ padding:32px 16px !important; }
+  h1{ font-size:clamp(32px,9vw,44px) !important; }
+  .topbar-inner{ padding:10px 16px; font-size:12px; }
+  .diagram-row{ display:grid !important; gap:12px !important; }
+}
+@media (max-width:480px){
+  .badge{ left:12px; right:12px; bottom:12px; }
+  .pricebox{ flex-direction:column; align-items:flex-start; }
+}
+
 </style>
 <script type="application/ld+json">
 {
@@ -326,14 +368,27 @@ footer strong{color:#fff;display:block;margin-bottom:6px}
         <a class="btn-text" href="/intake">Full patient intake →</a>
       </div>
     </form>
-    <p class="note">Submits through Netlify Forms (same appointment-request channel as the live site). Full chart intake stays at /intake.</p>
+    
   </div>
 </section>
 <footer>
   <div class="inner">
-    <div><strong>One Ortho</strong>12222 N Central Expy, Ste 130<br>Dallas, TX 75243</div>
-    <div><strong>Contact</strong>(972) 457-1530</div>
-    <div><strong>Dr. Anup Pradhan</strong>Elite results · Clear answers · Honest care</div>
+    <div>
+      <strong>One Ortho</strong>
+      <div>12222 N Central Expy, Ste 130</div>
+      <div>Dallas, TX 75243</div>
+    </div>
+    <div>
+      <strong>Contact</strong>
+      <div><a href="tel:+19724571530" style="color:#93C5FD;font-weight:600;text-decoration:none">(972) 457-1530</a></div>
+      <div>North Dallas · Park Cities · Plano</div>
+    </div>
+    <div>
+      <strong>Patients</strong>
+      <div><a href="/#intake" style="color:#93C5FD;text-decoration:none">Request a consult</a></div>
+      <div><a href="/intake" style="color:#93C5FD;text-decoration:none">Full patient intake</a></div>
+      <div><a href="/second-opinion.html" style="color:#93C5FD;text-decoration:none">Second opinion</a></div>
+    </div>
   </div>
 </footer>
 </body>

@@ -2,12 +2,12 @@
 <html lang="en-US">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Patient Intake | One Ortho · Before Your Visit</title>
 <meta name="description" content="Patient intake form for One Ortho. Complete this before your scheduled visit with Dr. Anup Pradhan, board-certified orthopedic surgeon in Dallas.">
 <link rel="canonical" href="https://oneortho.com/intake.html">
 <meta name="robots" content="noindex,follow">
-<meta name="theme-color" content="#0E1B2C">
+
 <meta http-equiv="content-language" content="en-US">
 
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -21,47 +21,66 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="shared/site.css?v=6">
-<link rel="stylesheet" href="shared/intake.css?v=6">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0B0F14">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0B0F14 !important;
+  --navy-soft:#1A2330 !important;
+  --accent:#155EEF !important;
+  --accent-hover:#1249C7 !important;
+  --bg-elev:#F3F5F7 !important;
+  --bg-deep:#E8ECF0 !important;
+  --rule:#E5E9EE !important;
+  --ink:#0B0F14 !important;
+  --ink-soft:#4B5563 !important;
+  --serif:"Instrument Serif",Georgia,serif !important;
+  --sans:Inter,-apple-system,BlinkMacSystemFont,sans-serif !important;
+}
+html{-webkit-text-size-adjust:100%}
+body{overflow-x:hidden;font-family:var(--sans)}
+input,select,textarea,button{font-size:16px !important}
+.oo-topbar{background:#0B0F14;color:#fff;font-size:13px}
+.oo-topbar__inner{max-width:1160px;margin:0 auto;padding:10px max(16px, env(safe-area-inset-left));display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
+.oo-topbar a{color:#93C5FD;font-weight:600;text-decoration:none}
+.oo-header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px max(16px, env(safe-area-inset-left));border-bottom:1px solid #E5E9EE;background:#fff;position:sticky;top:0;z-index:50}
+.oo-header img{height:26px;width:auto}
+.oo-header nav{display:flex;gap:14px;align-items:center;font-size:14px;font-weight:500;color:#4B5563;flex-wrap:wrap;justify-content:flex-end}
+.oo-header nav a{color:inherit;text-decoration:none}
+.oo-btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:11px 16px;border-radius:999px;background:#0B0F14;color:#fff;font-weight:600;font-size:14px;text-decoration:none;border:0}
+.oo-phone{font-weight:700;color:#0B0F14;text-decoration:none;white-space:nowrap}
+.oo-footer{background:#0B0F14;color:#9AA3AE;padding:36px max(16px, env(safe-area-inset-left));font-size:14px;margin-top:48px}
+.oo-footer__inner{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.oo-footer strong{display:block;color:#fff;margin-bottom:8px}
+.oo-footer a{color:#93C5FD;text-decoration:none}
+.page-hero .display,h1.display{font-family:var(--serif)!important;letter-spacing:-.02em}
+@media(max-width:800px){
+  .oo-header nav .hide{display:none}
+  .oo-footer__inner{grid-template-columns:1fr}
+  .site-header,.mobile-nav{display:none !important} /* hide old chrome if leftover */
+}
+</style>
+
+<link rel="stylesheet" href="shared/site.css?v=7">
+<link rel="stylesheet" href="shared/intake.css?v=7">
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to content</a>
 
-<!-- Header -->
-<header class="site-header">
-  <div class="site-header__inner">
-    <a aria-label='One Ortho — home' class='site-header__logo' href='/'><img src="assets/logo-wordmark.png" alt="One Ortho" width="156" height="29"></a>
-    <nav class="site-nav" aria-label="Primary">
-      <a href='/#specialties'>Specialties</a>
-      <a href='/about'>About</a>
-      <a href='/#getting-started'>Patient Info</a>
-      <a href='/contact'>Contact</a>
-    </nav>
-    <div class="site-header__right">
-      <a class="tel-link" href="tel:+19724571530">(972) 457-1530</a>
-      <button class="btn btn--primary" data-open-intake type="button">Request an Appointment</button>
-      <a class="tel-icon" href="tel:+19724571530" aria-label="Call (972) 457-1530"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
-      <button class="nav-toggle" data-mobile-nav-toggle type="button" aria-controls="mobile-nav" aria-expanded="false" aria-label="Open menu"><span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span></button>
-    </div>
-  </div>
+<div class="oo-topbar"><div class="oo-topbar__inner"><span>North Dallas · Orthopedic surgery</span><a href="tel:+19724571530">Call (972) 457-1530</a></div></div>
+<header class="oo-header">
+  <a href="/"><img src="/assets/logo-wordmark.png" alt="One Ortho"></a>
+  <nav>
+    <a class="hide" href="/knee.html">Knee</a>
+    <a class="hide" href="/hip.html">Hip</a>
+    <a class="hide" href="/shoulder.html">Shoulder</a>
+    <a href="/second-opinion.html">Second opinion</a>
+    <a class="oo-phone" href="tel:+19724571530">(972) 457-1530</a>
+    <a class="oo-btn" href="/#intake">Request a consult</a>
+  </nav>
 </header>
-
-<div class="mobile-nav" id="mobile-nav" data-mobile-nav>
-  <div class="mobile-nav__inner">
-    <nav class="mobile-nav__links" aria-label="Mobile primary">
-      <a href='/#specialties'>Specialties</a>
-      <a href='/about'>About</a>
-      <a href='/#getting-started'>Patient Info</a>
-      <a href='/contact'>Contact</a>
-      <a href='/traveling'>Traveling to Dallas</a>
-      <a href='/intake'>Patient Intake Form</a>
-    </nav>
-    <div class="mobile-nav__cta">
-      <button class="btn btn--primary" data-open-intake type="button">Request an Appointment</button>
-      <a class="btn btn--ghost" href="tel:+19724571530">Call (972) 457-1530</a>
-    </div>
-  </div>
-</div>
 
 <main id="main">
 
@@ -608,57 +627,13 @@
 </main>
 
 <!-- FOOTER -->
-<footer class="site-footer">
-  <div class="site-footer__inner">
-    <div class="site-footer__top">
-      <div class="site-footer__brand">
-        <img class="site-footer__logo-img" src="assets/logo-wordmark.png" alt="One Ortho" width="156" height="29">
-        <p>Independent orthopedic surgery.<br>North Dallas, since 2012.</p>
-        <p style="margin-top:20px"><a class="tel" href="tel:+19724571530">(972) 457-1530</a></p>
-        <p>12222 N Central Expy, Ste 130<br>Dallas, TX 75243</p>
-      </div>
-      <div>
-        <h4>Specialties</h4>
-        <ul>
-          <li><a href='/specialties/sports-medicine'>Sports Medicine</a></li>
-          <li><a href='/specialties/joint-preservation'>Joint Preservation</a></li>
-          <li><a href='/specialties/joint-replacement'>Joint Replacement</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Procedures</h4>
-        <ul>
-          <li><a href='/procedures/acl-reconstruction'>ACL Reconstruction</a></li>
-          <li><a href='/procedures/meniscus-repair'>Meniscus Repair</a></li>
-          <li><a href='/procedures/rotator-cuff-repair'>Rotator Cuff Repair</a></li><li><a href='/procedures/hip-arthroscopy'>Hip Arthroscopy</a></li>
-          <li><a href='/procedures/knee-replacement'>Knee Replacement</a></li>
-          <li><a href='/procedures/hip-replacement'>Hip Replacement</a></li>
-          <li><a href='/procedures/cartilage-restoration'>Cartilage Restoration</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Practice</h4>
-        <ul>
-          <li><a href='/about'>About Dr. Pradhan</a></li>
-          <li><a href='/contact'>Contact &amp; Location</a></li><li><a href='/traveling'>Traveling to Dallas</a></li>
-          <li><a href="#" data-open-intake>Request an Appointment</a></li>
-          <li><a href='/intake'>Patient Intake Form</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Get in touch</h4>
-        <ul>
-          <li><a href="tel:+19724571530">(972) 457-1530</a></li>
-          <li><a href="https://maps.google.com/?q=12222+N+Central+Expy+Suite+130+Dallas+TX+75243" target="_blank" rel="noopener">Directions</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="site-footer__bottom">
-      <div>© <span data-year>2026</span> One Ortho. All rights reserved.</div>
-      <div>Anup Pradhan, MD · Board-certified orthopedic surgeon</div>
-    </div>
-  </div>
-</footer>
+
+<footer class="oo-footer"><div class="oo-footer__inner">
+  <div><strong>One Ortho</strong><div>12222 N Central Expy, Ste 130</div><div>Dallas, TX 75243</div></div>
+  <div><strong>Contact</strong><div><a href="tel:+19724571530">(972) 457-1530</a></div><div>North Dallas · Park Cities · Plano</div></div>
+  <div><strong>Patients</strong><div><a href="/#intake">Request a consult</a></div><div><a href="/intake">Full patient intake</a></div><div><a href="/second-opinion.html">Second opinion</a></div></div>
+</div></footer>
+
 
 <!-- Intake (appointment-request) modal — same component as elsewhere on the site -->
 <div class="intake-modal" id="intake-modal" role="dialog" aria-modal="true" aria-labelledby="intake-title">
