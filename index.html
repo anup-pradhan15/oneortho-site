@@ -107,6 +107,14 @@ footer strong{color:#fff;display:block;margin-bottom:8px;font-weight:600}
 .diagram img{display:block;width:100%;height:auto}
 @media(max-width:700px){.intake-grid{grid-template-columns:1fr}}
 
+
+.topbar{background:var(--ink);color:#fff;font-size:13px}
+.topbar-inner{max-width:1160px;margin:0 auto;padding:10px var(--pad-x);display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap}
+.topbar a{color:#93C5FD;font-weight:600;text-decoration:none}
+.topbar a:hover{text-decoration:underline}
+.header-phone{font-weight:700;color:var(--ink) !important;white-space:nowrap}
+.header-phone:hover{color:var(--accent) !important}
+@media(max-width:900px){.header-phone{display:none}}
 </style>
 <script type="application/ld+json">
 {
@@ -172,12 +180,17 @@ footer strong{color:#fff;display:block;margin-bottom:8px;font-weight:600}
     <a class="hide" href="knee.html">Knee</a>
     <a class="hide" href="hip.html">Hip</a>
     <a class="hide" href="shoulder.html">Shoulder</a>
-    <a class="hide" href="#care">Care</a>
-    <a class="hide" href="#about">About</a>
     <a href="second-opinion.html">Second opinion</a>
-    <a class="btn btn-primary" href="tel:+19724571530">Request a consult</a>
+    <a class="header-phone" href="tel:+19724571530">(972) 457-1530</a>
+    <a class="btn btn-primary" href="#intake">Request a consult</a>
   </nav>
 </header>
+<div class="topbar">
+  <div class="topbar-inner">
+    <span>North Dallas · Orthopedic surgery</span>
+    <a href="tel:+19724571530"><strong>Call (972) 457-1530</strong></a>
+  </div>
+</div>
 
 <section class="hero">
   <div>
@@ -185,8 +198,8 @@ footer strong{color:#fff;display:block;margin-bottom:8px;font-weight:600}
     <h1>Elite results. Clear answers. Honest care.</h1>
     <p class="lede">Dr. Anup Pradhan treats every knee, hip, and shoulder decision the way he’d want for his own family — world-class surgery when you need it, and a doctor who still looks you in the eye.</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="tel:+19724571530">Request a consult</a>
-      <a class="btn btn-ghost" href="#care">How we care</a>
+      <a class="btn btn-primary" href="#intake">Request a consult</a>
+      <a class="btn btn-ghost" href="tel:+19724571530">Call (972) 457-1530</a>
       <a class="btn-text" href="second-opinion.html">Need a second opinion?</a>
     </div>
     <div class="trust">
@@ -223,9 +236,9 @@ footer strong{color:#fff;display:block;margin-bottom:8px;font-weight:600}
 
 <section class="section" style="padding-top:24px;padding-bottom:0">
   <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px" class="diagram-row">
-    <a href="knee.html" class="diagram"><img src="assets/diagram-knee.svg" alt="Knee surgery in Dallas — joint diagram" width="400" height="320" loading="lazy"></a>
-    <a href="hip.html" class="diagram"><img src="assets/diagram-hip.svg" alt="Hip surgery in Dallas — joint diagram" width="400" height="320" loading="lazy"></a>
-    <a href="shoulder.html" class="diagram"><img src="assets/diagram-shoulder.svg" alt="Shoulder surgery in Dallas — joint diagram" width="400" height="320" loading="lazy"></a>
+    <a href="knee.html" class="diagram"><img src="assets/diagram-knee.png" alt="Knee surgery in Dallas — joint diagram" width="400" height="320" loading="lazy"></a>
+    <a href="hip.html" class="diagram"><img src="assets/diagram-hip.png" alt="Hip surgery in Dallas — joint diagram" width="400" height="320" loading="lazy"></a>
+    <a href="shoulder.html" class="diagram"><img src="assets/diagram-shoulder.png" alt="Shoulder surgery in Dallas — joint diagram" width="400" height="320" loading="lazy"></a>
   </div>
 </section>
 
@@ -267,7 +280,7 @@ footer strong{color:#fff;display:block;margin-bottom:8px;font-weight:600}
     <div class="panel">
       <h2>For physicians</h2>
       <p class="intro">Send complex knees, shoulders, and hips — or patients who need a serious second look before an operation.</p>
-      <a class="btn btn-primary" href="tel:+19724571530">Refer a patient</a>
+      <a class="btn btn-primary" href="#intake">Refer a patient</a>
       <p style="margin-top:16px;font-size:14px;color:var(--ink-soft)">We close the loop after the consult. Records coordinated by our team.</p>
     </div>
   </div>

@@ -87,10 +87,13 @@ footer strong{color:#fff;display:block;margin-bottom:6px}
 .intake .full{grid-column:1/-1}
 .intake .actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:14px}
 .intake .note{font-size:12px;color:var(--ink-mute);margin-top:10px}
-.diagram{margin:8px 0 0;border-radius:20px;overflow:hidden;border:1px solid var(--line)}
+.diagram{margin:8px 0 16px;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:#fff}
+.diagram img{display:block;width:100%;height:auto;object-fit:contain;background:#fff}
 .diagram img{display:block;width:100%;height:auto}
 @media(max-width:700px){.intake-grid{grid-template-columns:1fr}}
 
+.header-phone{font-weight:700;color:var(--ink)!important;white-space:nowrap}
+@media(max-width:900px){.header-phone{display:none}}
 </style>
 <script type="application/ld+json">
 {
@@ -199,11 +202,12 @@ footer strong{color:#fff;display:block;margin-bottom:6px}
 <header>
   <a href="index.html"><img src="logo-wordmark.png" alt="One Ortho"></a>
   <nav>
-    <a class="hide active" href="knee.html">Knee</a>
-    <a class="hide " href="hip.html">Hip</a>
-    <a class="hide " href="shoulder.html">Shoulder</a>
+    <a class="hide" href="knee.html">Knee</a>
+    <a class="hide" href="hip.html">Hip</a>
+    <a class="hide" href="shoulder.html">Shoulder</a>
     <a href="second-opinion.html">Second opinion</a>
-    <a class="btn btn-primary" href="tel:+19724571530">Request a consult</a>
+    <a class="header-phone" href="tel:+19724571530" style="font-weight:700;color:var(--ink)">(972) 457-1530</a>
+    <a class="btn btn-primary" href="#intake">Request a consult</a>
   </nav>
 </header>
 
@@ -212,7 +216,8 @@ footer strong{color:#fff;display:block;margin-bottom:6px}
   <h1>Elite knee surgery. Clear answers.</h1>
   <p class="lede">Meniscus repair, ACL reconstruction, and knee replacement — decided by your demand level and imaging together, not an MRI in a vacuum.</p>
   <div class="cta-row">
-    <a class="btn btn-primary" href="tel:+19724571530">Request a consult</a>
+    <a class="btn btn-primary" href="#intake">Request a consult</a>
+    <a class="btn btn-ghost" href="tel:+19724571530">Call (972) 457-1530</a>
     <a class="btn btn-accent" href="second-opinion.html">Surgical second opinion</a>
   </div>
   <div class="trust">
@@ -245,7 +250,7 @@ footer strong{color:#fff;display:block;margin-bottom:6px}
 
 <section class="section">
   <h2>What we operate on</h2>
-  <div class="diagram"><img src="assets/diagram-knee.svg" alt="Knee joint diagram — femur, meniscus, tibia" width="960" height="768" loading="lazy"></div>
+  <div class="diagram"><img src="assets/diagram-knee.png" alt="Knee joint diagram — femur, meniscus, tibia" width="960" height="768" loading="lazy"></div>
   <p class="intro">Three operations define most of the knee work here.</p>
   <div class="grid"><article class="card"><h3>Meniscus repair / surgery</h3><p>Save tissue when the tear pattern allows. Trim when repair won’t hold. Often among the better-tolerated knee operations — still matched to your demand level.</p>
         <p style="margin-top:12px"><strong style="color:var(--ink);font-size:13px">Recovery:</strong> <span>Some patients bounce back within about a week; higher-demand return takes longer and follows healing.</span></p>

@@ -75,6 +75,8 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(36px,4.8vw,52px);lin
 .diagram img{display:block;width:100%;height:auto}
 @media(max-width:700px){.intake-grid{grid-template-columns:1fr}}
 
+.header-phone{font-weight:700;color:var(--ink)!important;white-space:nowrap}
+@media(max-width:900px){.header-phone{display:none}}
 </style>
 <script type="application/ld+json">
 {
@@ -169,7 +171,14 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(36px,4.8vw,52px);lin
 <body>
 <header>
   <a href="index.html"><img src="logo-wordmark.png" alt="One Ortho"></a>
-  <a class="btn btn-accent" href="tel:+19724571530">Book second opinion</a>
+  <nav>
+    <a class="hide" href="knee.html">Knee</a>
+    <a class="hide" href="hip.html">Hip</a>
+    <a class="hide" href="shoulder.html">Shoulder</a>
+    <a href="second-opinion.html">Second opinion</a>
+    <a class="header-phone" href="tel:+19724571530" style="font-weight:700;color:var(--ink)">(972) 457-1530</a>
+    <a class="btn btn-primary" href="#intake">Request a consult</a>
+  </nav>
 </header>
 
 <section class="hero">
@@ -179,7 +188,7 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(36px,4.8vw,52px);lin
     <p class="lede">A fellowship-trained orthopedic surgeon reviews your imaging and options — then tells you yes, no, or not yet. In plain language. In writing.</p>
     <div class="pricebox"><b>$750</b><span>flat cash · HSA/FSA</span></div>
     <div class="cta-row">
-      <a class="btn btn-accent" href="tel:+19724571530">Start intake — (972) 457-1530</a>
+      <a class="btn btn-accent" href="#intake">Start intake</a>
       <a class="btn btn-ghost" href="#included">What’s included</a>
     </div>
     <div class="proof">
