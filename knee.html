@@ -75,7 +75,7 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(36px,4.8vw,52px);lin
 footer{background:var(--ink);color:#9AA3AE;padding:40px var(--pad-x);font-size:14px;margin-top:48px}
 footer .inner{max-width:960px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 footer strong{color:#fff;display:block;margin-bottom:6px}
-@media(max-width:800px){.grid,.steps{grid-template-columns:1fr} nav .hide{display:none}}
+@media(max-width:800px){.grid,.steps{grid-template-columns:1fr}}
 
 .intake{background:var(--bg-mute);border:1px solid var(--line);border-radius:20px;padding:28px;margin-top:8px}
 .intake h2{font-family:var(--serif);font-size:28px;letter-spacing:-.02em;margin-bottom:8px}
@@ -111,7 +111,6 @@ input,select,textarea,button{ font-size:16px; } /* prevent iOS input zoom */
   header{ padding:12px 16px; gap:12px; }
   header img{ height:24px; }
   nav{ gap:12px; }
-  nav .hide{ display:none !important; }
   .hero{ grid-template-columns:1fr !important; gap:28px !important; padding:36px 16px 32px !important; }
   .hero-photo img{ aspect-ratio:4/5; max-height:420px; width:100%; object-fit:cover; }
   .focus,.two,.values,.grid,.grid3,.steps,.creds,.diagram-row{ grid-template-columns:1fr !important; }
@@ -134,6 +133,34 @@ input,select,textarea,button{ font-size:16px; } /* prevent iOS input zoom */
 @media (max-width:480px){
   .badge{ left:12px; right:12px; bottom:12px; }
   .pricebox{ flex-direction:column; align-items:flex-start; }
+}
+
+
+/* shared constrained header + hamburger */
+header{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);z-index:50;display:block;padding:0}
+.header-inner{max-width:1160px;margin:0 auto;padding:14px var(--pad-x);display:flex;align-items:center;justify-content:space-between;gap:20px}
+header img{height:26px;width:auto;flex-shrink:0}
+nav.primary-nav{display:flex;gap:18px;align-items:center;font-size:14px;color:var(--ink-soft);font-weight:500;flex-wrap:nowrap}
+nav.primary-nav a:hover{color:var(--ink)}
+nav.primary-nav a.active{color:var(--ink)}
+.nav-toggle{display:none;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid var(--line);border-radius:10px;background:#fff;cursor:pointer;padding:0;flex-shrink:0}
+.nav-toggle span{display:block;width:18px;height:2px;background:var(--ink);position:relative}
+.nav-toggle span::before,.nav-toggle span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--ink)}
+.nav-toggle span::before{top:-6px}
+.nav-toggle span::after{top:6px}
+.nav-toggle[aria-expanded="true"] span{background:transparent}
+.nav-toggle[aria-expanded="true"] span::before{top:0;transform:rotate(45deg)}
+.nav-toggle[aria-expanded="true"] span::after{top:0;transform:rotate(-45deg)}
+.mobile-panel{display:none}
+.mobile-panel.is-open{display:block;border-top:1px solid var(--line);background:#fff}
+.mobile-panel nav{display:flex;flex-direction:column;padding:8px var(--pad-x) 16px;gap:0}
+.mobile-panel a{display:block;padding:14px 4px;font-size:16px;font-weight:500;color:var(--ink);border-bottom:1px solid var(--line);min-height:44px}
+.mobile-panel a:last-child{border-bottom:0}
+.mobile-panel a.tel{color:var(--accent);font-weight:600}
+@media(max-width:900px){
+  .nav-toggle{display:inline-flex}
+  nav.primary-nav{display:none}
+  .header-inner{padding:10px 16px}
 }
 
 </style>
@@ -242,15 +269,28 @@ input,select,textarea,button{ font-size:16px; } /* prevent iOS input zoom */
 </head>
 <body>
 <header>
-  <a href="index.html"><img src="logo-wordmark.png" alt="One Ortho"></a>
-  <nav>
-    <a class="hide" href="knee.html">Knee</a>
-    <a class="hide" href="hip.html">Hip</a>
-    <a class="hide" href="shoulder.html">Shoulder</a>
-    <a href="second-opinion.html">Second opinion</a>
-    <a class="header-phone" href="tel:+19724571530" style="font-weight:700;color:var(--ink)">(972) 457-1530</a>
-    <a class="btn btn-primary" href="#intake">Request a consult</a>
-  </nav>
+  <div class="header-inner">
+    <a href="index.html"><img src="logo-wordmark.png" alt="One Ortho"></a>
+    <nav class="primary-nav" aria-label="Primary">
+      <a href="knee.html" class="active">Knee</a>
+      <a href="hip.html">Hip</a>
+      <a href="shoulder.html">Shoulder</a>
+      <a href="second-opinion.html">Second opinion</a>
+    </nav>
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+      <span></span>
+    </button>
+  </div>
+  <div class="mobile-panel" id="mobile-nav" hidden>
+    <nav aria-label="Mobile">
+      <a href="knee.html">Knee</a>
+      <a href="hip.html">Hip</a>
+      <a href="shoulder.html">Shoulder</a>
+      <a href="second-opinion.html">Second opinion</a>
+      <a href="#intake">Request a consult</a>
+      <a class="tel" href="tel:+19724571530">Call (972) 457-1530</a>
+    </nav>
+  </div>
 </header>
 
 <section class="hero">
@@ -391,5 +431,29 @@ input,select,textarea,button{ font-size:16px; } /* prevent iOS input zoom */
     </div>
   </div>
 </footer>
+
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var panel = document.getElementById('mobile-nav');
+  if (!btn || !panel) return;
+  function setOpen(open){
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    panel.hidden = !open;
+    panel.classList.toggle('is-open', open);
+  }
+  btn.addEventListener('click', function(){
+    setOpen(btn.getAttribute('aria-expanded') !== 'true');
+  });
+  panel.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ setOpen(false); });
+  });
+  window.addEventListener('resize', function(){
+    if (window.matchMedia('(min-width:901px)').matches) setOpen(false);
+  });
+})();
+</script>
+
 </body>
 </html>
