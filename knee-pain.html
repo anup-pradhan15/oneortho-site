@@ -16,7 +16,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex">
 <title>Knee Pain | One Ortho · Dr. Anup Pradhan</title>
-<meta name="description" content="Evaluation and treatment for knee pain, meniscus tears, ACL injuries, arthritis, and knee replacement in Dallas. See Dr. Anup Pradhan.">
+<meta name="description" content="Evaluation and treatment for knee pain, meniscus tears, ACL injuries, arthritis, and knee replacement in Dallas. See Dr. Pradhan directly and get a clear treatment plan.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
@@ -74,11 +74,8 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(40px,5.2vw,58px);lin
 .prose p{margin-bottom:14px}
 .prose strong{color:var(--ink);font-weight:600}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.conditions{grid-template-columns:1fr 1fr}
 .card{background:var(--bg-mute);border:1px solid var(--line);border-radius:16px;padding:22px}
 .card h3{font-size:15px;font-weight:600}
-.conditions .card{padding:16px 18px}
-.conditions .card h3{margin:0}
 #intake{scroll-margin-top:96px}
 .callout{border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:12px;padding:18px 20px;margin:18px 0 0;background:#fff;max-width:64ch}
 .callout p{margin:0;font-size:14px;color:var(--ink-soft)}
@@ -120,9 +117,6 @@ input,select,textarea,button{font-size:16px}
 @supports(padding:max(0px)){
   .header-inner,.section,.hero,footer,.door-inner{padding-left:max(var(--pad-x),env(safe-area-inset-left));padding-right:max(var(--pad-x),env(safe-area-inset-right))}
 }
-@media(min-width:800px){
-  .conditions{grid-template-columns:repeat(4,1fr)}
-}
 @media(max-width:900px){
   .header-inner{padding:10px 16px;flex-wrap:wrap}
   header img{height:24px}
@@ -141,9 +135,6 @@ input,select,textarea,button{font-size:16px}
   footer{padding:32px 16px}
   footer .inner{flex-direction:column;gap:16px}
   h1{font-size:clamp(32px,9vw,44px)}
-}
-@media(max-width:799px){
-  .conditions .card:last-child{grid-column:1 / -1}
 }
 @media(max-width:480px){
   .badge{left:12px;right:12px;bottom:12px}
@@ -164,7 +155,7 @@ input,select,textarea,button{font-size:16px}
 <section class="hero">
   <div>
     <h1>Knee pain? Get a clear answer from an experienced orthopedic surgeon.</h1>
-    <p class="lede">Evaluation and treatment for knee pain, meniscus tears, ACL injuries, arthritis, and knee replacement in Dallas. See Dr. Anup Pradhan directly and get a treatment plan based on what you actually need.</p>
+    <p class="lede">Evaluation and treatment for knee pain, meniscus tears, ACL injuries, arthritis, and knee replacement in Dallas. See Dr. Pradhan directly and get a clear treatment plan.</p>
     <div class="cta-row">
       <a class="btn btn-primary cta-request" id="cta-hero-request" data-cta="hero-request" href="#intake">Request an Appointment</a>
       <a class="btn btn-ghost cta-call" id="cta-hero-call" data-cta="hero-call" href="tel:+19724571530">Call the Office</a>
@@ -174,7 +165,7 @@ input,select,textarea,button{font-size:16px}
     <img src="/dr-pradhan-torso.jpg" alt="Anup Pradhan, MD" width="1400" height="1750">
     <div class="badge">
       <strong>Anup Pradhan, MD</strong>
-      <span>6× D Magazine Best Doctor · Dallas</span>
+      <span>D Magazine Best Doctor · Dallas</span>
     </div>
   </figure>
 </section>
@@ -187,14 +178,14 @@ input,select,textarea,button{font-size:16px}
 
 <section class="section" id="conditions">
   <h2>What brings you in?</h2>
-  <div class="grid conditions">
-    <article class="card"><h3>Knee pain</h3></article>
-    <article class="card"><h3>Meniscus tear</h3></article>
-    <article class="card"><h3>ACL injury</h3></article>
-    <article class="card"><h3>Knee arthritis</h3></article>
-    <article class="card"><h3>Knee replacement</h3></article>
-    <article class="card"><h3>Sports injury</h3></article>
-    <article class="card"><h3>Second opinion</h3></article>
+  <div class="trust" aria-label="Conditions">
+    <span class="pill">Knee pain</span>
+    <span class="pill">Meniscus tear</span>
+    <span class="pill">ACL injury</span>
+    <span class="pill">Knee arthritis</span>
+    <span class="pill">Knee replacement</span>
+    <span class="pill">Sports injury</span>
+    <span class="pill">Second opinion</span>
   </div>
   <p class="intro" style="margin-top:28px">Not sure what is causing your pain? That is exactly what the evaluation is for.</p>
   <a class="btn btn-primary cta-request" id="cta-conditions-request" data-cta="conditions-request" href="#intake">Request an Appointment</a>
@@ -218,14 +209,11 @@ input,select,textarea,button{font-size:16px}
       <p class="caption">Anup Pradhan, MD · North Dallas</p>
     </aside>
     <div>
-      <div class="prose">
-        <p>Anup Pradhan, MD is a Duke-trained orthopedic surgeon specializing in knee, hip, and shoulder conditions. He has practiced in Dallas since 2012 and has performed more than 10,000 orthopedic procedures.</p>
-      </div>
       <div class="creds">
-        <div class="cred"><b>Training</b><span>Vanderbilt MD · Duke sports medicine fellowship</span></div>
-        <div class="cred"><b>Recognition</b><span>6× D Magazine Best Doctor</span></div>
-        <div class="cred"><b>Leadership</b><span>Chair of Orthopedics, Medical City Dallas — 6 years</span></div>
-        <div class="cred"><b>Experience</b><span>10,000+ procedures · Dallas since 2012</span></div>
+        <div class="cred"><b>Duke-trained orthopedic surgeon</b></div>
+        <div class="cred"><b>D Magazine Best Doctor</b></div>
+        <div class="cred"><b>10,000+ orthopedic procedures</b></div>
+        <div class="cred"><b>Practicing in Dallas since 2012</b></div>
       </div>
     </div>
   </div>
@@ -274,16 +262,26 @@ input,select,textarea,button{font-size:16px}
     <p class="intro">Takes about a minute. We’ll follow up within one business day. Prefer to talk now? <a class="btn-text cta-call" id="cta-form-call" data-cta="form-call" href="tel:+19724571530">(972) 457-1530</a></p>
     <form class="intake-grid" name="appointment-request" method="POST" action="/thank-you" data-netlify="true" data-netlify-honeypot="bot-field" netlify>
       <input type="hidden" name="form-name" value="appointment-request">
+      <input type="hidden" name="source" value="knee-pain">
       <p class="full" style="display:none" aria-hidden="true"><label>Don’t fill: <input name="bot-field"></label></p>
-      <div><label for="name">Full name</label><input id="name" name="name" required autocomplete="name"></div>
+      <div><label for="name">Name</label><input id="name" name="name" required autocomplete="name"></div>
       <div><label for="phone">Phone</label><input id="phone" name="phone" type="tel" required autocomplete="tel"></div>
       <div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email"></div>
-      <div><label for="interest">I’m interested in</label>
-        <select id="interest" name="interest"><option value="">Select…</option><option value="knee" selected>Knee</option><option value="hip">Hip</option><option value="shoulder">Shoulder</option><option value="second-opinion">Surgical second opinion</option><option value="other">Not sure / other</option></select>
+      <div class="full"><label for="interest">What are you having trouble with?</label>
+        <select id="interest" name="interest">
+          <option value="Knee pain" selected>Knee pain</option>
+          <option value="Meniscus tear">Meniscus tear</option>
+          <option value="ACL injury">ACL injury</option>
+          <option value="Knee arthritis">Knee arthritis</option>
+          <option value="Knee replacement">Knee replacement</option>
+          <option value="Sports injury">Sports injury</option>
+          <option value="Second opinion">Second opinion</option>
+          <option value="Other">Other</option>
+        </select>
       </div>
-      <div class="full"><label for="msg">What’s going on? (optional)</label><textarea id="msg" name="message" placeholder="Pain, injury, prior recommendation for surgery, imaging already done…"></textarea></div>
+      <div class="full"><label for="msg">Message (optional)</label><textarea id="msg" name="message"></textarea></div>
       <div class="actions full">
-        <button class="btn btn-accent cta-submit" id="cta-form-submit" data-cta="form-submit" type="submit">Send request</button>
+        <button class="btn btn-accent cta-submit" id="cta-form-submit" data-cta="form-submit" type="submit">Request an Appointment</button>
       </div>
     </form>
   </div>
