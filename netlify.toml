@@ -28,6 +28,41 @@
   to = "/knee-pain"
   status = 301
 
+[[redirects]]
+  from = "/hip-pain.html"
+  to = "/hip-pain"
+  status = 301
+
+[[redirects]]
+  from = "/shoulder-pain.html"
+  to = "/shoulder-pain"
+  status = 301
+
+[[redirects]]
+  from = "/knee-replacement.html"
+  to = "/knee-replacement"
+  status = 301
+
+[[redirects]]
+  from = "/hip-replacement.html"
+  to = "/hip-replacement"
+  status = 301
+
+[[redirects]]
+  from = "/rotator-cuff.html"
+  to = "/rotator-cuff"
+  status = 301
+
+[[redirects]]
+  from = "/acl.html"
+  to = "/acl"
+  status = 301
+
+[[redirects]]
+  from = "/meniscus.html"
+  to = "/meniscus"
+  status = 301
+
 [[headers]]
   for = "/*"
   [headers.values]
