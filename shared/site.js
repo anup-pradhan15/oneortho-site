@@ -201,6 +201,7 @@
   // when the site is deployed. In local preview the fetch fails silently
   // and we still show the success state for demo purposes.
   var apptForm = document.querySelector('form[name="appointment-request"]');
+  var leadTracked = false;
   if (apptForm) {
     apptForm.addEventListener('submit', function(e) {
       e.preventDefault();
@@ -214,6 +215,12 @@
       data.forEach(function(v, k){ body.append(k, v); });
 
       function showSuccess() {
+        // Contact modal submits in place and never reaches /thank-you.
+        // Fire once, with no form fields attached.
+        if (!leadTracked && typeof window.gtag === 'function') {
+          leadTracked = true;
+          window.gtag('event', 'generate_lead');
+        }
         // Hide the prompt heading + lede that sit above the form so the
         // success state stands cleanly — otherwise both states stack and
         // the user sees "A few questions before we meet" alongside
