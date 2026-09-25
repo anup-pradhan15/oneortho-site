@@ -131,9 +131,11 @@ input,select,textarea,button{font-size:16px}
   footer .inner{flex-direction:column;gap:16px}
   h1{font-size:clamp(32px,9vw,44px)}
 }
+@media(max-width:799px){
+  .conditions .card:last-child{grid-column:1 / -1}
+}
 @media(max-width:480px){
   .badge{left:12px;right:12px;bottom:12px}
-  .conditions{grid-template-columns:1fr 1fr}
 }
 </style>
 </head>
