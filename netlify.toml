@@ -23,6 +23,11 @@
   to = "/contact"
   status = 301
 
+[[redirects]]
+  from = "/knee-pain.html"
+  to = "/knee-pain"
+  status = 301
+
 [[headers]]
   for = "/*"
   [headers.values]
