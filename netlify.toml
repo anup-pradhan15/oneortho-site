@@ -24,6 +24,16 @@
   status = 301
 
 [[redirects]]
+  from = "/privacy.html"
+  to = "/privacy"
+  status = 301
+
+[[redirects]]
+  from = "/terms.html"
+  to = "/terms"
+  status = 301
+
+[[redirects]]
   from = "/knee-pain.html"
   to = "/knee-pain"
   status = 301
