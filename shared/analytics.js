@@ -22,6 +22,8 @@
       link_url: href,
       location: window.location.pathname || '/'
     });
+    // No parameters: do not send the phone number or the page path.
+    if (window.fbq) window.fbq('trackCustom', 'ClickToCall');
   });
 
   // Marketing-page consult forms POST to /thank-you (Netlify). One page view
@@ -34,6 +36,7 @@
       performance.getEntriesByType('navigation')[0];
     if (!nav || nav.type === 'navigate') {
       track('generate_lead');
+      if (window.fbq) window.fbq('track', 'Lead');
     }
   }
 })();
