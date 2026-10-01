@@ -220,6 +220,7 @@
         if (!leadTracked && typeof window.gtag === 'function') {
           leadTracked = true;
           window.gtag('event', 'generate_lead');
+          if (window.fbq) window.fbq('track', 'Lead');
         }
         // Hide the prompt heading + lede that sit above the form so the
         // success state stands cleanly — otherwise both states stack and
