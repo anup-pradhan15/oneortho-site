@@ -73,6 +73,11 @@
   to = "/meniscus"
   status = 301
 
+[[redirects]]
+  from = "/cash-prices.html"
+  to = "/cash-prices"
+  status = 301
+
 [[headers]]
   for = "/*"
   [headers.values]
