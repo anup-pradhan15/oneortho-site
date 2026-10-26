@@ -326,7 +326,7 @@ section.hero:has(>div+figure),section.hero:has(>figure){display:grid;grid-templa
 .hero-navy .btn-primary:hover{background:var(--plat);border-color:var(--plat)}
 .hero-navy .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.45)}
 .hero-navy .btn-ghost:hover{border-color:#fff;background:transparent}
-.trust-lines{margin-top:48px;padding-top:28px;border-top:1px solid var(--on-navy-rule);display:grid;grid-template-columns:repeat(3,1fr);gap:14px 36px;max-width:1020px}
+.trust-lines{margin-top:48px;padding-top:28px;border-top:1px solid var(--on-navy-rule);display:grid;grid-template-columns:repeat(3,1fr);gap:14px 36px}
 .trust-lines div{font-size:14.5px;color:var(--on-navy-mute);line-height:1.5}
 .trust-lines strong{display:block;color:#fff;font-size:15.5px;margin-bottom:4px}
 .svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:36px}
@@ -411,9 +411,16 @@ section.steps{display:block;width:min(1200px,100% - 48px);margin:0 auto;padding:
 .hero-navy .trust-lines{margin-top:56px}
 @media (max-width:960px){.hero-grid{grid-template-columns:1fr}.hero-visual img{max-height:420px}}
 
-/* Hero proof panel (2026-10-26): brand-first, no personal photo in hero */
-.hero-panel{background:var(--plat-bg);border-radius:8px;padding:30px 30px 14px;color:var(--ink)}
-.hero-panel .hp-kicker{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);margin:0 0 6px}
-.hero-panel .hp-row{padding:14px 0;border-top:1px solid var(--line)}
-.hero-panel .hp-row strong{display:block;font-size:19px;font-weight:700;letter-spacing:-.01em}
-.hero-panel .hp-row span{display:block;font-size:13.5px;color:var(--slate);margin-top:2px;line-height:1.45}
+
+/* Header portal pill (2026-10-26) */
+.header-portal{border:1px solid var(--line);border-radius:999px;padding:6px 14px 6px 11px;display:inline-flex;align-items:center;gap:7px}
+.header-portal::before{content:"";width:11px;height:11px;flex:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2352606D' stroke-width='2.4' stroke-linecap='round'%3E%3Crect x='4' y='10' width='16' height='11' rx='2'/%3E%3Cpath d='M8 10V7a4 4 0 0 1 8 0v3'/%3E%3C/svg%3E") center/contain no-repeat}
+.header-portal:hover{border-color:var(--slate);text-decoration:none}
+
+/* Hero care-pathway card (2026-10-26) */
+.pathway-card{background:#12293F;border:1px solid var(--on-navy-rule);border-radius:8px;padding:26px 26px 16px}
+.pw-title{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--on-navy-mute);margin:0 0 8px}
+.pw-row{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:15px 6px;border-top:1px solid var(--on-navy-rule);color:#fff;font-weight:600;font-size:16.5px;line-height:1.35;text-decoration:none;border-radius:4px}
+.pw-row:hover{background:rgba(255,255,255,.06);text-decoration:none}
+.pw-arrow{color:var(--on-navy-mute);font-size:24px;font-weight:400;line-height:1}
+.pw-caption{border-top:1px solid var(--on-navy-rule);padding-top:14px;margin:2px 0 4px;font-size:12.5px;line-height:1.55;color:var(--on-navy-mute)}
