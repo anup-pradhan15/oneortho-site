@@ -396,3 +396,9 @@ section.hero:has(>div+figure),section.hero:has(>figure){display:grid;grid-templa
 .header-portal{font-weight:600;color:var(--slate);white-space:nowrap;font-size:14.5px}
 .header-portal:hover{color:var(--navy);text-decoration:underline;text-underline-offset:4px}
 @media (max-width:960px){.header-portal{display:none}}
+
+/* Second-opinion layout containment (added 2026-10-26): #included grid and
+   the steps section are direct body children on that page; give them the
+   standard container used by .section/.wrap. */
+#included{width:min(1200px,100% - 48px);margin:0 auto;padding:72px 0 0}
+section.steps{display:block;width:min(1200px,100% - 48px);margin:0 auto;padding:72px 0}
