@@ -1,7 +1,7 @@
 /* OneOrtho Patient Concierge v3 — light institutional panel, home + messages.
    Spacing system: 20px panel gutters, 12px message rhythm, 10px chip gaps. */
 #oo-concierge{position:fixed;right:24px;bottom:24px;z-index:9999;font-family:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;display:flex;flex-direction:column;align-items:flex-end;gap:12px;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
-#oo-concierge *{box-sizing:border-box;margin:0;padding:0}
+#oo-concierge *{box-sizing:border-box;margin:0}
 #oo-concierge button{font-family:inherit}
 
 /* ---------- Launcher ---------- */
@@ -32,7 +32,7 @@
 
 /* Home view */
 .oo-home{display:flex;flex-direction:column;flex:1;min-height:0}
-.oo-home-scroll{padding:22px 22px 18px;overflow-y:auto;flex:1}
+.oo-home-scroll{padding:22px 22px 18px;overflow-y:auto;overscroll-behavior:contain;flex:1}
 .oo-home-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:20px}
 .oo-logo-tile{width:46px;height:46px;border-radius:13px;background:#0B1B2B;display:flex;align-items:center;justify-content:center}
 .oo-logo-tile svg{width:29px;height:29px}
@@ -68,7 +68,7 @@
 .oo-chat-title{font-size:15px;font-weight:700;color:#0B1B2B;line-height:1.25}
 .oo-chat-sub{font-size:12px;color:#8494A1;display:flex;align-items:center;gap:5px;margin-top:1px}
 .oo-chat-head .oo-x{margin-left:auto}
-.oo-msgs{padding:18px;overflow-y:auto;overflow-x:hidden;display:flex;flex-direction:column;gap:10px;flex:1;background:#F7F9FA;scrollbar-width:thin}
+.oo-msgs{padding:18px;overflow-y:auto;overscroll-behavior:contain;overflow-x:hidden;display:flex;flex-direction:column;gap:10px;flex:1;background:#F7F9FA;scrollbar-width:thin}
 .oo-msg{max-width:86%;padding:11px 14px;border-radius:15px;font-size:14px;line-height:1.58;word-break:break-word;overflow-wrap:anywhere;white-space:pre-wrap}
 .oo-msg.bot{background:#fff;color:#24333F;border:1px solid #E2E7EB;align-self:flex-start;border-bottom-left-radius:5px;box-shadow:0 2px 6px rgba(8,19,32,.04)}
 .oo-msg.user{background:#0B1B2B;color:#fff;align-self:flex-end;border-bottom-right-radius:5px}
