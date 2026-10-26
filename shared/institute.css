@@ -391,3 +391,8 @@ section.hero:has(>div+figure),section.hero:has(>figure){display:grid;grid-templa
 @supports(padding:max(0px)){
   .header-inner,.section,.hero,.footer-inner,.footer-meta,.bottom-inner,.doc,.layout,.page-hero,.hero-navy-inner{padding-left:max(24px,env(safe-area-inset-left));padding-right:max(24px,env(safe-area-inset-right))}
 }
+
+/* Patient Portal utility link (added 2026-10-26) */
+.header-portal{font-weight:600;color:var(--slate);white-space:nowrap;font-size:14.5px}
+.header-portal:hover{color:var(--navy);text-decoration:underline;text-underline-offset:4px}
+@media (max-width:960px){.header-portal{display:none}}
