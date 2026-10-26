@@ -23,175 +23,11 @@ fbq('track', 'PageView');
 <!-- End Meta Pixel Code -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta property="og:title" content="Orthopedic Surgeon in Dallas | One Ortho">
+<meta property="og:title" content="Orthopedic Surgeon in Dallas | OneOrtho Institute">
 <meta property="og:description" content="Elite results. Clear answers. Honest care. Dr. Anup Pradhan.">
 <meta property="og:image" content="https://oneortho.com/assets/og-home.svg">
-<title>Orthopedic Surgeon in Dallas | One Ortho · Dr. Anup Pradhan</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#FFFFFF;
-  --bg-mute:#F3F5F7;
-  --bg-deep:#E8ECF0;
-  --ink:#0B0F14;
-  --ink-soft:#4B5563;
-  --ink-mute:#9AA3AE;
-  --line:#E5E9EE;
-  --accent:#155EEF;          /* modern teal */
-  --accent-hover:#1249C7;
-  --accent-soft:rgba(21,94,239,.08);
-  --navy:#0B0F14;            /* near-black, not old navy brochure */
-  --serif:"Instrument Serif",Georgia,serif;
-  --sans:Inter,-apple-system,BlinkMacSystemFont,sans-serif;
-  --pad-x:clamp(20px,5vw,72px);
-  --r:12px;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none}
-.banner{background:#111;color:#fff;text-align:center;padding:10px 16px;font-size:12px;font-weight:500;letter-spacing:.02em}
-.banner a{color:#93C5FD;text-decoration:underline;margin-left:8px}
-header{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);z-index:50}
-.header-inner{max-width:1160px;margin:0 auto;padding:14px var(--pad-x);display:flex;align-items:center;justify-content:space-between;gap:20px}
-header img{height:26px;width:auto;flex-shrink:0}
-nav.primary-nav{display:flex;gap:18px;align-items:center;font-size:14px;color:var(--ink-soft);font-weight:500}
-nav.primary-nav a:hover{color:var(--ink)}
-.nav-toggle{display:none;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid var(--line);border-radius:10px;background:#fff;cursor:pointer;padding:0}
-.nav-toggle span{display:block;width:18px;height:2px;background:var(--ink);position:relative}
-.nav-toggle span::before,.nav-toggle span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--ink)}
-.nav-toggle span::before{top:-6px}
-.nav-toggle span::after{top:6px}
-.nav-toggle[aria-expanded="true"] span{background:transparent}
-.nav-toggle[aria-expanded="true"] span::before{top:0;transform:rotate(45deg)}
-.nav-toggle[aria-expanded="true"] span::after{top:0;transform:rotate(-45deg)}
-.mobile-panel{display:none}
-.mobile-panel.is-open{display:block;border-top:1px solid var(--line);background:#fff}
-.mobile-panel nav{display:flex;flex-direction:column;padding:8px var(--pad-x) 16px;gap:0}
-.mobile-panel a{display:block;padding:14px 4px;font-size:16px;font-weight:500;color:var(--ink);border-bottom:1px solid var(--line);min-height:44px}
-.mobile-panel a:last-child{border-bottom:0}
-.mobile-panel a.tel{color:var(--accent);font-weight:600}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:11px 18px;border-radius:999px;font-size:14px;font-weight:600;border:1px solid transparent;transition:.15s ease}
-.btn-primary{background:var(--ink);color:#fff}
-.btn-primary:hover{background:#1f2937}
-.btn-accent{background:var(--accent);color:#fff}
-.btn-accent:hover{background:var(--accent-hover)}
-.btn-ghost{border-color:var(--line);color:var(--ink);background:#fff}
-.btn-ghost:hover{border-color:var(--ink-mute);background:var(--bg-mute)}
-.btn-text{padding:0;border:0;border-radius:0;color:var(--accent);font-weight:600}
-.btn-text:hover{text-decoration:underline}
-.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;padding:72px var(--pad-x) 64px;max-width:1160px;margin:0 auto}
-.kicker{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:18px}
-h1{font-family:var(--serif);font-weight:400;font-size:clamp(40px,5.2vw,58px);line-height:1.05;letter-spacing:-.02em;color:var(--ink);margin-bottom:20px}
-.lede{font-size:17px;color:var(--ink-soft);max-width:38ch;margin-bottom:32px;line-height:1.6}
-.cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:32px}
-.trust{display:flex;flex-wrap:wrap;gap:8px}
-.pill{display:inline-flex;align-items:center;padding:6px 12px;border-radius:999px;background:var(--bg-mute);border:1px solid var(--line);font-size:12px;font-weight:500;color:var(--ink-soft)}
-.pill b{color:var(--ink);font-weight:600;margin-right:4px}
-.hero-photo{position:relative}
-.hero-photo img{width:100%;border-radius:var(--r);display:block;object-fit:cover;aspect-ratio:4/5;background:var(--bg-mute)}
-.badge{position:absolute;left:16px;right:16px;bottom:16px;background:rgba(11,15,20,.88);backdrop-filter:blur(8px);color:#fff;padding:14px 16px;border-radius:10px}
-.badge strong{display:block;font-size:14px;font-weight:600;margin-bottom:2px}
-.badge span{font-size:13px;color:#C5CDD6}
-.door{background:var(--bg-mute);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.door-inner{max-width:1160px;margin:0 auto;padding:20px var(--pad-x);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
-.door p{font-size:15px;color:var(--ink-soft);max-width:58ch}
-.door strong{color:var(--ink);font-weight:600}
-.section{padding:80px var(--pad-x);max-width:1160px;margin:0 auto}
-.section h2{font-family:var(--serif);font-size:clamp(30px,3.5vw,40px);color:var(--ink);font-weight:400;letter-spacing:-.02em;margin-bottom:12px}
-.section .intro{color:var(--ink-soft);max-width:48ch;margin-bottom:40px;font-size:16px}
-.focus{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start;background:var(--ink);color:#fff;border-radius:20px;padding:40px;overflow:hidden}
-.focus h2{color:#fff;margin-bottom:12px}
-.focus .intro{color:#A8B3C0;margin-bottom:0}
-.values{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.val{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:18px}
-.val b{display:block;font-size:14px;font-weight:600;margin-bottom:6px;color:#fff}
-.val span{font-size:13px;color:#A8B3C0;line-height:1.45}
-.anatomy{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
-.anatomy span{padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.14);font-size:13px;color:#D1D9E2}
-.quote-block{padding:80px var(--pad-x);background:var(--bg-mute);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.quote-inner{max-width:800px;margin:0 auto;text-align:center}
-.quote{font-family:var(--serif);font-size:clamp(26px,3.2vw,36px);color:var(--ink);line-height:1.25;letter-spacing:-.02em;margin-bottom:18px}
-.quote-attr{font-size:14px;color:var(--ink-soft);font-weight:500}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.panel{border:1px solid var(--line);border-radius:16px;padding:28px;background:#fff}
-.panel h2{font-size:28px;margin-bottom:10px}
-.panel .intro{margin-bottom:24px}
-.pay-item{padding:14px 0;border-bottom:1px solid var(--line)}
-.pay-item:last-child{border-bottom:0}
-.pay-item b{display:block;font-size:14px;font-weight:600;margin-bottom:4px}
-.pay-item span{font-size:14px;color:var(--ink-soft)}
-footer{background:var(--ink);color:#9AA3AE;padding:48px var(--pad-x);font-size:14px}
-footer .inner{max-width:1160px;margin:0 auto;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
-footer strong{color:#fff;display:block;margin-bottom:8px;font-weight:600}
-@media (max-width:900px){
-  .hero,.focus,.two,.values{grid-template-columns:1fr}
-}
+<title>Orthopedic Surgeon in Dallas | OneOrtho Institute · Dr. Anup Pradhan</title>
 
-.intake{background:var(--bg-mute);border:1px solid var(--line);border-radius:20px;padding:28px;margin-top:8px}
-.intake h2{font-family:var(--serif);font-size:28px;letter-spacing:-.02em;margin-bottom:8px}
-.intake .intro{color:var(--ink-soft);font-size:14px;margin-bottom:20px;max-width:48ch}
-.intake-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.intake label{display:block;font-size:12px;font-weight:600;margin-bottom:6px;color:var(--ink)}
-.intake input,.intake select,.intake textarea{width:100%;padding:12px 14px;border-radius:10px;border:1px solid var(--line);font:inherit;background:#fff;color:var(--ink)}
-.intake textarea{min-height:96px;resize:vertical;grid-column:1/-1}
-.intake .full{grid-column:1/-1}
-.intake .actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:14px}
-.intake .note{font-size:12px;color:var(--ink-mute);margin-top:10px}
-.diagram{margin:8px 0 0;border-radius:20px;overflow:hidden;border:1px solid var(--line)}
-.diagram img{display:block;width:100%;height:auto}
-@media(max-width:700px){.intake-grid{grid-template-columns:1fr}}
-
-
-.topbar{background:var(--ink);color:#fff;font-size:13px}
-.topbar-inner{max-width:1160px;margin:0 auto;padding:10px var(--pad-x);display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap}
-.topbar a{color:#93C5FD;font-weight:600;text-decoration:none}
-.topbar a:hover{text-decoration:underline}
-.header-phone{font-weight:700;color:var(--ink) !important;white-space:nowrap}
-.header-phone:hover{color:var(--accent) !important}
-@media(max-width:900px){.header-phone{display:none}}
-
-/* iOS / responsive hardening */
-html{ -webkit-text-size-adjust:100%; text-size-adjust:100%; }
-*,*::before,*::after{ box-sizing:border-box; }
-body{ overflow-x:hidden; width:100%; }
-img,svg,video{ max-width:100%; height:auto; }
-.section,.hero,.door,.quote-block,.muted,.topbar-inner,footer .inner{ width:100%; }
-input,select,textarea,button{ font-size:16px; } /* prevent iOS input zoom */
-.btn{ min-height:44px; padding:12px 18px; }
-.header-phone{ min-height:44px; display:inline-flex; align-items:center; }
-@supports(padding:max(0px)){
-  .topbar-inner, .header-inner, .mobile-panel nav, .section, .hero, footer .inner, .door-inner{ padding-left:max(var(--pad-x), env(safe-area-inset-left)); padding-right:max(var(--pad-x), env(safe-area-inset-right)); }
-}
-@media (max-width:900px){
-  .nav-toggle{ display:inline-flex; }
-  nav.primary-nav{ display:none; }
-  .header-inner{ padding:10px 16px; }
-  header img{ height:24px; }
-  .hero{ grid-template-columns:1fr !important; gap:28px !important; padding:36px 16px 32px !important; }
-  .hero-photo img{ aspect-ratio:4/5; max-height:420px; width:100%; object-fit:cover; }
-  .focus,.two,.values,.grid,.grid3,.steps,.creds,.diagram-row{ grid-template-columns:1fr !important; }
-  .focus{ padding:24px !important; border-radius:16px !important; }
-  .section{ padding:40px 16px !important; }
-  .quote-block{ padding:40px 16px !important; }
-  .door-inner{ padding:20px 16px !important; flex-direction:column; align-items:flex-start !important; }
-  .cta-row{ flex-direction:column; align-items:stretch; }
-  .cta-row .btn{ width:100%; justify-content:center; }
-  .trust{ gap:8px; }
-  .pill{ font-size:11px; }
-  .intake{ padding:20px !important; }
-  .intake-grid{ grid-template-columns:1fr !important; }
-  footer .inner{ flex-direction:column; gap:20px; padding:0; }
-  footer{ padding:32px 16px !important; }
-  h1{ font-size:clamp(32px,9vw,44px) !important; }
-  .topbar-inner{ padding:10px 16px; font-size:12px; }
-  .diagram-row{ display:grid !important; gap:12px !important; }
-}
-@media (max-width:480px){
-  .badge{ left:12px; right:12px; bottom:12px; }
-  .pricebox{ flex-direction:column; align-items:flex-start; }
-}
-
-</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -237,7 +73,7 @@ input,select,textarea,button{ font-size:16px; } /* prevent iOS input zoom */
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "name": "One Ortho",
+      "name": "OneOrtho Institute",
       "url": "https://oneortho.com/",
       "potentialAction": {
         "@type": "CommunicateAction",
@@ -248,72 +84,49 @@ input,select,textarea,button{ font-size:16px; } /* prevent iOS input zoom */
   ]
 }
 </script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared/institute.css?v=1">
 </head>
 <body>
-<div class="topbar">
-  <div class="topbar-inner">
-    <span>North Dallas · Orthopedic surgery</span>
-    <a href="tel:+19724571530"><strong>Call (972) 457-1530</strong></a>
-  </div>
-</div>
-<header>
+<header class="site-header">
   <div class="header-inner">
-    <a href="index.html"><img src="logo-wordmark.png" alt="One Ortho"></a>
+    <a class="wordmark" href="index.html" aria-label="OneOrtho Institute — home"><strong>One</strong>Ortho <span>Institute</span></a>
     <nav class="primary-nav" aria-label="Primary">
-      <a href="knee.html">Knee</a>
-      <a href="hip.html">Hip</a>
-      <a href="shoulder.html">Shoulder</a>
-      <a href="second-opinion.html">Second opinion</a>
+      <div class="nav-item"><a class="nav-link" href="about.html">Our Specialists</a><div class="dropdown"><a href="about.html">Dr. Anup Pradhan<small>Orthopedic surgeon · Dallas</small></a><a href="knee.html">Knee<small>Reconstruction &amp; preservation</small></a><a href="hip.html">Hip<small>Anterior replacement &amp; arthroscopy</small></a><a href="shoulder.html">Shoulder<small>Rotator cuff &amp; arthroplasty</small></a></div></div><div class="nav-item"><a class="nav-link" href="index.html#services">Clinical Innovations</a><div class="dropdown"><a href="index.html#services">Outpatient ASC Network<small>Advanced outpatient surgery, North Texas</small></a><a href="second-opinion.html">Surgical Second Opinion<small>One dedicated advisory visit</small></a><a href="knee-replacement.html">Knee Reconstruction<small>Replacement &amp; joint preservation</small></a><a href="hip-replacement.html">Hip Replacement<small>Anterior, muscle-sparing approach</small></a><a href="rotator-cuff.html">Rotator Cuff<small>Repair &amp; total shoulder arthroplasty</small></a></div></div><div class="nav-item"><a class="nav-link" href="contact.html">Patient Resources</a><div class="dropdown"><a href="contact.html">Insurance Verification<small>Coverage confirmed before your visit</small></a><a href="intake.html">Digital Intake Forms<small>Complete before your visit</small></a><a href="about.html">About<small>The institute &amp; Dr. Pradhan</small></a><a href="contact.html">Contact<small>North Dallas office</small></a></div></div>
     </nav>
-    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
-      <span></span>
-    </button>
+    <div class="header-actions">
+      <a class="header-phone" href="tel:+19724571530">(972) 457-1530</a>
+      <a class="btn btn-primary btn-book" href="#intake">Book Appointment</a>
+    </div>
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu"><span></span></button>
   </div>
   <div class="mobile-panel" id="mobile-nav" hidden>
     <nav aria-label="Mobile">
-      <a href="knee.html">Knee</a>
-      <a href="hip.html">Hip</a>
-      <a href="shoulder.html">Shoulder</a>
-      <a href="second-opinion.html">Second opinion</a>
-      <a href="#intake">Request a consult</a>
+      <p class="mobile-group">Our Specialists</p><a href="about.html">Dr. Anup Pradhan</a><a href="knee.html">Knee</a><a href="hip.html">Hip</a><a href="shoulder.html">Shoulder</a><p class="mobile-group">Clinical Innovations</p><a href="index.html#services">Outpatient ASC Network</a><a href="second-opinion.html">Surgical Second Opinion</a><a href="knee-replacement.html">Knee Reconstruction</a><a href="hip-replacement.html">Hip Replacement</a><a href="rotator-cuff.html">Rotator Cuff</a><p class="mobile-group">Patient Resources</p><a href="contact.html">Insurance Verification</a><a href="intake.html">Digital Intake Forms</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+      <a class="btn btn-primary" href="#intake">Book Appointment</a>
       <a class="tel" href="tel:+19724571530">Call (972) 457-1530</a>
     </nav>
   </div>
 </header>
 
-<section class="hero">
-  <div>
-    <p class="kicker">Independent orthopedic surgery · Dallas</p>
-    <h1>Elite results. Clear answers. Honest care.</h1>
-    <p class="lede">Dr. Anup Pradhan treats every knee, hip, and shoulder decision the way he’d want for his own family — world-class surgery when you need it, and a doctor who still looks you in the eye.</p>
+<section class="hero-navy">
+  <div class="hero-navy-inner">
+    <p class="kicker">ONEORTHO INSTITUTE · NORTH TEXAS</p>
+    <h1>Frictionless Orthopedic Excellence. Clear Answers.</h1>
+    <p class="lede">Welcome to OneOrtho Institute. We are a premier musculoskeletal platform across North Texas, delivering elite knee, hip, and shoulder care through advanced outpatient surgery and streamlined insurance verification.</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="#intake">Request an online consult</a>
-      <a class="btn btn-ghost" href="tel:+19724571530">Call (972) 457-1530</a>
+      <a class="btn btn-primary" href="#intake">Request Online Consult</a>
+      <a class="btn btn-ghost" href="second-opinion.html">Explore Surgical Second Opinions</a>
     </div>
-    <div class="trust">
-      <span class="pill"><b>4.8★</b> 300+ reviews</span>
-      <span class="pill"><b>7×</b> D Magazine Best Doctor</span>
-      <span class="pill"><b>Dallas</b> since 2012</span>
-      <span class="pill"><b>Vanderbilt</b> · <b>Duke</b></span>
+    <div class="trust-lines">
+      <div><strong>7× D Magazine Best Doctor</strong> · 2020–2026</div>
+      <div><strong>Outpatient ASC Network</strong> · North Texas</div>
+      <div><strong>Insurance Verification</strong> Before Your Visit</div>
     </div>
-  </div>
-  <figure class="hero-photo">
-    <img src="dr-pradhan-torso.jpg" alt="Anup Pradhan, MD">
-    <div class="badge">
-      <strong>Anup Pradhan, MD</strong>
-      <span>7× D Magazine Best Doctor · Dallas</span>
-    </div>
-  </figure>
-</section>
-
-<section class="door">
-  <div class="door-inner">
-    <p><strong>Told you need surgery?</strong> A dedicated surgical second opinion is available — clear process, transparent cash price, written plan.</p>
-    <a class="btn btn-accent" href="second-opinion.html">Explore second opinion</a>
   </div>
 </section>
 
-<section class="door" style="background:#fff">
+<section class="door" aria-label="Ratings">
   <div class="door-inner" style="justify-content:flex-start;gap:28px">
     <p style="margin:0"><strong>4.8★</strong> Healthgrades · 68 reviews</p>
     <p style="margin:0"><strong>5/5</strong> U.S. News · 239 ratings</p>
@@ -321,22 +134,25 @@ input,select,textarea,button{ font-size:16px; } /* prevent iOS input zoom */
   </div>
 </section>
 
-
-<section class="section" style="padding-top:24px;padding-bottom:0">
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px" class="diagram-row">
-    <a href="knee.html" class="diagram"><img src="assets/diagram-knee.png?v=4" alt="Knee surgery in Dallas — joint diagram" width="400" height="320" loading="lazy"></a>
-    <a href="hip.html" class="diagram"><img src="assets/diagram-hip.png" alt="Hip surgery in Dallas — joint diagram" width="400" height="320" loading="lazy"></a>
-    <a href="shoulder.html" class="diagram"><img src="assets/diagram-shoulder.png?v=7" alt="Shoulder surgery in Dallas — joint diagram" width="400" height="320" loading="lazy"></a>
+<section class="section" id="services">
+  <p class="kicker">Clinical services</p>
+  <h2>Four service lines. One standard.</h2>
+  <p class="intro">Knee, hip, and shoulder care decided by demand, exam, and imaging together — plus a dedicated second opinion when the decision deserves a second look.</p>
+  <div class="svc-grid">
+    <div class="svc-cell"><span class="n">01</span><h3>Advanced Knee Reconstruction &amp; Joint Preservation</h3><p>Preservation first when the joint can be saved. Reconstruction and replacement when it cannot — decided on imaging and function, not a sales pathway.</p><a href="knee.html">Knee care</a></div>
+    <div class="svc-cell"><span class="n">02</span><h3>Anterior Hip Replacement &amp; Muscle-Sparing Metrics</h3><p>Anterior, muscle-sparing hip replacement through the outpatient ASC network, with recovery measured against function — not brochure averages.</p><a href="hip.html">Hip care</a></div>
+    <div class="svc-cell"><span class="n">03</span><h3>Complex Rotator Cuff &amp; Total Shoulder Arthroplasty</h3><p>Complex cuff repair and total shoulder arthroplasty for shoulders that have failed simpler care — or were never offered it.</p><a href="shoulder.html">Shoulder care</a></div>
+    <div class="svc-cell"><span class="n">04</span><h3>Dedicated Independent Surgical Second Opinions</h3><p>A clean, low-overhead advisory product: one dedicated visit, imaging review, and a written plan you can take anywhere.</p><a href="second-opinion.html">Second opinions</a></div>
   </div>
 </section>
 
-<section class="section" id="care">
+<section class="section" id="care" style="padding-top:0">
   <div class="focus">
     <div>
       <h2>One focus: elite patient care.</h2>
       <p class="intro">Not three product lines. One standard — how every person who walks in should be treated, whether the answer is surgery or not.</p>
       <div class="anatomy">
-        <a href="knee.html" style="padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.14);font-size:13px;color:#D1D9E2">Knee</a><a href="hip.html" style="padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.14);font-size:13px;color:#D1D9E2">Hip</a><a href="shoulder.html" style="padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.14);font-size:13px;color:#D1D9E2">Shoulder</a>
+        <a href="knee.html">Knee</a><a href="hip.html">Hip</a><a href="shoulder.html">Shoulder</a>
         <span>Sports medicine</span><span>Preservation</span><span>Replacement</span>
       </div>
     </div>
@@ -352,19 +168,36 @@ input,select,textarea,button{ font-size:16px; } /* prevent iOS input zoom */
 <section class="quote-block" id="about">
   <div class="quote-inner">
     <p class="quote">“You always have options. My job is to help you find yours — and to deliver world-class outcomes when surgery is the answer.”</p>
-    <p class="quote-attr">— Anup Pradhan, MD · Vanderbilt · Duke · 7× D Magazine Best Doctor · <a class="btn-text" href="/about">About</a></p>
+    <p class="quote-attr">— Anup Pradhan, MD · Vanderbilt · Duke · 7× D Magazine Best Doctor (2020–2026) · <a class="btn-text" href="/about">About</a></p>
   </div>
 </section>
 
 <section class="section">
+  <div class="specialist-band">
+    <div>
+      <figure class="portrait" style="margin:0"><img src="dr-pradhan-torso.jpg" alt="Anup Pradhan, MD"></figure>
+      <p class="caption">Anup Pradhan, MD · 7× D Magazine Best Doctor (2020–2026) · Dallas</p>
+    </div>
+    <div>
+      <p class="kicker">Our specialists</p>
+      <h2 style="margin:0 0 12px">Anup Pradhan, MD</h2>
+      <p class="intro" style="margin-bottom:20px">Board-certified orthopedic surgeon. Vanderbilt MD, Duke fellowship. Founder of OneOrtho Institute — a premier musculoskeletal platform built to grow: more specialists, one standard of care.</p>
+      <a class="btn btn-primary" href="about.html">About Dr. Pradhan</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
   <div class="two">
     <div class="panel">
-      <h2>How we work</h2>
-      <p class="intro">Selective on purpose. Right decision first — then outstanding surgery when that’s the path.</p>
-      <div class="pay-item"><b>Consults</b><span>Focused visits for people who need a real orthopedic decision.</span></div>
-      <div class="pay-item"><b>Office cash prices</b><span>Published rates for visits and large-joint injections. <a class="btn-text" href="/cash-prices">Cash prices</a></span></div>
-      <div class="pay-item"><b>Surgical second opinion</b><span>Transparent cash product. <a class="btn-text" href="second-opinion.html">Details</a></span></div>
-      <div class="pay-item"><b>Surgery</b><span>Cash packages available. Estimates before you decide. Medicare accepted where eligible.</span></div>
+      <h2>Insurance &amp; verification</h2>
+      <p class="intro">Most patients are seen through commercial insurance or Medicare. We verify coverage before your visit — no surprise bills as a business model.</p>
+      <ul class="check-list">
+        <li><strong>Now in-network</strong> — the practice is transitioning into premium commercial insurance networks.</li>
+        <li><strong>Verified before your visit</strong> — our team confirms your plan and coverage before you come in.</li>
+        <li><strong>Medicare accepted</strong> — where eligible, for consults and follow-on care.</li>
+      </ul>
+      <a class="btn-text" href="contact.html">Verify your insurance</a>
     </div>
     <div class="panel">
       <h2>For physicians</h2>
@@ -374,9 +207,6 @@ input,select,textarea,button{ font-size:16px; } /* prevent iOS input zoom */
     </div>
   </div>
 </section>
-
-
-
 
 <section class="section" id="intake">
   <div class="intake">
@@ -401,28 +231,43 @@ input,select,textarea,button{ font-size:16px; } /* prevent iOS input zoom */
     
   </div>
 </section>
-<footer>
-  <div class="inner">
-    <div>
-      <strong>One Ortho</strong>
-      <div>12222 N Central Expy, Ste 130</div>
-      <div>Dallas, TX 75243</div>
+<section class="insurance-ticker" aria-label="Insurance accepted">
+  <p class="ticker-head">Most Major Commercial Insurance & Medicare Networks Accepted.</p>
+  <div class="ticker-viewport"><div class="ticker-track">
+    <ul class="ticker-list"><li>BlueCross BlueShield</li><li>UnitedHealthcare</li><li>Aetna</li><li>Cigna</li><li>Medicare</li></ul>
+    <ul class="ticker-list" aria-hidden="true"><li>BlueCross BlueShield</li><li>UnitedHealthcare</li><li>Aetna</li><li>Cigna</li><li>Medicare</li></ul>
+  </div></div>
+</section>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a class="wordmark" href="index.html"><strong>One</strong>Ortho <span>Institute</span></a>
+      <p>Premier musculoskeletal platform across North Texas — elite knee, hip, and shoulder care through advanced outpatient surgery.</p>
+      <p>12222 N Central Expy, Ste 130<br>Dallas, TX 75243<br><a href="tel:+19724571530">(972) 457-1530</a></p>
     </div>
-    <div>
-      <strong>Contact</strong>
-      <div><a href="tel:+19724571530" style="color:#93C5FD;font-weight:600;text-decoration:none">(972) 457-1530</a></div>
-      <div>North Dallas · Park Cities · Plano</div>
+    <div class="footer-col">
+      <h4>Specialists</h4>
+      <a href="about.html">Dr. Anup Pradhan</a>
+      <a href="knee.html">Knee</a>
+      <a href="hip.html">Hip</a>
+      <a href="shoulder.html">Shoulder</a>
+      <a href="second-opinion.html">Surgical Second Opinion</a>
     </div>
-    <div>
-      <strong>Patients</strong>
-      <div><a href="/#intake" style="color:#93C5FD;text-decoration:none">Request a consult</a></div>
-<div><a href="/about" style="color:#93C5FD;text-decoration:none">About Dr. Pradhan</a></div>
-      <div><a href="/cash-prices" style="color:#93C5FD;text-decoration:none">Cash prices</a></div>
-      <div><a href="/second-opinion.html" style="color:#93C5FD;text-decoration:none">Second opinion</a></div>
-      <div><a href="/privacy" style="color:#93C5FD;text-decoration:none">Privacy Policy</a></div>
-      <div><a href="/terms" style="color:#93C5FD;text-decoration:none">Terms of Use</a></div>
+    <div class="footer-col">
+      <h4>Patient Resources</h4>
+      <a href="contact.html">Insurance Verification</a>
+      <a href="intake.html">Digital Intake Forms</a>
+      <a href="#intake">Book Appointment</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/terms">Terms of Use</a>
+      <a class="footer-fine-link" href="/cash-prices">Self-Pay Fee Schedule</a>
     </div>
   </div>
+  <div class="footer-meta"><span>© 2026 OneOrtho Institute · One Orthopaedics, PLLC</span><span>North Dallas · Park Cities · Plano</span></div>
 </footer>
 
 <script>
@@ -448,5 +293,6 @@ input,select,textarea,button{ font-size:16px; } /* prevent iOS input zoom */
 })();
 </script>
 <script src="shared/analytics.js?v=2"></script>
+<div class="sticky-cta"><a href="tel:+19724571530">⚡ Schedule Urgent Consultation | (972) 457-1530</a></div>
 </body>
 </html>
