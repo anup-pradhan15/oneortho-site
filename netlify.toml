@@ -2,16 +2,9 @@
   publish = "."
 
 [[redirects]]
-  from = "/intake"
-  to = "/"
-  status = 301
-  force = true
-
-[[redirects]]
   from = "/intake.html"
-  to = "/"
+  to = "/intake"
   status = 301
-  force = true
 
 [[redirects]]
   from = "/about.html"
