@@ -26,11 +26,11 @@
     { id: "diagnosis",
       patterns: [/diagnos/, /what'?s wrong with/, /should i (have|get) surgery/, /do i need surgery/, /(my )?(knee|hip|shoulder|joint) (hurts|aches|pain)/, /is it normal (to|that)/, /symptom/],
       reply: "I can't assess symptoms or medical questions in chat — that takes an in-person evaluation with imaging. The fastest route is a specialist evaluation, and we offer same-day and next-day appointments. Want me to start a request?",
-      actions: [{ label: "Start Appointment Request", intent: "schedule" }, { label: "Call " + PHONE_DISPLAY, href: PHONE_TEL, ghost: true }] },
+      actions: [{ label: "Book an appointment", href: "https://healow.com/apps/provider/anupam-pradhan-3340771", external: true }, { label: "Call " + PHONE_DISPLAY, href: PHONE_TEL, ghost: true }] },
     { id: "existing",
       patterns: [/reschedul/, /cancel/, /existing appointment/, /change my (appointment|appt)/, /move my (appointment|appt)/],
       reply: "To reschedule or cancel, call our intake desk at " + PHONE_DISPLAY + " (Mon–Fri, 8 AM–5 PM) and we will move you right away. You can also send a fresh request here and we will call to confirm the new time.",
-      actions: [{ label: "Call " + PHONE_DISPLAY, href: PHONE_TEL }, { label: "New Request", intent: "schedule", ghost: true }, { label: "Intake Forms", href: "/#intake", intake: true, ghost: true }] },
+      actions: [{ label: "Call " + PHONE_DISPLAY, href: PHONE_TEL }, { label: "Book an appointment", href: "https://healow.com/apps/provider/anupam-pradhan-3340771", external: true, ghost: true }, { label: "Intake Forms", href: "/intake", ghost: true }] },
     { id: "cost",
       patterns: [/cost/, /price|pricing/, /self[- ]?pay/, /\bcash\b/, /how much/, /fee schedule/, /afford/, /payment plan/, /financ/],
       reply: "Two ways to pay: most patients use insurance or Medicare, and we verify your exact coverage before your visit. Prefer self-pay? Our published Self-Pay Fee Schedule lists flat rates — a new patient evaluation is $249. No surprise bills, ever.",
@@ -38,7 +38,7 @@
     { id: "hours",
       patterns: [/hours?/, /when (are|do) you (open|close)/, /open (now|on)/, /weekend/, /saturday|sunday/],
       reply: "Our Dallas clinic is open Monday through Friday, 8:00 AM to 5:00 PM. Consults can be requested online anytime — we confirm your exact time by phone.",
-      actions: [{ label: "Request an Appointment", intent: "schedule" }, { label: "Call " + PHONE_DISPLAY, href: PHONE_TEL, ghost: true }] },
+      actions: [{ label: "Book an appointment", href: "https://healow.com/apps/provider/anupam-pradhan-3340771", external: true }, { label: "Call " + PHONE_DISPLAY, href: PHONE_TEL, ghost: true }] },
     { id: "portal",
       patterns: [/portal/, /healow/, /log ?in|sign ?in/, /my (records?|results?|chart)/, /test results?/, /medical records?/],
       reply: "Your records, results, and secure messaging live in the Healow Patient Portal. It opens in a new tab — you can also reach it anytime from the Patient Portal button at the top of this site.",
@@ -46,27 +46,27 @@
     { id: "doctor",
       patterns: [/pradhan/, /who (is|will|would)/, /doctor|surgeon/, /credentials?/, /experience/, /best doctor/, /board[- ]certified/, /trained|training/],
       reply: "Your surgeon is Anup Pradhan, MD — board-certified, Vanderbilt MD and residency, Duke fellowship, and former Chair of Orthopedics at Medical City Dallas. He has been named a D Magazine Best Doctor seven years in a row (2020–2026).",
-      actions: [{ label: "About Dr. Pradhan", href: "/about" }, { label: "Book a Consult", intent: "schedule", ghost: true }] },
+      actions: [{ label: "About Dr. Pradhan", href: "/about" }, { label: "Book an appointment", href: "https://healow.com/apps/provider/anupam-pradhan-3340771", external: true, ghost: true }] },
     { id: "prepare",
       patterns: [/bring/, /first visit/, /prepare|preparation/, /paperwork/, /intake/, /what (do|should) i (do|bring|expect)/, /before my (visit|appointment|surgery)/],
       reply: "For a first visit, bring your insurance card, a photo ID, and any prior imaging (MRI or X-rays) — reports are fine if you don't have the images. You can also complete your intake forms online before you arrive, which speeds everything up.",
-      actions: [{ label: "Complete Intake Forms", href: "/#intake", intake: true }, { label: "Book a Consult", intent: "schedule", ghost: true }] },
+      actions: [{ label: "Complete Intake Forms", href: "/intake" }, { label: "Book an appointment", href: "https://healow.com/apps/provider/anupam-pradhan-3340771", external: true, ghost: true }] },
     { id: "recovery",
       patterns: [/recover/, /outpatient/, /same[- ]day/, /\basc\b|surgery center/, /physical therapy|\bpt\b|rehab/, /hospital stay/],
       reply: "Most of our joint replacements are outpatient — surgery at an advanced surgery center, home the same day, walking the same day. Recovery is structured: you leave with a clear plan, scheduled follow-ups, and a team that tracks your progress.",
-      actions: [{ label: "Book a Consult", intent: "schedule" }, { label: "Second Opinion", intent: "second", ghost: true }] },
+      actions: [{ label: "Book an appointment", href: "https://healow.com/apps/provider/anupam-pradhan-3340771", external: true }, { label: "Second Opinion", intent: "second", ghost: true }] },
     { id: "knee",
       patterns: [/knee/, /meniscus/, /\bacl\b/, /cartilage/],
       reply: "Our knee care covers reconstruction and joint preservation through to full replacement — the goal is the least invasive option that actually fixes the problem. Explore knee care, or start with an evaluation.",
-      actions: [{ label: "Knee Care", href: "/knee" }, { label: "Book an Evaluation", intent: "schedule", ghost: true }] },
+      actions: [{ label: "Knee Care", href: "/knee" }, { label: "Book an appointment", href: "https://healow.com/apps/provider/anupam-pradhan-3340771", external: true, ghost: true }] },
     { id: "hip",
       patterns: [/\bhip\b/, /groin pain/],
       reply: "Our hip care centers on the anterior, muscle-sparing approach to replacement — most patients are home the same day. Explore hip care, or start with an evaluation.",
-      actions: [{ label: "Hip Care", href: "/hip" }, { label: "Book an Evaluation", intent: "schedule", ghost: true }] },
+      actions: [{ label: "Hip Care", href: "/hip" }, { label: "Book an appointment", href: "https://healow.com/apps/provider/anupam-pradhan-3340771", external: true, ghost: true }] },
     { id: "shoulder",
       patterns: [/shoulder/, /rotator cuff/, /labrum|labral/],
       reply: "Our shoulder care runs from rotator cuff repair to total shoulder replacement, with preservation options first when they can work. Explore shoulder care, or start with an evaluation.",
-      actions: [{ label: "Shoulder Care", href: "/shoulder" }, { label: "Book an Evaluation", intent: "schedule", ghost: true }] },
+      actions: [{ label: "Shoulder Care", href: "/shoulder" }, { label: "Book an appointment", href: "https://healow.com/apps/provider/anupam-pradhan-3340771", external: true, ghost: true }] },
     { id: "human",
       patterns: [/human/, /real person/, /someone (real|live)/, /speak|talk (to|with)/, /phone|call (me|you|us)/, /contact/],
       reply: "Of course — our intake desk answers Monday through Friday, 8:00 AM to 5:00 PM at " + PHONE_DISPLAY + ". Or leave your number in an appointment request and we'll call you.",
@@ -74,11 +74,11 @@
     { id: "greeting",
       patterns: [/^(hi|hey|hello|good (morning|afternoon|evening)|yo)\b/],
       reply: "Hello — welcome to OneOrtho. I can help you schedule an appointment, start a second opinion, verify insurance, or answer questions about our care. What would you like to do?",
-      actions: [{ label: "Schedule", intent: "schedule" }, { label: "Second Opinion", intent: "second", ghost: true }, { label: "Insurance", intent: "insurance", ghost: true }, { label: "Location & Hours", intent: "location", ghost: true }] },
+      actions: [{ label: "Book an appointment", href: "https://healow.com/apps/provider/anupam-pradhan-3340771", external: true }, { label: "Second Opinion", intent: "second", ghost: true }, { label: "Insurance", intent: "insurance", ghost: true }, { label: "Location & Hours", intent: "location", ghost: true }] },
     { id: "thanks",
       patterns: [/thank/, /thanks/, /great|awesome|perfect|that helps/],
       reply: "You're welcome. Anything else I can help with — scheduling, insurance, or directions?",
-      actions: [{ label: "Schedule", intent: "schedule" }, { label: "Call " + PHONE_DISPLAY, href: PHONE_TEL, ghost: true }] }
+      actions: [{ label: "Book an appointment", href: "https://healow.com/apps/provider/anupam-pradhan-3340771", external: true }, { label: "Call " + PHONE_DISPLAY, href: PHONE_TEL, ghost: true }] }
   ];
 
   var FLOWS = {
@@ -92,7 +92,7 @@
   var FALLBACK = {
     reply: "I want to make sure you get an exact answer. I can help right away with scheduling, second opinions, insurance verification, costs, and locations — or our team can help directly at " + PHONE_DISPLAY + ".",
     actions: [
-      { label: "Schedule an Appointment", intent: "schedule" },
+      { label: "Book an appointment", href: "https://healow.com/apps/provider/anupam-pradhan-3340771", external: true },
       { label: "Second Opinion", intent: "second", ghost: true },
       { label: "Insurance", intent: "insurance", ghost: true },
       { label: "Call " + PHONE_DISPLAY, href: PHONE_TEL, ghost: true }
@@ -260,7 +260,7 @@
         '<option value="" selected>Select\u2026</option><option value="knee">Knee</option><option value="hip">Hip</option><option value="shoulder">Shoulder</option></select></div>' +
         '<div><label for="ooFDay">Preferred Day</label><select id="ooFDay" name="day">' +
         '<option value="First available" selected>First available</option><option value="Today">Today</option><option value="Tomorrow">Tomorrow</option><option value="This week">This week</option><option value="Next week">Next week</option></select></div>' +
-        '<button class="oo-btn" type="submit">Request My Appointment</button>';
+        '<button class="oo-btn" type="submit">Send request</button>';
       form.addEventListener("submit", function (ev) {
         ev.preventDefault();
         var name = document.getElementById("ooFName").value.trim();
@@ -284,7 +284,7 @@
             addMsg("Thanks, " + name.split(" ")[0] + " \u2014 your request is in. Our intake desk will call " + phone + " shortly to confirm your time.", "bot");
           })
           .catch(function () {
-            btn.disabled = false; btn.textContent = "Request My Appointment";
+            btn.disabled = false; btn.textContent = "Send request";
             addMsg("That didn\u2019t go through \u2014 please call us at " + PHONE_DISPLAY + " and we\u2019ll book you right away.", "bot");
           });
       });
@@ -307,7 +307,7 @@
       },
       insurance: function () {
         botSay("We accept Medicare and major commercial insurance plans, and our team verifies your exact coverage before your visit so there are no surprises.", [
-          { label: "Verify My Coverage & Book", href: "/#intake", intake: true },
+          { label: "Book an appointment", href: "https://healow.com/apps/provider/anupam-pradhan-3340771", external: true },
           { label: "Self-Pay Rates", intent: "cost", ghost: true }
         ]);
       },
@@ -317,7 +317,7 @@
           { label: "Knee Care", href: "/knee", ghost: true },
           { label: "Hip Care", href: "/hip", ghost: true },
           { label: "Shoulder Care", href: "/shoulder", ghost: true },
-          { label: "Book Consult", href: "/#intake", intake: true }
+          { label: "Book an appointment", href: "https://healow.com/apps/provider/anupam-pradhan-3340771", external: true }
         ]);
       }
     };
@@ -364,7 +364,7 @@
         if (reply) {
           addMsg(reply, "bot");
           addActions([
-            { label: "Book a Consult", intent: "schedule", ghost: true },
+            { label: "Book an appointment", href: "https://healow.com/apps/provider/anupam-pradhan-3340771", external: true, ghost: true },
             { label: "Call " + PHONE_DISPLAY, href: PHONE_TEL, ghost: true }
           ]);
           return;
@@ -452,7 +452,7 @@
           showChat();
           botSay("Everything for an existing visit, in one place.", [
             { label: "Reschedule or Cancel", intent: "existing" },
-            { label: "Intake Forms", href: "/#intake", intake: true, ghost: true },
+            { label: "Intake Forms", href: "/intake", ghost: true },
             { label: "Patient Portal", href: "https://health.healow.com/OneOrtho", external: true, ghost: true },
             { label: "Directions", href: MAPS_URL, external: true, ghost: true },
             { label: "What to Bring", intent: "prepare", ghost: true }
