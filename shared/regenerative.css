@@ -364,3 +364,9 @@ body.rg.thanks { background: var(--ink); }
 .rg .quote figcaption { font-size: 14px; color: var(--on-dark); }
 .rg .quote.ratings { gap: 12px; justify-content: center; font-size: 16px; color: var(--on-dark); }
 .rg .quote.ratings strong { color: var(--hot); font-size: 24px; font-weight: 800; margin-right: 8px; }
+
+/* Price anchors */
+.rg .anchors { gap: 10px; margin-top: 10px; padding-top: 18px; border-top: 1px solid #48484A; }
+.rg .anchor { display: flex; gap: 14px; align-items: baseline; }
+.rg .anchor strong { flex: 0 0 auto; min-width: 128px; font-size: 20px; font-weight: 800; color: #FFFFFF; }
+.rg .anchor span { font-size: 14px; color: var(--on-dark); }
