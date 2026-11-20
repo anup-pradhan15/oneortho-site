@@ -364,3 +364,12 @@ body.rg.thanks { background: var(--ink); }
 .rg .quote figcaption { font-size: 14px; color: var(--on-dark); }
 .rg .quote.ratings { gap: 12px; justify-content: center; font-size: 16px; color: var(--on-dark); }
 .rg .quote.ratings strong { color: var(--hot); font-size: 24px; font-weight: 800; margin-right: 8px; }
+
+/* Price anchors */
+.rg .anchors { gap: 10px; margin-top: 10px; padding-top: 18px; border-top: 1px solid #48484A; }
+.rg .anchor { display: flex; gap: 14px; align-items: baseline; }
+.rg .anchor strong { flex: 0 0 auto; min-width: 128px; font-size: 20px; font-weight: 800; color: #FFFFFF; }
+.rg .anchor span { font-size: 14px; color: var(--on-dark); }
+.rg .pay-note { font-size: 14px; font-weight: 700; color: #FFFFFF; padding-left: 26px; position: relative; }
+.rg .pay-note::before { content: ""; position: absolute; left: 0; top: 2px; width: 16px; height: 16px; background: var(--hot); border-radius: 3px; }
+.rg .pay-note::after { content: ""; position: absolute; left: 5px; top: 4px; width: 4px; height: 8px; border: solid var(--ink); border-width: 0 2px 2px 0; transform: rotate(45deg); }
