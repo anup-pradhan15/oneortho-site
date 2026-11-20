@@ -26,12 +26,12 @@ fbq('track', 'PageView');
 <meta name="description" content="PRP injections and joint preservation in Dallas with board-certified orthopedic surgeon Anup Pradhan, MD. Request an evaluation to find out whether PRP is right for your joint.">
 <meta property="og:title" content="PRP Injections and Joint Preservation in Dallas | OneOrtho">
 <meta property="og:description" content="Non-surgical options for knee, hip and shoulder arthritis from a board-certified orthopedic surgeon. Prices posted up front.">
-<meta property="og:image" content="https://oneortho.com/assets/regenerative/hero.jpg">
+<meta property="og:image" content="https://oneortho.com/assets/regenerative/knee-hero.jpg">
 <link rel="canonical" href="https://oneortho.com/regenerative">
 <title>PRP Injections and Joint Preservation in Dallas | OneOrtho</title>
 <link rel="icon" href="/favicon.ico">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="shared/regenerative.css?v=1">
+<link rel="stylesheet" href="shared/regenerative.css?v=2">
 </head>
 <body class="rg">
 
@@ -44,14 +44,13 @@ fbq('track', 'PageView');
 
 <main>
 <section class="hero">
-  <img class="hero-img" src="assets/regenerative/hero.jpg" alt="" aria-hidden="true" width="1505" height="842">
-  <div class="hero-scrim" aria-hidden="true"></div>
   <div class="wrap">
     <div class="hero-copy stack">
       <div class="eyebrow">PRP injections and joint preservation · Dallas</div>
-      <h1>Too young for a replacement. Too active to sit around waiting.</h1>
+      <h1>Too young for a replacement. <span class="hot">Too active to sit around waiting.</span></h1>
       <p>PRP injections and other non-surgical options for knee, hip and shoulder arthritis, from a board-certified orthopedic surgeon in Dallas. It starts with one evaluation to find out whether PRP is right for your joint.</p>
     </div>
+    <div class="hero-photo"><img src="assets/regenerative/knee-hero.jpg" alt="A person sitting on a sofa holding their knee" width="1254" height="837"></div>
   </div>
 </section>
 
@@ -60,6 +59,7 @@ fbq('track', 'PageView');
     <form id="request" class="card-form stack" name="prp-evaluation-request" method="POST" action="/regenerative-thanks" data-netlify="true" data-netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="prp-evaluation-request">
       <input type="hidden" name="source" value="regenerative">
+      <input type="hidden" name="ad" value="">
       <p class="hp" aria-hidden="true"><label>Don't fill: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
       <div class="stack" style="gap:4px">
         <div class="form-title">Request PRP Guide</div>
@@ -76,7 +76,7 @@ fbq('track', 'PageView');
       </div>
       <div class="fine">By submitting, you agree to our <a href="/privacy">Privacy Policy</a>. Please don't include medical details here; we'll discuss them at your visit.</div>
     </form>
-    <div class="fine caption-right">Illustrative image, not an actual patient.</div>
+    <div class="fine caption-right">Model, not an actual patient.</div>
   </div>
 </section>
 
@@ -101,8 +101,8 @@ fbq('track', 'PageView');
       <p class="lede">That stretch of time is what joint preservation is for. The goal is to keep you doing what matters, from the gym to the grandkids, with a plan built on your exam and imaging.</p>
     </div>
     <figure class="col stack">
-      <img class="photo" src="assets/regenerative/knee.jpg" alt="A person sitting on a sofa holding their knee" width="1254" height="837" loading="lazy">
-      <figcaption class="fine">Model, not an actual patient.</figcaption>
+      <img class="photo" src="assets/regenerative/hero.jpg" alt="A man playing tennis" width="1505" height="842" loading="lazy">
+      <figcaption class="fine">Illustrative image, not an actual patient.</figcaption>
     </figure>
     <div class="cards">
       <div class="card stack"><div class="card-title">A clear picture of the joint</div><p>Where the wear is, how far along it is, and what that means for the activities you care about.</p></div>
@@ -202,6 +202,7 @@ fbq('track', 'PageView');
     </div>
     <form class="guide-form stack" name="prp-guide-request" method="POST" action="/regenerative-thanks" data-netlify="true" data-netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="prp-guide-request">
+      <input type="hidden" name="ad" value="">
       <p class="hp" aria-hidden="true"><label>Don't fill: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
       <label for="guide-email">Email address</label>
       <div class="inline">
@@ -275,7 +276,7 @@ fbq('track', 'PageView');
     form.addEventListener('submit', function () {
       try {
         var data = {};
-        ['name', 'phone', 'email', 'joint'].forEach(function (k) {
+        ['name', 'phone', 'email', 'joint', 'ad'].forEach(function (k) {
           var el = form.elements[k];
           if (el && el.value) data[k] = el.value;
         });
@@ -283,6 +284,16 @@ fbq('track', 'PageView');
       } catch (e) { /* storage unavailable: the confirmation page still works */ }
     });
   }
+  // Which ad brought this visitor (?ad=1 on the ad's link). A short label only,
+  // kept for this browser tab and written into the forms so the office can
+  // see which ad a request came from.
+  var ad = '';
+  try {
+    var q = new URLSearchParams(window.location.search).get('ad') || '';
+    if (/^[A-Za-z0-9_-]{1,40}$/.test(q)) sessionStorage.setItem('prpAd', q);
+    ad = sessionStorage.getItem('prpAd') || '';
+  } catch (e) {}
+  Array.prototype.forEach.call(document.querySelectorAll('input[name="ad"]'), function (el) { el.value = ad; });
   // Select by name: Netlify removes the data-netlify attribute when it deploys.
   Array.prototype.forEach.call(document.querySelectorAll('form[name^="prp-"]'), remember);
 })();

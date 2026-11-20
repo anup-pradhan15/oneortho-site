@@ -27,7 +27,7 @@ fbq('track', 'PageView');
 <title>Request received | OneOrtho</title>
 <link rel="icon" href="/favicon.ico">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="shared/regenerative.css?v=1">
+<link rel="stylesheet" href="shared/regenerative.css?v=2">
 </head>
 <body class="rg thanks">
 
@@ -42,7 +42,7 @@ fbq('track', 'PageView');
 
   <section class="panel stack">
     <div class="check" aria-hidden="true">
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1D1D1F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
     </div>
     <h1>Request received.</h1>
     <p class="lede">Tell us the time you'd prefer below and we'll confirm it with you. If you'd rather not choose now, we'll call you within one business day. Prefer to talk? Call <a href="tel:+19724571530">(972) 457-1530</a>.</p>
@@ -90,6 +90,7 @@ fbq('track', 'PageView');
       <input type="hidden" name="phone">
       <input type="hidden" name="email">
       <input type="hidden" name="joint">
+      <input type="hidden" name="ad">
     </form>
   </section>
 
@@ -97,7 +98,7 @@ fbq('track', 'PageView');
     <div class="eyebrow">While you wait</div>
     <h2>The Years Before Replacement</h2>
     <p>Your free guide is ready. A plain-language overview of what helps, what doesn't, and what the evidence says about injections, PRP, bracing and exercise.</p>
-    <div><a class="btn btn-light" href="/assets/regenerative/the-years-before-replacement.pdf" target="_blank" rel="noopener">Open the guide</a></div>
+    <div><a class="btn" href="/assets/regenerative/the-years-before-replacement.pdf" target="_blank" rel="noopener">Open the guide</a></div>
   </section>
 
   <section class="panel stack">
@@ -200,7 +201,7 @@ fbq('track', 'PageView');
     }
     form.elements['requested-day'].value = chosenDay.label + ', ' + chosenDay.date;
     form.elements['requested-time'].value = chosenSlot;
-    ['name', 'phone', 'email', 'joint'].forEach(function (k) {
+    ['name', 'phone', 'email', 'joint', 'ad'].forEach(function (k) {
       form.elements[k].value = contact[k] || '';
     });
     sendBtn.disabled = true;
