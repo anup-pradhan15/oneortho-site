@@ -61,6 +61,10 @@ fbq('track', 'PageView');
         <div class="group-label" id="slot-label">Afternoon times</div>
         <div class="pill-row" id="slots" role="group" aria-labelledby="slot-label"></div>
       </div>
+      <div id="who" class="fields" hidden>
+        <div class="field stack"><label for="who-name">Name</label><input id="who-name" type="text" autocomplete="name"></div>
+        <div class="field stack"><label for="who-phone">Mobile phone</label><input id="who-phone" type="tel" autocomplete="tel"></div>
+      </div>
       <div class="confirm-row">
         <button class="btn" id="send-time" type="button" disabled>Request this time</button>
         <span class="muted" id="summary" aria-live="polite">Choose a time to continue.</span>
@@ -155,10 +159,30 @@ fbq('track', 'PageView');
 
   function when() { return chosenDay.label + ', ' + chosenDay.date + ' at ' + chosenSlot; }
 
+  // Contact details from the request form on the previous page. If they are
+  // missing (guide-only request, or the page was opened directly), ask here,
+  // so every time request reaches the office with a name and a number.
+  var contact = {};
+  try { contact = JSON.parse(sessionStorage.getItem('prpRequest') || '{}') || {}; } catch (e) {}
+  var whoEl = document.getElementById('who');
+  var whoName = document.getElementById('who-name');
+  var whoPhone = document.getElementById('who-phone');
+  var needWho = !(contact.name && contact.phone);
+  if (needWho) {
+    whoEl.hidden = false;
+    whoName.value = contact.name || '';
+    whoPhone.value = contact.phone || '';
+    whoName.addEventListener('input', refresh);
+    whoPhone.addEventListener('input', refresh);
+  }
+
   function refresh() {
-    var ready = chosenDay && chosenSlot;
-    sendBtn.disabled = !ready;
-    summary.textContent = ready ? when() : 'Choose a time to continue.';
+    var picked = chosenDay && chosenSlot;
+    var known = !needWho || (whoName.value.trim() && whoPhone.value.trim());
+    sendBtn.disabled = !(picked && known);
+    summary.textContent = !picked ? 'Choose a time to continue.'
+      : !known ? 'Add your name and mobile number to continue.'
+      : when();
   }
 
   options.forEach(function (o) {
@@ -170,8 +194,10 @@ fbq('track', 'PageView');
 
   sendBtn.addEventListener('click', function () {
     if (!chosenDay || !chosenSlot) return;
-    var contact = {};
-    try { contact = JSON.parse(sessionStorage.getItem('prpRequest') || '{}'); } catch (e) {}
+    if (needWho) {
+      contact.name = whoName.value.trim();
+      contact.phone = whoPhone.value.trim();
+    }
     form.elements['requested-day'].value = chosenDay.label + ', ' + chosenDay.date;
     form.elements['requested-time'].value = chosenSlot;
     ['name', 'phone', 'email', 'joint'].forEach(function (k) {

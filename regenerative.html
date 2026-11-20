@@ -283,7 +283,8 @@ fbq('track', 'PageView');
       } catch (e) { /* storage unavailable: the confirmation page still works */ }
     });
   }
-  Array.prototype.forEach.call(document.querySelectorAll('form[data-netlify]'), remember);
+  // Select by name: Netlify removes the data-netlify attribute when it deploys.
+  Array.prototype.forEach.call(document.querySelectorAll('form[name^="prp-"]'), remember);
 })();
 </script>
 <script src="shared/analytics.js?v=3"></script>
