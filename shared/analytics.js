@@ -26,11 +26,13 @@
     if (window.fbq) window.fbq('trackCustom', 'ClickToCall');
   });
 
-  // Marketing-page consult forms POST to /thank-you (Netlify). One page view
+  // Marketing-page consult forms POST to /thank-you, and the PRP landing
+  // page forms to /regenerative-thanks (Netlify). One page view
   // is one submission. Skip reloads and back/forward so the same visit
   // does not count twice. The contact modal never reaches this page.
   var path = (window.location.pathname || '/').replace(/\/+$/, '') || '/';
-  if (path === '/thank-you' || path === '/thank-you.html') {
+  if (path === '/thank-you' || path === '/thank-you.html' ||
+      path === '/regenerative-thanks' || path === '/regenerative-thanks.html') {
     var nav = window.performance &&
       performance.getEntriesByType &&
       performance.getEntriesByType('navigation')[0];

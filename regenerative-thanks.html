@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KC3YFT2S9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8KC3YFT2S9', {
+    allow_google_signals: false,
+    allow_ad_personalization_signals: false
+  });
+</script>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('set','autoConfig',false,'2352999282138395');
+fbq('init', '2352999282138395');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2352999282138395&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Request received | OneOrtho</title>
+<link rel="icon" href="/favicon.ico">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared/regenerative.css?v=1">
+</head>
+<body class="rg thanks">
+
+<header class="top">
+  <div class="wrap">
+    <a class="wordmark" href="/" aria-label="OneOrtho home"><strong>One</strong>Ortho</a>
+    <a class="btn btn-sm" href="tel:+19724571530">Call (972) 457-1530</a>
+  </div>
+</header>
+
+<main class="thanks-main stack">
+
+  <section class="panel stack">
+    <div class="check" aria-hidden="true">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+    </div>
+    <h1>Request received.</h1>
+    <p class="lede">Tell us the time you'd prefer below and we'll confirm it with you. If you'd rather not choose now, we'll call you within one business day. Prefer to talk? Call <a href="tel:+19724571530">(972) 457-1530</a>.</p>
+  </section>
+
+  <section class="panel stack" aria-labelledby="time-h">
+    <h2 id="time-h">Request a time with Dr. Pradhan</h2>
+    <p class="muted">PRP evaluations are on Tuesday and Wednesday afternoons at our North Dallas office.</p>
+
+    <div id="picker" class="stack" style="gap:20px">
+      <div class="stack" style="gap:10px">
+        <div class="group-label" id="day-label">Day</div>
+        <div class="pill-row" id="days" role="group" aria-labelledby="day-label"></div>
+      </div>
+      <div class="stack" style="gap:10px">
+        <div class="group-label" id="slot-label">Afternoon times</div>
+        <div class="pill-row" id="slots" role="group" aria-labelledby="slot-label"></div>
+      </div>
+      <div class="confirm-row">
+        <button class="btn" id="send-time" type="button" disabled>Request this time</button>
+        <span class="muted" id="summary" aria-live="polite">Choose a time to continue.</span>
+      </div>
+      <p class="fine" id="time-error" role="alert" hidden>We couldn't send that just now. Please call (972) 457-1530 and we'll set it up by phone.</p>
+    </div>
+
+    <div id="requested" class="requested stack" hidden>
+      <div class="requested-title">Time requested: <span id="requested-when"></span></div>
+      <p class="muted">This time isn't confirmed yet. Our team will call or text you to confirm it, usually within one business day. Bring any X-rays or MRI you already have.</p>
+      <div><button class="btn btn-link" id="change-time" type="button">Choose a different time</button></div>
+    </div>
+
+    <!-- Netlify detects this form at deploy time. It is submitted in the
+         background by the script below; contact details come from the
+         request form on the previous page (same browser tab only). -->
+    <form name="prp-time-request" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="prp-time-request">
+      <input name="bot-field" tabindex="-1" autocomplete="off">
+      <input type="hidden" name="requested-day">
+      <input type="hidden" name="requested-time">
+      <input type="hidden" name="name">
+      <input type="hidden" name="phone">
+      <input type="hidden" name="email">
+      <input type="hidden" name="joint">
+    </form>
+  </section>
+
+  <section class="panel dark stack">
+    <div class="eyebrow">While you wait</div>
+    <h2>The Years Before Replacement</h2>
+    <p>Your free guide is ready. A plain-language overview of what helps, what doesn't, and what the evidence says about injections, PRP, bracing and exercise.</p>
+    <div><a class="btn btn-light" href="/assets/regenerative/the-years-before-replacement.pdf" target="_blank" rel="noopener">Open the guide</a></div>
+  </section>
+
+  <section class="panel stack">
+    <h2>What happens at your visit</h2>
+    <ol>
+      <li>We verify your insurance for the office visit before you come in.</li>
+      <li>Dr. Pradhan examines the joint and reviews your X-rays or MRI with you.</li>
+      <li>You leave knowing your options and what we'd recommend first.</li>
+    </ol>
+    <p class="muted">12222 N Central Expy, Suite 130, Dallas, TX 75243, at Forest Lane and US-75.</p>
+  </section>
+
+</main>
+
+<script>
+(function () {
+  'use strict';
+  var DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  var MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  // Clinic days and times offered. Edit these two lines to change the widget.
+  var CLINIC_DAYS = [2, 3]; // Tuesday, Wednesday
+  var SLOTS = ['1:00 PM', '1:30 PM', '2:00 PM', '2:30 PM', '3:00 PM', '3:30 PM', '4:00 PM', '4:30 PM'];
+
+  var daysEl = document.getElementById('days');
+  var slotsEl = document.getElementById('slots');
+  var sendBtn = document.getElementById('send-time');
+  var summary = document.getElementById('summary');
+  var picker = document.getElementById('picker');
+  var requested = document.getElementById('requested');
+  var errorEl = document.getElementById('time-error');
+  var form = document.forms['prp-time-request'];
+  var chosenDay = null, chosenSlot = null;
+
+  // Next four clinic days, starting tomorrow.
+  var options = [];
+  var d = new Date();
+  d.setHours(12, 0, 0, 0);
+  while (options.length < 4) {
+    d.setDate(d.getDate() + 1);
+    if (CLINIC_DAYS.indexOf(d.getDay()) !== -1) {
+      options.push({ label: DAYS[d.getDay()], date: MONTHS[d.getMonth()] + ' ' + d.getDate() });
+    }
+  }
+
+  function pill(parent, html, extra, onPick) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'pill' + (extra ? ' ' + extra : '');
+    b.setAttribute('aria-pressed', 'false');
+    b.innerHTML = html;
+    b.addEventListener('click', function () {
+      Array.prototype.forEach.call(parent.children, function (c) { c.setAttribute('aria-pressed', 'false'); });
+      b.setAttribute('aria-pressed', 'true');
+      onPick();
+      refresh();
+    });
+    parent.appendChild(b);
+  }
+
+  function when() { return chosenDay.label + ', ' + chosenDay.date + ' at ' + chosenSlot; }
+
+  function refresh() {
+    var ready = chosenDay && chosenSlot;
+    sendBtn.disabled = !ready;
+    summary.textContent = ready ? when() : 'Choose a time to continue.';
+  }
+
+  options.forEach(function (o) {
+    pill(daysEl, o.label + '<span>' + o.date + '</span>', 'day', function () { chosenDay = o; });
+  });
+  SLOTS.forEach(function (s) {
+    pill(slotsEl, s, '', function () { chosenSlot = s; });
+  });
+
+  sendBtn.addEventListener('click', function () {
+    if (!chosenDay || !chosenSlot) return;
+    var contact = {};
+    try { contact = JSON.parse(sessionStorage.getItem('prpRequest') || '{}'); } catch (e) {}
+    form.elements['requested-day'].value = chosenDay.label + ', ' + chosenDay.date;
+    form.elements['requested-time'].value = chosenSlot;
+    ['name', 'phone', 'email', 'joint'].forEach(function (k) {
+      form.elements[k].value = contact[k] || '';
+    });
+    sendBtn.disabled = true;
+    errorEl.hidden = true;
+    var body = new URLSearchParams(new FormData(form)).toString();
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: body
+    }).then(function (res) {
+      if (!res.ok) throw new Error('send failed');
+      document.getElementById('requested-when').textContent = when();
+      picker.hidden = true;
+      requested.hidden = false;
+    }).catch(function () {
+      errorEl.hidden = false;
+      sendBtn.disabled = false;
+    });
+  });
+
+  document.getElementById('change-time').addEventListener('click', function () {
+    requested.hidden = true;
+    picker.hidden = false;
+    refresh();
+  });
+})();
+</script>
+<script src="shared/analytics.js?v=3"></script>
+</body>
+</html>

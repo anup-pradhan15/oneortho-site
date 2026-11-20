@@ -34,6 +34,16 @@
   status = 301
 
 [[redirects]]
+  from = "/regenerative.html"
+  to = "/regenerative"
+  status = 301
+
+[[redirects]]
+  from = "/regenerative-thanks.html"
+  to = "/regenerative-thanks"
+  status = 301
+
+[[redirects]]
   from = "/knee-pain.html"
   to = "/knee-pain"
   status = 301
