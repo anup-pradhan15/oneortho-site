@@ -259,3 +259,94 @@ body.rg.thanks { background: var(--tint); min-height: 100vh; }
   .rg h1 { font-size: 36px; }
   .rg .hero .wrap { padding-bottom: 120px; }
 }
+
+/* ------------------------------------------------------------------
+   Sharp scheme (Nov 2026, v3): mostly black, white type, yellow for
+   emphasis and every primary button. Squarer corners, heavier type.
+------------------------------------------------------------------- */
+body.rg { background: #FFFFFF; }
+.rg h2 { font-weight: 800; letter-spacing: -0.03em; }
+.rg h1 { font-weight: 800; }
+.rg .btn { border-radius: 8px; font-weight: 800; font-size: 17px; padding: 16px 28px; letter-spacing: -0.005em; box-shadow: 0 2px 0 rgba(0,0,0,0.25); }
+.rg .btn-sm { font-size: 15px; padding: 12px 20px; }
+.rg .btn-ink, .rg .btn-ink:hover { background: var(--ink); color: #FFFFFF; }
+.rg .btn-outline, .rg .btn-link { box-shadow: none; }
+.rg .dark .btn-outline, .rg .dark .btn-outline:hover { color: #FFFFFF; border-color: #FFFFFF; }
+.rg input[type="text"], .rg input[type="tel"], .rg input[type="email"], .rg select { border-radius: 8px; border-color: var(--ink); }
+.rg .card, .rg .option, .rg .dark-card, .rg .device-panel, .rg .photo, .rg .doc-photo img, .rg .hero-photo img, .rg .panel, .rg .requested, .rg .pill.day { border-radius: 10px; }
+.rg .pill { border-radius: 8px; }
+
+/* Header */
+.rg .top { background: var(--ink); border-bottom: 1px solid #2C2C2E; }
+.rg .wordmark { color: #FFFFFF; }
+
+/* Offer card */
+.rg .card-form { border: 0; border-top: 6px solid var(--hot); border-radius: 10px; box-shadow: 0 18px 50px rgba(0,0,0,0.28); }
+.rg .offer { display: flex; gap: 24px; align-items: center; }
+.rg .offer-cover { flex: 0 0 auto; width: 132px; height: auto; border-radius: 4px; box-shadow: 0 8px 22px rgba(0,0,0,0.35); transform: rotate(-3deg); }
+.rg .form-title { font-size: 32px; font-weight: 800; letter-spacing: -0.03em; line-height: 1.15; }
+.rg .form-sub { font-size: 15px; color: var(--ink); }
+.rg .ticks { list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 22px; font-size: 14px; font-weight: 600; }
+.rg .ticks li { padding-left: 24px; position: relative; }
+.rg .ticks li::before { content: ""; position: absolute; left: 0; top: 2px; width: 16px; height: 16px; background: var(--hot); border-radius: 3px; }
+.rg .ticks li::after { content: ""; position: absolute; left: 5px; top: 4px; width: 4px; height: 8px; border: solid var(--ink); border-width: 0 2px 2px 0; transform: rotate(45deg); }
+.rg .assure { font-size: 13px; color: var(--mute); }
+.rg .assure strong { color: var(--ink); }
+
+/* Proof bar: yellow band */
+.rg .proof { background: var(--hot); border: 0; }
+.rg .proof-title { font-weight: 800; color: var(--ink); }
+.rg .proof-sub { color: var(--ink); }
+.rg .request { padding-bottom: 56px; }
+
+/* Cards on white */
+.rg .card { background: #FFFFFF; border: 2px solid var(--ink); border-left-width: 8px; border-left-color: var(--hot); outline: 0; }
+.rg .card p { color: var(--ink); }
+.rg .step { border-top: 6px solid var(--hot); }
+.rg .step-n { color: var(--ink); font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; font-size: 13px; }
+.rg .step-title { font-weight: 800; }
+
+/* Dark sections */
+.rg .dark h2 { color: #FFFFFF; }
+.rg .dark .lede, .rg .dark .closing p, .rg .dark p.muted { color: var(--on-dark); }
+.rg .dark .option { background: var(--dark-card); color: #FFFFFF; }
+.rg .dark .option p { color: var(--on-dark); }
+.rg .dark .option.featured { background: var(--hot); color: var(--ink); }
+.rg .dark .option.featured p, .rg .dark .option.featured .card-title { color: var(--ink); }
+.rg .cta-row { display: flex; flex-wrap: wrap; gap: 16px 24px; align-items: center; margin-top: 40px; }
+.rg .cta-row span { color: var(--on-dark); font-size: 16px; }
+.rg .price { font-weight: 800; color: var(--hot); }
+
+/* Yellow sections */
+.rg .hot-sec { background: var(--hot); color: var(--ink); }
+.rg .hot-sec .eyebrow, .rg .panel.hot-sec .eyebrow { color: var(--ink); }
+.rg .hot-sec p, .rg .hot-sec .muted, .rg .hot-sec .fine, .rg .panel.hot-sec p { color: var(--ink); }
+.rg .hot-sec input { border-color: var(--ink); }
+.rg .guide-cover { flex: 0 0 auto; width: 190px; height: auto; border-radius: 4px; box-shadow: 0 14px 34px rgba(0,0,0,0.35); transform: rotate(-4deg); }
+
+/* FAQ */
+.rg .faq-item { border-top: 2px solid var(--ink); }
+.rg .faq-item:last-child { border-bottom: 2px solid var(--ink); }
+.rg summary { font-weight: 800; }
+.rg details p { color: var(--ink); }
+
+/* Footer */
+.rg .foot { background: var(--ink); border-top: 1px solid #2C2C2E; }
+.rg .foot .wrap { color: #A1A1A6; }
+.rg .foot a { color: #FFFFFF; }
+
+/* Mobile sticky button */
+.rg .sticky-cta { display: none; }
+@media (max-width: 760px) {
+  .rg .sticky-cta { display: block; position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; background: var(--ink); padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); box-shadow: 0 -6px 20px rgba(0,0,0,0.3); }
+  .rg .sticky-cta .btn { display: block; text-align: center; }
+  body.rg:not(.thanks) { padding-bottom: 76px; }
+  .rg .offer { align-items: flex-start; gap: 16px; }
+  .rg .offer-cover { width: 84px; }
+  .rg .form-title { font-size: 26px; }
+  .rg .guide-cover { width: 130px; }
+}
+
+/* Confirmation page */
+body.rg.thanks { background: var(--ink); }
+.rg .panel.hot-sec { background: var(--hot); }
