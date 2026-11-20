@@ -219,3 +219,43 @@ body.rg.thanks { background: var(--tint); min-height: 100vh; }
   .rg .panel { padding: 24px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* ------------------------------------------------------------------
+   Ad scheme (Nov 2026): matches the Meta ads that send traffic here.
+   Near-black panels, white type, one yellow highlight, yellow buttons.
+------------------------------------------------------------------- */
+:root { --hot: #FFD60A; --hot-hover: #F2C800; }
+.rg .btn { background: var(--hot); color: var(--ink); }
+.rg .btn:hover { background: var(--hot-hover); color: var(--ink); }
+.rg .btn-outline { background: transparent; color: var(--ink); border-color: var(--ink); }
+.rg .btn-outline:hover { background: transparent; color: var(--ink); }
+.rg .btn-light, .rg .btn-light:hover { background: #FFFFFF; color: var(--ink); }
+.rg .btn-link, .rg .btn-link:hover { background: transparent; color: var(--blue-text); }
+.rg .eyebrow, .rg .tint .eyebrow { color: var(--mute); }
+.rg .dark .eyebrow, .rg .hero .eyebrow, .rg .panel.dark .eyebrow { color: var(--hot); }
+.rg .hot { background: var(--hot); color: var(--ink); padding: 0 0.14em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+
+.rg .hero .wrap { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 48px; align-items: center; padding-top: 72px; padding-bottom: 168px; }
+.rg .hero-copy { max-width: none; gap: 24px; }
+.rg h1 { font-size: 60px; line-height: 1.12; font-weight: 700; }
+.rg .hero-photo img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 20px; }
+
+.rg .option.featured { background: var(--ink); color: #FFFFFF; }
+.rg .option.featured .card-title { color: var(--hot); }
+.rg .step { border-top-color: var(--ink); }
+.rg .step-n { color: var(--mute); }
+.rg .price-label { color: var(--hot); }
+.rg blockquote { border-left-color: var(--hot); }
+.rg .check { background: var(--hot); }
+.rg .pill[aria-pressed="true"] { background: var(--ink); color: #FFFFFF; border-color: var(--ink); }
+.rg input:focus-visible, .rg select:focus-visible, .rg .btn:focus-visible, .rg summary:focus-visible, .rg .pill:focus-visible { outline-color: var(--ink); }
+.rg .dark a:not(.btn), .rg .panel.dark a:not(.btn) { color: #FFFFFF; }
+
+@media (max-width: 900px) {
+  .rg .hero .wrap { grid-template-columns: 1fr; gap: 28px; padding-top: 44px; padding-bottom: 132px; }
+  .rg h1 { font-size: 44px; }
+}
+@media (max-width: 520px) {
+  .rg h1 { font-size: 36px; }
+  .rg .hero .wrap { padding-bottom: 120px; }
+}
