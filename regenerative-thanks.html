@@ -19,6 +19,13 @@
 fbq('set','autoConfig',false,'2352999282138395');
 fbq('init', '2352999282138395');
 fbq('track', 'PageView');
+// One Lead per browser session: reloads and back/forward don't count again.
+try {
+  if (!sessionStorage.getItem('prpLeadTracked')) {
+    fbq('track', 'Lead');
+    sessionStorage.setItem('prpLeadTracked', '1');
+  }
+} catch (e) { fbq('track', 'Lead'); }
 </script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2352999282138395&ev=PageView&noscript=1"/></noscript>
 <!-- End Meta Pixel Code -->
@@ -28,6 +35,11 @@ fbq('track', 'PageView');
 <link rel="icon" href="/favicon.ico">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared/regenerative.css?v=5">
+<style>
+  /* Imaging question: three pills on one row at any width. */
+  .rg #imaging { flex-wrap: nowrap; }
+  .rg #imaging .pill { flex: 1 1 0; min-width: 0; padding-left: 8px; padding-right: 8px; }
+</style>
 </head>
 <body class="rg thanks">
 
@@ -61,6 +73,10 @@ fbq('track', 'PageView');
         <div class="group-label" id="slot-label">Afternoon times</div>
         <div class="pill-row" id="slots" role="group" aria-labelledby="slot-label"></div>
       </div>
+      <div class="stack" style="gap:10px">
+        <div class="group-label" id="imaging-label">Have you had X-rays or an MRI of this joint? <span style="font-weight:400">(optional)</span></div>
+        <div class="pill-row" id="imaging" role="group" aria-labelledby="imaging-label"></div>
+      </div>
       <div id="who" class="fields" hidden>
         <div class="field stack"><label for="who-name">Name</label><input id="who-name" type="text" autocomplete="name"></div>
         <div class="field stack"><label for="who-phone">Mobile phone</label><input id="who-phone" type="tel" autocomplete="tel"></div>
@@ -91,6 +107,7 @@ fbq('track', 'PageView');
       <input type="hidden" name="email">
       <input type="hidden" name="joint">
       <input type="hidden" name="ad">
+      <input type="hidden" name="imaging">
     </form>
   </section>
 
@@ -130,7 +147,8 @@ fbq('track', 'PageView');
   var requested = document.getElementById('requested');
   var errorEl = document.getElementById('time-error');
   var form = document.forms['prp-time-request'];
-  var chosenDay = null, chosenSlot = null;
+  var chosenDay = null, chosenSlot = null, chosenImaging = '';
+  var imagingEl = document.getElementById('imaging');
 
   // Next four clinic days, starting tomorrow.
   var options = [];
@@ -192,6 +210,9 @@ fbq('track', 'PageView');
   SLOTS.forEach(function (s) {
     pill(slotsEl, s, '', function () { chosenSlot = s; });
   });
+  ['Yes', 'No', 'Not sure'].forEach(function (a) {
+    pill(imagingEl, a, '', function () { chosenImaging = a; });
+  });
 
   sendBtn.addEventListener('click', function () {
     if (!chosenDay || !chosenSlot) return;
@@ -201,6 +222,7 @@ fbq('track', 'PageView');
     }
     form.elements['requested-day'].value = chosenDay.label + ', ' + chosenDay.date;
     form.elements['requested-time'].value = chosenSlot;
+    form.elements['imaging'].value = chosenImaging;
     ['name', 'phone', 'email', 'joint', 'ad'].forEach(function (k) {
       form.elements[k].value = contact[k] || '';
     });
@@ -229,6 +251,6 @@ fbq('track', 'PageView');
   });
 })();
 </script>
-<script src="shared/analytics.js?v=3"></script>
+<script src="shared/analytics.js?v=4"></script>
 </body>
 </html>
