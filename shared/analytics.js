@@ -38,7 +38,10 @@
       performance.getEntriesByType('navigation')[0];
     if (!nav || nav.type === 'navigate') {
       track('generate_lead');
-      if (window.fbq) window.fbq('track', 'Lead');
+      // /regenerative-thanks fires its own Meta Lead in <head>, once per
+      // session, so it is not sent again from here.
+      var ownLead = path === '/regenerative-thanks' || path === '/regenerative-thanks.html';
+      if (window.fbq && !ownLead) window.fbq('track', 'Lead');
     }
   }
 })();
