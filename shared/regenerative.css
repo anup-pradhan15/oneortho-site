@@ -373,3 +373,8 @@ body.rg.thanks { background: var(--ink); }
 .rg .pay-note { font-size: 14px; font-weight: 700; color: #FFFFFF; padding-left: 26px; position: relative; }
 .rg .pay-note::before { content: ""; position: absolute; left: 0; top: 2px; width: 16px; height: 16px; background: var(--hot); border-radius: 3px; }
 .rg .pay-note::after { content: ""; position: absolute; left: 5px; top: 4px; width: 4px; height: 8px; border: solid var(--ink); border-width: 0 2px 2px 0; transform: rotate(45deg); }
+
+/* SMS consent (optional, unchecked by default) */
+.rg .consent { display: flex; gap: 10px; align-items: flex-start; font-size: 12px; line-height: 1.5; color: var(--mute); cursor: pointer; }
+.rg .consent input { flex: 0 0 auto; width: 18px; height: 18px; margin: 1px 0 0; accent-color: var(--hot); }
+.rg .consent a { text-decoration: underline; }
